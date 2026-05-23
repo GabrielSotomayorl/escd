@@ -3,7 +3,7 @@ subtitle: "Encuestas Sociales para Contextos Diversos"
 title: "<font style='font-size:1em;'>🗓️ Semana 01<br/> Presentación del curso</font>"
 author: Prof. [Gabriel Sotomayor](https://gabrielsotomayorl.github.io/)
 institute: '[Pontificia Universidad Católica de Chile](https://sociologia.uc.cl/)'
-date: "Viernes, Marzo 2026"
+date: "Viernes, 07 de agosto de 2026"
 date-meta: "2026"
 date-format: "DD MMM YYYY"
 toc: true
@@ -88,112 +88,33 @@ Al finalizar el semestre, ustedes serán capaces de:
 
 ## Unidad 1: Fundamentos para la producción de encuestas {.smaller .dark-background}
 
-::: columns
-::: {.column width="50%"}
-### 📐 1.1 Uso de encuestas en sociología e investigación social aplicada
-- Las encuestas como herramienta de investigación empírica en ciencias sociales.
-- Tipos de encuestas: hogares, establecimientos, paneles longitudinales.
-- El sistema estadístico chileno: INE, CASEN, ENUT y otras fuentes.
-:::
-
-::: {.column width="50%"}
-### 🎯 1.2 El error total de encuesta (TSE)
-- Concepto de TSE: fuentes de error a lo largo de todo el ciclo de producción.
-- Errores de representación vs. errores de medición.
-
-### 🔄 1.3 Modelo Genérico del Proceso Estadístico (GSBPM)
-- Las fases de producción estadística: de la especificación al archivo.
-- TSE y GSBPM como marcos complementarios.
-:::
-:::
+- 1.1 Uso de encuestas en sociología e investigación social aplicada
+- 1.2 El error total de encuesta (TSE)
+- 1.3 Modelo Genérico del Proceso Estadístico (GSBPM)
 
 ## Unidad 2: Especificación de necesidades y diseño muestral {.smaller .dark-background}
 
-::: columns
-::: {.column width="50%"}
-### 🗂️ 2.1 Especificación de necesidades
-- Definición de objetivos e información requerida.
-- Usuarios, usos esperados y restricciones operacionales.
-
-### 🗺️ 2.2 Marcos muestrales y cobertura
-- Definición de población objetivo y marco de muestreo.
-- Problemas de cobertura: sobre-cobertura, sub-cobertura y duplicaciones.
-:::
-
-::: {.column width="50%"}
-### 📊 2.3 Diseño muestral complejo
-- Estratos, conglomerados y etapas de selección.
-- Probabilidades de selección, efectos de diseño y factores de expansión.
-- Ejemplos aplicados: diseño muestral de la CASEN y la ENUT.
-:::
-:::
+- 2.1 Especificación de necesidades
+- 2.2 Marcos muestrales y cobertura
+- 2.3 Diseño muestral complejo
 
 ## Unidad 3: Construcción y validación de instrumentos {.smaller .dark-background}
 
-::: columns
-::: {.column width="50%"}
-### 🧠 3.1 El proceso de respuesta a encuestas
-- Modelo cognitivo del encuestado: comprensión, recuperación, juicio y respuesta.
-- Fuentes de sesgo en la medición: efectos de encuadre, deseabilidad social y fatiga.
-
-### 📐 3.2 Construcción de escalas y operacionalización
-- Conceptualización, dimensiones e indicadores.
-- Tipos de escala: Likert, semántica diferencial, escalas de actitud.
-:::
-
-::: {.column width="50%"}
-### 🔬 3.3 Métodos de pretesteo
-- Entrevista cognitiva y prueba cognitiva.
-- Question Appraisal System (QAS-99).
-- Prueba piloto y análisis de consistencia de ítem.
-- Criterios para la revisión y mejora del cuestionario.
-:::
-:::
+- 3.1 El proceso de respuesta a encuestas
+- 3.2 Construcción de escalas y operacionalización
+- 3.3 Métodos de pretesteo
 
 ## Unidad 4: Recolección y calidad de la información {.smaller .dark-background}
 
-::: columns
-::: {.column width="50%"}
-### 🏠 4.1 Modos de administración y trabajo de campo
-- Modos de administración: PAPI, CAPI, CATI, CAWI y diseños mixtos.
-- Efectos del modo en la calidad de la respuesta.
-- Planificación, capacitación y supervisión del trabajo de campo.
-
-### 📋 4.2 Seguimiento del terreno e indicadores AAPOR
-- Monitoreo en tiempo real del avance de campo.
-- Indicadores AAPOR: tasas de respuesta, contacto, cooperación y rechazo.
-:::
-
-::: {.column width="50%"}
-### 📉 4.3 No respuesta y ajustes
-- No respuesta de unidad vs. no respuesta de ítem.
-- Análisis de sesgo de no respuesta.
-- Imputación y ajuste de ponderadores post-estratificación.
-:::
-:::
+- 4.1 Modos de administración y trabajo de campo
+- 4.2 Seguimiento del terreno e indicadores AAPOR
+- 4.3 No respuesta y ajustes
 
 ## Unidad 5: Análisis, calidad y diseminación {.smaller .dark-background}
 
-::: columns
-::: {.column width="50%"}
-### 💻 5.1 Análisis de encuestas complejas
-- Estimación de proporciones, medias y totales con factores de expansión.
-- Errores estándar correctos bajo diseño muestral complejo.
-- Uso de los paquetes `{survey}` y `{srvyr}` en R.
-
-### 🧹 5.2 Calidad de datos y procesamiento
-- Dimensiones de la calidad estadística.
-- Validación de consistencia y limpieza de bases.
-- Procesamiento de paradata y documentación de decisiones.
-:::
-
-::: {.column width="50%"}
-### 📢 5.3 Publicación y control de divulgación
-- Estándares de diseminación de microdatos: metadatos y documentación.
-- Control de divulgación estadística: supresión, perturbación y k-anonimidad.
-- Publicación de resultados bajo estándares internacionales (SDMX, DDI).
-:::
-:::
+- 5.1 Análisis de encuestas complejas
+- 5.2 Calidad de datos y procesamiento
+- 5.3 Publicación y control de divulgación
 
 # Metodología del Curso
 
@@ -227,31 +148,17 @@ Se exige un mínimo de **70%** de asistencia a clases para aprobar el curso.
 
 ## Bibliografía Obligatoria {.smaller background-color="white"}
 
-::: {style="font-size: 1.1rem;"}
-| Ítem | Título | Autor/a | Año |
-|:---|:---|:---|:---|
-| 1 | Standards and Best Practices for Survey Research | AAPOR | 2022 |
-| 2 | Medir la realidad social: El sentido de la metodología cuantitativa | Asún, R. | 2006 |
-| 3 | Construcción de cuestionarios y escalas: El proceso de la producción de información cuantitativa | Asún, R. | 2006 |
-| 4 | Métodos de encuesta: teoría y práctica, errores y mejora | Cea d'Ancona, M. Á. | 2004 |
-| 5 | La calidad de la encuesta en la sociedad digital | Cea d'Ancona, M. Á. | 2025 |
-| 6 | Diseño y análisis estadístico de las encuestas de hogares de América Latina | CEPAL | 2023 |
-| 7 | Survey Methodology (2nd ed.) | Groves, Fowler, Couper et al. | 2009 |
-| 8 | Total survey error: Past, present, and future | Groves & Lyberg | 2010 |
-| 9 | Generic Statistical Business Process Model (GSBPM v5.2) | UNECE | 2025 |
-| 10 | Handbook of Surveys on Households and Individuals | UNSD | 2026 |
-:::
-
-## Bibliografía Optativa {.smaller background-color="white"}
-
-::: {style="font-size: 1.1rem;"}
-| Ítem | Título | Autor/a | Año |
-|:---|:---|:---|:---|
-| 11 | Internet como modo de administración de encuestas (CIS, Cuad. 59) | Díaz de Rada, Domínguez & Pasadas | 2019 |
-| 12 | Sampling: Design and Analysis (3.ª ed.) | Lohr, S. L. | 2022 |
-| 13 | Informe sobre desigualdad de ingresos en Chile | Min. Desarrollo Social y Familia | 2026 |
-| 14 | Question Appraisal System QAS-99 | Willis & Lessler | 1999 |
-| 15 | [Exploring Complex Survey Data Analysis Using R](https://tidy-survey-r.github.io/tidy-survey-book/) | Zimmer, Powell & Velásquez | 2024 |
+::: {style="font-size: 0.85rem;"}
+- AAPOR (2022). *Standards and Best Practices for Survey Research*.
+- Asún, R. (2006). Medir la realidad social. En Canales (Ed.), *Metodologías de la investigación social* (pp. 31–61).
+- Asún, R. (2006). Construcción de cuestionarios y escalas. En Canales (Ed.), *Metodologías de la investigación social* (pp. 63–113).
+- Cea d'Ancona, M. Á. (2004). *Métodos de encuesta: teoría y práctica, errores y mejora*.
+- Cea d'Ancona, M. Á. (2025). La calidad de la encuesta en la sociedad digital. *REIS*, 191, 25–42.
+- CEPAL (2023). *Diseño y análisis estadístico de las encuestas de hogares de América Latina*. Metodologías N° 5.
+- Groves et al. (2009). *Survey Methodology* (2nd ed.). Wiley.
+- Groves & Lyberg (2010). Total survey error. *Public Opinion Quarterly*, 74(5), 849–879.
+- UNECE (2025). *Generic Statistical Business Process Model: GSBPM* (v5.2).
+- UNSD (2026). *Handbook of Surveys on Households and Individuals* (Final draft).
 :::
 
 # Evaluaciones

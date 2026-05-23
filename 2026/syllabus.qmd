@@ -23,19 +23,15 @@ toc: true
 | **Nivel formativo** | Pregrado |
 | **Docente** | Gabriel Sotomayor<br>gabriel.sotomayor@uc.cl |
 
----
-
 ## Integridad Académica y Código de Honor
 
 La Universidad tiene un compromiso con la construcción de una cultura de respeto e integridad. Quienes participen de este curso se adscriben al **Código de Honor UC** y adquieren el compromiso de aportar a la construcción de una cultura de Integridad Académica, actuando en consonancia con los valores de veracidad, confianza, respeto, justicia, responsabilidad y honestidad en todo el trabajo académico.
 
----
 
 ## II. Descripción del curso
 
 En este curso el estudiante aplicará un conjunto de principios de los métodos de encuesta que forman la base de las prácticas en este campo de investigación. Mediante cátedra, estudio de casos y aprendizaje basado en problemas, el estudiante revisará y analizará las principales encuestas de hogares y de establecimientos en Chile, identificando sus principales características y las particularidades de los distintos diseños metodológicos. También evaluará la influencia de diferentes fuentes de error en la calidad de los datos recolectados. Las evaluaciones consideran el desarrollo de informes y presentaciones orales individual y grupal.
 
----
 
 ## III. Resultados de Aprendizaje
 
@@ -44,7 +40,6 @@ En este curso el estudiante aplicará un conjunto de principios de los métodos 
 3. Aplicar herramientas de investigación social en el desarrollo de un proyecto de investigación aplicado.
 4. Distinguir diferentes técnicas de evaluación que se pueden implementar en el proceso de diseño de cuestionarios de encuestas.
 
----
 
 ## IV. Contenidos
 
@@ -78,7 +73,6 @@ En este curso el estudiante aplicará un conjunto de principios de los métodos 
 - 5.2 Calidad de datos y procesamiento
 - 5.3 Publicación y control de divulgación
 
----
 
 ## V. Estrategias Metodológicas
 
@@ -92,7 +86,6 @@ El curso combina cuatro estrategias pedagógicas articuladas a lo largo del seme
 
 - **Charlas con invitados e invitadas profesionales.** Tres sesiones con expositores externos que representan los principales regímenes de producción de encuestas: una del sector público (oficinas de estadística o ministerios), una del ámbito académico (centros con producción propia, como paneles longitudinales) y una del campo de estudios de mercado y opinión pública. Funcionan como anclas empíricas que permiten contrastar las decisiones metodológicas reales tomadas en cada régimen.
 
----
 
 ## VI. Estrategias Evaluativas
 
@@ -126,7 +119,6 @@ Dos controles breves realizados en sala, sobre la bibliografía obligatoria corr
 **Requisito de asistencia:** 70% de las clases para aprobar el curso.
 :::
 
----
 
 ## VII. Bibliografía
 
@@ -151,7 +143,6 @@ Dos controles breves realizados en sala, sobre la bibliografía obligatoria corr
 - Willis, G., & Lessler, J. (1999). *Question Appraisal System QAS-99*. Research Triangle Institute. https://www.researchgate.net/publication/267938670
 - Zimmer, S. A., Powell, R. J., & Velásquez, I. C. (2024). *Exploring Complex Survey Data Analysis Using R: A Tidy Introduction with {srvyr} and {survey}*. Chapman & Hall: CRC Press.
 
----
 
 ## VIII. Integridad Académica y Uso de IA
 
