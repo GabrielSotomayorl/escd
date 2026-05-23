@@ -2,6 +2,11 @@
 title: "🗓️ Semana 01: Introducción al curso"
 ---
 
+```{r}
+#| include: false
+library(haven)
+```
+
 En esta primera semana revisaremos los objetivos, evaluaciones y la estructura de trabajo del semestre. Luego, introduciremos los fundamentos de las encuestas sociales como herramienta de investigación: qué son, para qué sirven, cuáles son sus alcances y limitaciones, y cómo se insertan en el ciclo de la investigación empírica en ciencias sociales.
 
 ## 👨‍🏫 Clase Expositiva
