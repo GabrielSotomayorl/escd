@@ -1,0 +1,63 @@
+---
+title: "🤖 Política de Uso de Inteligencia Artificial"
+subtitle: "Encuestas Sociales para Contextos Diversos"
+format: html
+toc: true
+---
+
+Este curso se rige por los lineamientos de la **Política de Uso Ético de IA del ISUC** (Instituto de Sociología, Pontificia Universidad Católica de Chile), que se resumen a continuación.  
+
+---
+
+## Responsabilidad del estudiantado
+
+El uso de IA no exime al estudiantado de dominar el contenido y los argumentos de sus trabajos. **Las y los estudiantes son totalmente responsables por el contenido de sus entregas**, con independencia de la asistencia de IA generativa.
+
+Por ello, los y las docentes tendrán la facultad de citar a exposición oral de los trabajos entregados, sin necesidad de aviso previo, con el fin de evaluar el dominio real del/de la estudiante sobre el producto presentado. En base a estos antecedentes el/la docente podrá determinar la nota final del trabajo.
+
+---
+
+## ¿Qué está permitido?
+
+Cada docente indica explícitamente en el programa del curso o en las instrucciones de los trabajos si el uso de IA está **prohibido**, **permitido** o **recomendado**, especificando además para qué tareas y en qué medida puede utilizarse.
+
+::: {.callout-important}
+## Primer año de pregrado
+
+Con el fin de fomentar el desarrollo profundo de habilidades de aprendizaje, análisis crítico, redacción académica y autonomía intelectual, **el uso de herramientas de IA generativa estará estrictamente prohibido durante el primer año de la formación de pregrado**. Esta medida busca asegurar que los y las estudiantes construyan una base sólida de competencias fundamentales sin intermediación tecnológica.
+:::
+
+---
+
+## ¿Qué se pide a cambio? (cuando el uso es autorizado)
+
+Cuando el uso de IA sea permitido o recomendado, las y los estudiantes deberán incluir un **apartado en los anexos del trabajo** indicando:
+
+1. **Qué herramientas de IA generativa fueron utilizadas.**
+2. **Para qué tareas fueron utilizadas** (por ejemplo: revisión de redacción, corrección de ortografía, corrección de código, análisis de datos, etc.).
+
+Este apartado será obligatorio y tendrá como finalidad garantizar la **transparencia, trazabilidad y responsabilidad** en el uso de estas tecnologías. En caso de no ser incluido, el trabajo podrá ser evaluado con nota mínima por la o el docente del curso. Además, las y los docentes podrán solicitar copia de los prompts utilizados para la interacción con la IA generativa.
+
+---
+
+## Evaluación y criterio docente
+
+La evaluación de trabajos y pruebas seguirá siempre el criterio experto y académico del docente; la nota final podrá incluir tanto elementos de rúbricas estandarizadas definidas previamente como consideraciones académicas del profesor.
+
+---
+
+## Uso no autorizado
+
+En caso de constatar el uso no autorizado de IA generativa en cualquier trabajo académico, las y los docentes se orientarán por los lineamientos de la universidad en atención a la correspondiente evaluación y sanción de la falta a la integridad académica.
+
+---
+
+## En resumen
+
+| | |
+|:---|:---|
+| **¿Está permitido usar IA?** | Depende de la evaluación. El docente lo indicará explícitamente en cada caso. |
+| **¿Qué debo incluir si uso IA?** | Un apartado en los anexos con las herramientas usadas y para qué tareas. |
+| **¿Quién es responsable del trabajo?** | Siempre el/la estudiante, independiente del uso de IA. |
+| **¿Primer año de pregrado?** | Uso de IA generativa estrictamente prohibido. |
+| **¿Más información?** | [https://integridadacademica.uc.cl/](https://integridadacademica.uc.cl/) |

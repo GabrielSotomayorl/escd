@@ -1,0 +1,26 @@
+---
+title: "Encuestas Sociales para Contextos Diversos"
+format:
+  html:
+    include-before-body: helpers/remove-nav.html
+    include-after-body: helpers/remove-title.html
+---
+
+# 📑 Descripción del curso
+
+En este curso el estudiante aplicará un conjunto de principios de los métodos de encuesta que forman la base de las prácticas en este campo de investigación. Mediante cátedra, estudio de casos y aprendizaje basado en problemas, el estudiante revisará y analizará las principales encuestas de hogares y de establecimientos en Chile, identificando sus principales características y las particularidades de los distintos diseños metodológicos. También evaluará la influencia de diferentes fuentes de error en la calidad de los datos recolectados.
+
+# 🎯 Resultados de Aprendizaje
+
+1. Relacionar los conceptos de calidad y ética que se utilizan en investigación con encuestas con sus distintas etapas de implementación práctica.
+2. Explicar las principales características de las encuestas de hogares y de establecimientos para desarrollar protocolos de aplicación adaptados a las diversas particularidades de cada una.
+3. Aplicar herramientas de investigación social en el desarrollo de un proyecto de investigación aplicado.
+4. Distinguir diferentes técnicas de evaluación que se pueden implementar en el proceso de diseño de cuestionarios de encuestas.
+
+-----------------
+
+**Selecciona el año académico:**
+
+<a href="2026/index.qmd">
+    <button class="btn-course">2026</button>
+</a>

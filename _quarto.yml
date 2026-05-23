@@ -1,0 +1,80 @@
+project:
+  type: "website"
+  title: "Encuestas Sociales para Contextos Diversos"
+  output-dir: _output
+render:
+    - "index.qmd"
+    - "404.qmd"
+    - "2026/*.qmd"
+    - "2026/weeks/**/*.qmd"
+
+website:
+  title: "Encuestas Sociales para Contextos Diversos"
+  page-navigation: true
+  reader-mode: true
+  open-graph:
+    description: "Sitio del curso Encuestas Sociales para Contextos Diversos, Pontificia Universidad Católica de Chile, 2026."
+    image: "figures/banner.png"
+  twitter-card:
+    creator: "@<GSotomayorL>"
+    site: "\\@<GSotomayorL>"
+    description: "Sitio del curso Encuestas Sociales para Contextos Diversos, PUC 2026."
+    image: "figures/banner.png"
+  favicon: "figures/icons/course_favicon.png"
+  search:
+    location: navbar
+    type: textbox
+  sidebar:
+      style: docked
+      collapse-level: 2
+      contents:
+        - href: 2026/index.qmd
+          text: "🏠 Inicio"
+        - href: 2026/syllabus.qmd
+          text: "📓 Programa del curso"
+        - href: 2026/ai-policy.qmd
+          text: "🤖 Política de IA"
+        - section: "🗓️ Semanas"
+          collapse: false
+          contents:
+            - section: "Semana 01"
+              collapse: false
+              contents:
+                - href: 2026/weeks/week01/page.qmd
+                  text: "👨‍🏫 Material de clase"
+
+  navbar:
+    background: primary
+  page-footer:
+    background: light
+    left: "Copyright 2026, Pontificia Universidad Católica de Chile"
+
+
+
+bibliography: references/references.bib
+csl: references/chicago-author-date.csl
+
+
+format:
+  html:
+    author:    Gabriel Sotomayor
+    author-meta: Gabriel Sotomayor
+    date-format: "DD MMMM YYYY"
+
+    email-obfuscation: javascript
+    link-external-newwindow: true
+    link-external-icon: true
+    link-external-filter: ^(?:http:|https:)\/\/(?:lse-dsi\.github\.io\/|localhost)
+
+    theme:
+      light:
+        - journal
+        - css/custom.scss
+      dark:
+        - darkly
+        - css/custom.scss
+    toc: true
+    include-in-header:
+      - goatcounter.html
+    margin-header: |
+      ![](/figures/logos/MY_INSTITUTION.png)

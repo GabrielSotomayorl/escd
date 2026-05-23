@@ -1,0 +1,66 @@
+---
+title: "Encuestas Sociales para Contextos Diversos"
+subtitle: "Año académico: 2026"
+format: html
+---
+
+::: {.callout-important collapse=false}
+## 📢 Avisos
+
+- Bienvenidos/as al curso. El material irá publicándose semana a semana.
+:::
+
+# 🧑🏻‍🏫 Equipo Docente
+
+::: {.panel-tabset}
+## Profesor
+
+![](/figures/people/profesor.jpg){fig-align="left" fig-alt="Foto de Gabriel Sotomayor" style="object-fit: cover;width:5em;height:5em;border-radius: 50%;"}
+**[Gabriel Sotomayor](https://gabrielsotomayorl.github.io/)** <br/>
+_Sociólogo (U. de Chile) · MSc en Sociología (LSE)_ <br/>
+[Pontificia Universidad Católica de Chile](https://sociologia.uc.cl/)<br/>
+📧 [gabriel.sotomayor@uc.cl](mailto:gabriel.sotomayor@uc.cl)
+
+Horario de consultas:
+
+- **Cuándo:** Por confirmar
+- **Dónde:** Por confirmar
+
+## Ayudantes
+
+Por confirmar.
+
+:::
+
+# 📍 Horario y Sala
+
+::: {.schedule-box}
+**Cátedra**
+
+- 📆 Viernes (Módulos 5 y 6)
+- ⌚ 14:50 a 17:20 hrs.
+- 📌 Asistencia: 70%
+:::
+
+::: {.schedule-box}
+**Ayudantía**
+
+- 📆 Jueves (Módulo 7)
+- ⌚ 17:30 a 18:40 hrs.
+- 📌 Asistencia: 70%
+:::
+
+# 📋 Identificación del curso
+
+| | |
+|---|---|
+| **Curso** | Encuestas Sociales para Contextos Diversos |
+| **Sigla** | SOL-314 |
+| **Créditos** | 10 |
+| **Módulos** | 3 por semana (2 cátedra + 1 ayudantía) |
+| **Requisito** | SOL208 |
+| **Carácter** | Optativo |
+| **Tipo** | Cátedra |
+| **Formato** | Presencial |
+| **Calificación** | Estándar |
+| **Nivel** | Pregrado |

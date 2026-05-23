@@ -1,0 +1,168 @@
+---
+title: "Programa del curso"
+subtitle: "Encuestas Sociales para Contextos Diversos"
+format: html
+toc: true
+---
+
+## I. Identificación
+
+| | |
+|---|---|
+| **Curso** | Encuestas Sociales para Contextos Diversos |
+| **Traducción** | Social Surveys for Diverse Contexts |
+| **Sigla** | SOL-314 |
+| **Créditos** | 10 |
+| **Módulos** | 3 por semana (2 de cátedra y 1 de ayudantía) |
+| **Requisito** | SOL208 |
+| **Carácter** | Optativo |
+| **Tipo** | Cátedra |
+| **Formato** | Presencial |
+| **Calificación** | Estándar |
+| **Palabras clave** | Encuestas sociales, Diseño metodológico, Cuestionarios, Error total |
+| **Nivel formativo** | Pregrado |
+| **Docente** | Gabriel Sotomayor<br>gabriel.sotomayor@uc.cl |
+
+---
+
+## Integridad Académica y Código de Honor
+
+La Universidad tiene un compromiso con la construcción de una cultura de respeto e integridad. Quienes participen de este curso se adscriben al **Código de Honor UC** y adquieren el compromiso de aportar a la construcción de una cultura de Integridad Académica, actuando en consonancia con los valores de veracidad, confianza, respeto, justicia, responsabilidad y honestidad en todo el trabajo académico.
+
+---
+
+## II. Descripción del curso
+
+En este curso el estudiante aplicará un conjunto de principios de los métodos de encuesta que forman la base de las prácticas en este campo de investigación. Mediante cátedra, estudio de casos y aprendizaje basado en problemas, el estudiante revisará y analizará las principales encuestas de hogares y de establecimientos en Chile, identificando sus principales características y las particularidades de los distintos diseños metodológicos. También evaluará la influencia de diferentes fuentes de error en la calidad de los datos recolectados. Las evaluaciones consideran el desarrollo de informes y presentaciones orales individual y grupal.
+
+---
+
+## III. Resultados de Aprendizaje
+
+1. Relacionar los conceptos de calidad y ética que se utilizan en investigación con encuestas con sus distintas etapas de implementación práctica.
+2. Explicar las principales características de las encuestas de hogares y de establecimientos para desarrollar protocolos de aplicación adaptados a las diversas particularidades de cada una.
+3. Aplicar herramientas de investigación social en el desarrollo de un proyecto de investigación aplicado.
+4. Distinguir diferentes técnicas de evaluación que se pueden implementar en el proceso de diseño de cuestionarios de encuestas.
+
+---
+
+## IV. Contenidos
+
+**Unidad 1. Fundamentos para la producción de encuestas**
+
+- 1.1 Uso de encuestas en sociología e investigación social aplicada
+- 1.2 El error total de encuesta (TSE)
+- 1.3 Modelo Genérico del Proceso Estadístico (GSBPM)
+
+**Unidad 2. Especificación de necesidades y diseño muestral**
+
+- 2.1 Especificación de necesidades
+- 2.2 Marcos muestrales y cobertura
+- 2.3 Diseño muestral complejo
+
+**Unidad 3. Construcción y validación de instrumentos**
+
+- 3.1 El proceso de respuesta a encuestas
+- 3.2 Construcción de escalas y operacionalización
+- 3.3 Métodos de pretesteo
+
+**Unidad 4. Recolección y calidad de la información**
+
+- 4.1 Modos de administración y trabajo de campo
+- 4.2 Seguimiento del terreno e indicadores AAPOR
+- 4.3 No respuesta y ajustes
+
+**Unidad 5. Análisis, calidad y diseminación**
+
+- 5.1 Análisis de encuestas complejas
+- 5.2 Calidad de datos y procesamiento
+- 5.3 Publicación y control de divulgación
+
+---
+
+## V. Estrategias Metodológicas
+
+El curso combina cuatro estrategias pedagógicas articuladas a lo largo del semestre:
+
+- **Cátedras.** Clases expositivas que presentan los marcos conceptuales (TSE, GSBPM) y los contenidos técnicos centrales de cada unidad. Constituyen el formato base.
+
+- **Talleres aplicados en clase (aprendizaje basado en problemas).** En sesiones específicas, las y los estudiantes trabajan en grupos pequeños sobre encargos simulados que reproducen problemas reales de la práctica profesional. Cada taller exige aplicar contenidos de la unidad correspondiente para resolver una tarea concreta, desde la definición de objetivos y necesidades de información hasta el diseño de elementos del instrumento o del plan de campo, recurriendo a marcos metodológicos internacionales y a casos del sistema estadístico chileno. Los talleres alternan contextos de producción públicos, académicos y comerciales.
+
+- **Talleres computacionales (laboratorios).** Sesiones específicas del semestre introducen el uso de herramientas profesionales aplicadas a microdatos reales mediante el software R, abarcando análisis con diseño muestral complejo, control de divulgación estadística, validación de consistencia en levantamientos y procesamiento de paradata para reportes de terreno.
+
+- **Charlas con invitados e invitadas profesionales.** Tres sesiones con expositores externos que representan los principales regímenes de producción de encuestas: una del sector público (oficinas de estadística o ministerios), una del ámbito académico (centros con producción propia, como paneles longitudinales) y una del campo de estudios de mercado y opinión pública. Funcionan como anclas empíricas que permiten contrastar las decisiones metodológicas reales tomadas en cada régimen.
+
+---
+
+## VI. Estrategias Evaluativas
+
+La evaluación del curso se estructura en torno a tres componentes complementarios: un trabajo grupal integrador que constituye la columna vertebral del aprendizaje, tareas individuales aplicadas vinculadas a talleres específicos, y controles breves sobre la bibliografía obligatoria.
+
+| Componente | Ponderación |
+|:---|:---:|
+| **Proyecto grupal** | 60% |
+| **Tareas aplicadas** | 20% |
+| **Controles de lectura en sala** | 20% |
+
+### 1. Proyecto grupal: análisis crítico y propuesta de mejora (60%)
+
+En grupos pequeños, las y los estudiantes desarrollan durante el semestre un análisis metodológico crítico de una encuesta social existente y una propuesta fundamentada de mejora para una versión futura de la misma. El trabajo aplica los marcos del Error Total de Encuesta (TSE) y del Modelo Genérico del Proceso Estadístico (GSBPM) para diagnosticar las decisiones metodológicas en cada fase del ciclo de producción —especificación de necesidades, diseño muestral, construcción del instrumento, recolección, procesamiento, análisis y diseminación— y para fundamentar la propuesta. La evaluación se distribuye en tres entregas escalonadas:
+
+| Entrega | Descripción | Ponderación |
+|:---|:---|:---:|
+| **Entrega 1** | Análisis crítico inicial centrado en marco conceptual, necesidades de información y diseño muestral. | 15% |
+| **Entrega 2** | Análisis del instrumento, recolección y procesamiento, e identificación del problema metodológico que la propuesta abordará. | 15% |
+| **Entrega 3** | Reporte final integrado con propuesta de mejora fundamentada y presentación oral grupal. | 30% |
+
+### 2. Tareas aplicadas (20%)
+
+Cuatro tareas breves, individuales o en pares, vinculadas a talleres específicos del semestre. Cada tarea aplica los contenidos y herramientas trabajados en el taller correspondiente y exige una decisión metodológica argumentada acompañada de un producto entregable. Cada tarea pondera un **5%**.
+
+### 3. Controles de lectura en sala (20%)
+
+Dos controles breves realizados en sala, sobre la bibliografía obligatoria correspondiente a la primera y a la segunda mitad del semestre, respectivamente. Combinan preguntas de comprensión conceptual y de aplicación breve. Cada control pondera un **10%**.
+
+::: {.callout-important}
+**Requisito de asistencia:** 70% de las clases para aprobar el curso.
+:::
+
+---
+
+## VII. Bibliografía
+
+### Bibliografía Obligatoria
+
+- American Association for Public Opinion Research (AAPOR). (2022). *Standards and Best Practices for Survey Research*. AAPOR. https://aapor.org/standards-and-ethics/best-practices/
+- Asún, R. (2006). Medir la realidad social: El sentido de la metodología cuantitativa. En M. Canales (Ed.), *Metodologías de la investigación social: Introducción a los oficios* (pp. 31–61). LOM Ediciones.
+- Asún, R. (2006). Construcción de cuestionarios y escalas: El proceso de la producción de información cuantitativa. En M. Canales (Ed.), *Metodologías de la investigación social: Introducción a los oficios* (pp. 63–113). LOM Ediciones.
+- Cea d'Ancona, M. Á. (2004). *Métodos de encuesta: teoría y práctica, errores y mejora*. Síntesis.
+- Cea d'Ancona, M. Á. (2025). La calidad de la encuesta en la sociedad digital: avances y retrocesos. *Revista Española de Investigaciones Sociológicas*, 191, 25–42.
+- Comisión Económica para América Latina y el Caribe (CEPAL). (2023). *Diseño y análisis estadístico de las encuestas de hogares de América Latina*. Metodologías de la CEPAL, N° 5 (LC/PUB.2023/14-P). Santiago: CEPAL.
+- Groves, R. M., Fowler, F. J., Couper, M. P., Lepkowski, J. M., Singer, E., & Tourangeau, R. (2009). *Survey Methodology* (2nd ed.). Wiley.
+- Groves, R. M., & Lyberg, L. (2010). Total survey error: Past, present, and future. *Public Opinion Quarterly*, 74(5), 849–879. https://doi.org/10.1093/poq/nfq065
+- United Nations Economic Commission for Europe (UNECE). (2025). *Generic Statistical Business Process Model: GSBPM* (Version 5.2). UNECE.
+- United Nations Statistics Division. (2026). *Handbook of Surveys on Households and Individuals: Foundations and Emerging Approaches* (Final draft, updated version of April 30, 2026). Background document prepared for the 57th session of the United Nations Statistical Commission, New York, 3–6 March 2026.
+
+### Bibliografía Optativa
+
+- Díaz de Rada, V., Domínguez Álvarez, J. A., & Pasadas del Amo, S. (2019). *Internet como modo de administración de encuestas* (Cuaderno Metodológico 59). CIS.
+- Lohr, S. L. (2022). *Sampling: Design and Analysis* (3.ª ed.). Chapman & Hall/CRC.
+- Ministerio de Desarrollo Social y Familia, Subsecretaría de Evaluación Social, División Observatorio Social. (2026). *Informe sobre desigualdad de ingresos en Chile*. Santiago de Chile: Ministerio de Desarrollo Social y Familia.
+- Willis, G., & Lessler, J. (1999). *Question Appraisal System QAS-99*. Research Triangle Institute. https://www.researchgate.net/publication/267938670
+- Zimmer, S. A., Powell, R. J., & Velásquez, I. C. (2024). *Exploring Complex Survey Data Analysis Using R: A Tidy Introduction with {srvyr} and {survey}*. Chapman & Hall: CRC Press.
+
+---
+
+## VIII. Integridad Académica y Uso de IA
+
+### Integridad Académica
+
+Las faltas a la Integridad Académica son definidas como acciones de plagio, fraude y/o adulteración de documentación cometidas de forma individual o colectiva, que atenten contra los valores de honestidad, veracidad, confianza, justicia, respeto y responsabilidad, dentro del marco de actividades académicas.
+
+El o la docente responsable de la actividad donde fue cometida la falta podrá aplicar una medida académica de manera inmediata al estudiante, si lo considera pertinente. Adicionalmente, conforme a la Política de Integridad Académica de la Universidad, toda falta será derivada al **Comité de Integridad Académica de la Facultad de Ciencias Sociales**. Este órgano definirá la gravedad de la falta (leve, moderada o grave) y las consecuencias correspondientes.
+
+Se recomienda consultar las guías de Bibliotecas UC sobre el uso ético de la información y la adecuada citación: [http://guiastematicas.bibliotecas.uc.cl](http://guiastematicas.bibliotecas.uc.cl). Los detalles de la política de integridad académica UC se encuentran en: [https://integridadacademica.uc.cl/](https://integridadacademica.uc.cl/)
+
+### Uso Ético de IA
+
+Los cursos se rigen por los lineamientos de la **Política de Uso Ético de IA del ISUC**. Consulta la [🤖 Política de IA](ai-policy.qmd) del curso para más detalles.
