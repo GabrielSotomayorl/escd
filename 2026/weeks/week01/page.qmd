@@ -7,7 +7,7 @@ title: "🗓️ Semana 01: Introducción al curso"
 library(haven)
 ```
 
-En esta primera semana revisaremos el rol de las encuestas en la investigación social empírica: qué son, para qué se usan, cuáles son sus alcances y limitaciones, y cómo se insertan en el ciclo de producción de información social. Se presentan además los marcos que estructuran el curso: el Error Total de Encuesta (TSE) y el Modelo Genérico del Proceso Estadístico (GSBPM).
+En esta primera semana se presenta el curso (objetivos, metodología y evaluaciones) y se aborda la pregunta que lo organiza: ¿por qué la encuesta es el instrumento central de la investigación social cuantitativa? Revisaremos qué significa medir la realidad social y qué se gana y se pierde al hacerlo, cómo el muestreo probabilístico resolvió el problema de ir "de la parte al todo", qué es una encuesta y cuáles son sus principales dimensiones de diseño, y cómo se organiza la producción de encuestas en Chile en tres regímenes —público, académico y comercial— ilustrados con cuatro casos: CASEN, ENUT, ELSOC y Plaza Pública Cadem.
 
 ## Clase Expositiva
 
@@ -21,7 +21,14 @@ Puedes navegar por las diapositivas directamente en el recuadro de abajo o hacer
 
 Para acompañar los contenidos de esta semana, por favor revisa el siguiente material:
 
-*(Por completar)*
+- Asún, R. (2006). Medir la realidad social: El sentido de la metodología cuantitativa. En M. Canales (Ed.), *Metodologías de la investigación social: Introducción a los oficios* (pp. 31–61). LOM Ediciones.
+- Goldthorpe, J. H. (2017). Estadística y métodos de recogida de datos. En *La sociología como ciencia de la población* (cap. 6). Alianza.
+
+## Lecturas Complementarias
+
+- Goldthorpe, J. H. (2017). *La sociología como ciencia de la población*. Alianza. Cap. 1.
+- Groves, R. M., Fowler, F. J., Couper, M. P., Lepkowski, J. M., Singer, E., & Tourangeau, R. (2009). *Survey Methodology* (2nd ed.). Wiley. Cap. 1.
+- Cea d'Ancona, M. Á. (2004). *Métodos de encuesta: teoría y práctica, errores y mejora*. Síntesis. Cap. 1.
 
 ## Dudas y Comunicación
 

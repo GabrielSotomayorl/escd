@@ -1,7 +1,19 @@
 /*-- scss:defaults --*/
 // NOTA DE SINCRONIZACIÓN: estos valores deben mantenerse iguales a los de css/custom.scss
-$brand-main:    #1E2240;   // Azul medianoche
-$brand-accent:  #7C90CC;   // Lavanda
+$brand-main:      #0A3564;   // Navy del logo
+$brand-accent:    #1294AE;   // Turquesa del logo
+$brand-accent-dk: #0B7285;   // Turquesa oscuro
+$brand-orange:    #C2410C;   // Naranjo oscuro del logo
+$brand-gold:      #856100;   // Oro oscuro del logo
+
+$link-color:    $brand-accent-dk;
+
+// Mismos colores semánticos de callout que el sitio
+$callout-color-note:      $brand-main;
+$callout-color-tip:       $brand-accent-dk;
+$callout-color-important: $brand-orange;
+$callout-color-warning:   $brand-gold;
+$callout-color-caution:   $brand-orange;
 
 /*-- scss:rules --*/
 
@@ -58,7 +70,7 @@ span.tag {
     font-size: 0.85em;
     font-weight: 600;
     border-radius: 10px;
-    background-color: $brand-accent;
+    background-color: $brand-accent-dk;
     color: #ffffff;
     margin-bottom: 0.5em;
 }
@@ -71,4 +83,39 @@ span.tag {
 .reveal .columns > .column > :not(ul,ol) {
     margin-left: 0;
     margin-right: 0;
+}
+
+// ==========================================
+// 5. DIAPOSITIVAS DE SECCIÓN OSCURAS
+// La clase .dark-background se usa en los .qmd para marcar diapositivas de
+// contraste (unidades, tablas panorámicas). Sin esta regla no producía nada.
+// ==========================================
+.reveal section.dark-background {
+  background-color: $brand-main !important;
+  color: #ffffff;
+
+  h1, h2, h3, h4 { color: #ffffff; }
+  h2 { border-bottom-color: $brand-accent; }
+  strong { color: #ffffff; }
+  a { color: #8FD3E4; }
+
+  table {
+    color: #ffffff;
+    tr.header { background-color: rgba(255, 255, 255, 0.15); }
+    tr.odd { background-color: rgba(255, 255, 255, 0.06); }
+    td, th { border-color: rgba(255, 255, 255, 0.25); }
+  }
+
+  // Los callouts de Reveal no traen fondo propio: sobre navy quedarían
+  // ilegibles. Se les da un panel claro para que sigan leyéndose.
+  .callout {
+    background-color: rgba(255, 255, 255, 0.94);
+    color: #1a1a1a;
+    padding-right: 0.4em;
+
+    .callout-title, .callout-title-container, .callout-body, p, li, strong {
+      color: #1a1a1a;
+    }
+    a { color: $brand-accent-dk; }
+  }
 }

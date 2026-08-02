@@ -21,7 +21,8 @@ toc: true
 | **Calificación** | Estándar |
 | **Palabras clave** | Encuestas sociales, Diseño metodológico, Cuestionarios, Error total |
 | **Nivel formativo** | Pregrado |
-| **Docente** | Gabriel Sotomayor<br>gabriel.sotomayor@uc.cl |
+| **Docente** | Gabriel Sotomayor<br>gasotomayorl@uc.cl |
+| **Ayudante** | Amanda Vieira<br>amanda.vieira@uc.cl |
 
 ## Integridad Académica y Código de Honor
 
@@ -82,7 +83,7 @@ El curso combina cuatro estrategias pedagógicas articuladas a lo largo del seme
 
 - **Talleres aplicados en clase (aprendizaje basado en problemas).** En sesiones específicas, las y los estudiantes trabajan en grupos pequeños sobre encargos simulados que reproducen problemas reales de la práctica profesional. Cada taller exige aplicar contenidos de la unidad correspondiente para resolver una tarea concreta, desde la definición de objetivos y necesidades de información hasta el diseño de elementos del instrumento o del plan de campo, recurriendo a marcos metodológicos internacionales y a casos del sistema estadístico chileno. Los talleres alternan contextos de producción públicos, académicos y comerciales.
 
-- **Talleres computacionales (laboratorios).** Sesiones específicas del semestre introducen el uso de herramientas profesionales aplicadas a microdatos reales mediante el software R, abarcando análisis con diseño muestral complejo, control de divulgación estadística, validación de consistencia en levantamientos y procesamiento de paradata para reportes de terreno.
+- **Talleres computacionales (laboratorios).** Sesiones específicas del semestre introducen el uso de herramientas profesionales aplicadas a microdatos reales mediante el software R, abarcando análisis con diseño muestral complejo, validación de consistencia en levantamientos y procesamiento de paradata para reportes de terreno.
 
 - **Charlas con invitados e invitadas profesionales.** Tres sesiones con expositores externos que representan los principales regímenes de producción de encuestas: una del sector público (oficinas de estadística o ministerios), una del ámbito académico (centros con producción propia, como paneles longitudinales) y una del campo de estudios de mercado y opinión pública. Funcionan como anclas empíricas que permiten contrastar las decisiones metodológicas reales tomadas en cada régimen.
 
@@ -99,7 +100,7 @@ La evaluación del curso se estructura en torno a tres componentes complementari
 
 ### 1. Proyecto grupal: análisis crítico y propuesta de mejora (60%)
 
-En grupos pequeños, las y los estudiantes desarrollan durante el semestre un análisis metodológico crítico de una encuesta social existente y una propuesta fundamentada de mejora para una versión futura de la misma. El trabajo aplica los marcos del Error Total de Encuesta (TSE) y del Modelo Genérico del Proceso Estadístico (GSBPM) para diagnosticar las decisiones metodológicas en cada fase del ciclo de producción —especificación de necesidades, diseño muestral, construcción del instrumento, recolección, procesamiento, análisis y diseminación— y para fundamentar la propuesta. La evaluación se distribuye en tres entregas escalonadas:
+En grupos pequeños, las y los estudiantes desarrollan durante el semestre un análisis metodológico crítico de una encuesta social existente y una propuesta fundamentada de mejora para una versión futura de la misma. El trabajo aplica los marcos del Error Total de Encuesta (TSE) y del Modelo Genérico del Proceso Estadístico (GSBPM) para diagnosticar las decisiones metodológicas en cada fase del ciclo de producción —especificación de necesidades, diseño muestral, construcción del instrumento, recolección, procesamiento, análisis y diseminación— y para fundamentar la propuesta. La evaluación se distribuye en tres entregas escalonadas, lo que permite a los estudiantes recibir retroalimentación formativa oportuna:
 
 | Entrega | Descripción | Ponderación |
 |:---|:---|:---:|
@@ -130,6 +131,7 @@ Dos controles breves realizados en sala, sobre la bibliografía obligatoria corr
 - Cea d'Ancona, M. Á. (2004). *Métodos de encuesta: teoría y práctica, errores y mejora*. Síntesis.
 - Cea d'Ancona, M. Á. (2025). La calidad de la encuesta en la sociedad digital: avances y retrocesos. *Revista Española de Investigaciones Sociológicas*, 191, 25–42.
 - Comisión Económica para América Latina y el Caribe (CEPAL). (2023). *Diseño y análisis estadístico de las encuestas de hogares de América Latina*. Metodologías de la CEPAL, N° 5 (LC/PUB.2023/14-P). Santiago: CEPAL.
+- Goldthorpe, J. H. (2017). *La sociología como ciencia de la población* (M. T. Casado Rodríguez, trad.). Alianza Editorial. (Obra original publicada en 2016).
 - Groves, R. M., Fowler, F. J., Couper, M. P., Lepkowski, J. M., Singer, E., & Tourangeau, R. (2009). *Survey Methodology* (2nd ed.). Wiley.
 - Groves, R. M., & Lyberg, L. (2010). Total survey error: Past, present, and future. *Public Opinion Quarterly*, 74(5), 849–879. https://doi.org/10.1093/poq/nfq065
 - United Nations Economic Commission for Europe (UNECE). (2025). *Generic Statistical Business Process Model: GSBPM* (Version 5.2). UNECE.
@@ -150,9 +152,11 @@ Dos controles breves realizados en sala, sobre la bibliografía obligatoria corr
 
 Las faltas a la Integridad Académica son definidas como acciones de plagio, fraude y/o adulteración de documentación cometidas de forma individual o colectiva, que atenten contra los valores de honestidad, veracidad, confianza, justicia, respeto y responsabilidad, dentro del marco de actividades académicas.
 
-El o la docente responsable de la actividad donde fue cometida la falta podrá aplicar una medida académica de manera inmediata al estudiante, si lo considera pertinente. Adicionalmente, conforme a la Política de Integridad Académica de la Universidad, toda falta será derivada al **Comité de Integridad Académica de la Facultad de Ciencias Sociales**. Este órgano definirá la gravedad de la falta (leve, moderada o grave) y las consecuencias correspondientes.
+El o la docente responsable de la actividad donde fue cometida la falta podrá aplicar una medida académica de manera inmediata al estudiante, si lo considera pertinente (por ejemplo, sancionar al estudiante con un 1.0 en la evaluación correspondiente). Adicionalmente, conforme a la Política de Integridad Académica de la Universidad, toda falta será derivada al **Comité de Integridad Académica de la Facultad de Ciencias Sociales**. Este órgano definirá la gravedad de la falta (leve, moderada o grave) y las consecuencias de dicha falta, con foco formativo. Este órgano también realizará seguimiento del caso.
 
-Se recomienda consultar las guías de Bibliotecas UC sobre el uso ético de la información y la adecuada citación: [http://guiastematicas.bibliotecas.uc.cl](http://guiastematicas.bibliotecas.uc.cl). Los detalles de la política de integridad académica UC se encuentran en: [https://integridadacademica.uc.cl/](https://integridadacademica.uc.cl/)
+En caso de que la o el estudiante no aceptase las consecuencias establecidas por el Comité, podrá solicitar a este órgano la revisión de su caso. Una vez realizada la revisión, y si aún el o la estudiante no desea asumir las consecuencias planteadas por el Comité, podrá apelar a la Secretaría General de la Universidad.
+
+Asimismo, se recomienda consultar las guías de Bibliotecas UC sobre el uso ético de la información y la adecuada citación: [http://guiastematicas.bibliotecas.uc.cl](http://guiastematicas.bibliotecas.uc.cl). Los detalles de la política de integridad académica UC se encuentran en: [https://integridadacademica.uc.cl/](https://integridadacademica.uc.cl/)
 
 ### Uso Ético de IA
 

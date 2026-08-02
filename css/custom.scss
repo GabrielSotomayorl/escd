@@ -1,18 +1,24 @@
 /*-- scss:defaults --*/
 
 // 1. PALETA DE COLORES
+// Derivada del logo del curso (figures/icons/course_favicon.png) y del banner.
 // NOTA: Si cambias estos valores, actualiza también los mismos en css/slides.scss
-$brand-main:    #1E2240;   // Azul medianoche
-$brand-accent:  #7C90CC;   // Lavanda
-$brand-link:    #8A9ED4;   // Lavanda clara
+$brand-main:      #0A3564;   // Navy del logo — 12.3:1 sobre blanco
+$brand-accent:    #1294AE;   // Turquesa del logo — bordes y superficies, no texto
+$brand-accent-dk: #0B7285;   // Turquesa oscuro — texto y links (5.6:1)
+$brand-orange:    #C2410C;   // Naranjo oscuro del logo (5.2:1)
+$brand-gold:      #856100;   // Oro oscuro del logo (5.7:1)
 
 $primary:       $brand-main;
 $navbar-bg:     $brand-main;
-$link-color:    $brand-link;
+$link-color:    $brand-accent-dk;
 
-// Override Bootstrap colors usados por callouts
-$danger:        $brand-accent;   // callout-important
-$warning:       $brand-accent;   // callout-warning
+// Callouts: cada tipo recupera su color semántico dentro de la paleta
+$callout-color-note:      $brand-main;
+$callout-color-tip:       $brand-accent-dk;
+$callout-color-important: $brand-orange;
+$callout-color-warning:   $brand-gold;
+$callout-color-caution:   $brand-orange;
 
 /*-- scss:rules --*/
 
@@ -21,7 +27,7 @@ $warning:       $brand-accent;   // callout-warning
 // ==========================================
 .navbar {
   background-color: $navbar-bg;
-  background-image: linear-gradient(rgba(30, 34, 64, 0.15), rgba(30, 34, 64, 0.15)), url("figures/banner.png");
+  background-image: linear-gradient(rgba(10, 53, 100, 0.55), rgba(10, 53, 100, 0.55)), url("figures/banner.png");
   background-size: cover;
   background-position: center 40%;
   min-height: 160px;
@@ -49,21 +55,6 @@ table.syllabus {
 .callout.callout-style-default {
   border-left-width: 5px;
   border-radius: 5px;
-  &.callout-important {
-    border-left-color: $brand-accent;
-    background-color: rgba($brand-accent, 0.07);
-    .callout-icon::before { color: $brand-accent !important; }
-    .callout-title { color: $brand-main; }
-  }
-  &.callout-note {
-    border-left-color: $brand-main;
-    background-color: rgba($brand-main, 0.05);
-  }
-  &.callout-warning {
-    border-left-color: $brand-accent;
-    background-color: rgba($brand-accent, 0.07);
-    .callout-icon::before { color: $brand-accent !important; }
-  }
 }
 
 // ==========================================
@@ -78,7 +69,7 @@ table.syllabus {
   transition: all 0.3s ease;
 
   &:hover {
-    background-color: $brand-accent;
+    background-color: $brand-accent-dk;
     color: #ffffff !important;
     transform: translateY(-2px);
   }
@@ -92,10 +83,10 @@ table.syllabus {
   width: 45%;
   border-style: dotted;
   border-width: 1px;
-  border-color: #e0e0e0;
+  border-color: rgba($brand-main, 0.25);
   margin: 1%;
   padding: 1.5%;
-  background-color: #fafafa;
+  background-color: rgba($brand-main, 0.04);
   border-radius: 4px;
 }
 
@@ -127,5 +118,19 @@ table.syllabus {
 // ==========================================
 div.csl-entry {
   margin-top: 1rem;
-  a { color: $brand-link; font-weight: 500; }
+  a { color: $brand-accent-dk; font-weight: 500; }
+}
+
+// ==========================================
+// 8. MODO OSCURO
+// Las superficies y textos fijos de arriba pierden contraste sobre darkly.
+// ==========================================
+body.quarto-dark {
+  .schedule-box {
+    border-color: rgba(255, 255, 255, 0.25);
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+  .lab-content h3 { color: #9FC7D9; }
+  a, div.csl-entry a { color: #7FC4D6; }
+  table.syllabus tr.odd { background-color: rgba(255, 255, 255, 0.08); }
 }
