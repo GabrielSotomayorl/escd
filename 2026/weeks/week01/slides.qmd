@@ -45,7 +45,7 @@ format:
 :::
 :::
 
-## Ayudante/s {.smaller background-color="white"}
+## Ayudante/s {.smaller}
 
 ::: {.callout-note icon=false title="Amanda Vieira"}
 Ayudante del curso · Pontificia Universidad Católica de Chile
@@ -55,7 +55,7 @@ Ayudante del curso · Pontificia Universidad Católica de Chile
 
 El horario de ayudantía se usará primariamente para revisión d e la bibliografía del curso y como complemento al trabajo práctico de los talleres a realizar en los horarios de cátedra. 
 
-## ¿De qué trata este curso? {.smaller background-color="white"}
+## ¿De qué trata este curso? {.smaller}
 
 Este curso forma a los estudiantes en los **principios y prácticas de los métodos de encuesta** que constituyen la base del trabajo de investigación cuantitativa en ciencias sociales.
 
@@ -69,13 +69,13 @@ Al finalizar el semestre, el estudiantado será capaz de:
 2. Diseñar y evaluar instrumentos de medición en distintos contextos poblacionales.
 3. Analizar datos de encuestas complejas con herramientas computacionales.
 
-## Resultados de Aprendizaje {background-color="white"}
+## Resultados de Aprendizaje
 
 ::: {.callout-tip title="Resultado General"}
 Aplicar los principios de los métodos de encuesta para **diseñar, implementar y evaluar críticamente** encuestas sociales en contextos diversos, identificando fuentes de error y proponiendo mejoras fundamentadas.
 :::
 
-## Resultados Específicos {.smaller background-color="white"}
+## Resultados Específicos {.smaller}
 
 Al finalizar el semestre, ustedes serán capaces de:
 
@@ -86,37 +86,37 @@ Al finalizar el semestre, ustedes serán capaces de:
 4. **Distinguir** diferentes técnicas de evaluación que se pueden implementar en el proceso de diseño de cuestionarios de encuestas.
 :::
 
-## Unidad 1: Fundamentos para la producción de encuestas {.smaller .dark-background}
+## Unidad 1: Fundamentos para la producción de encuestas {.smaller}
 
 - 1.1 Uso de encuestas en sociología e investigación social aplicada
 - 1.2 El error total de encuesta (TSE)
 - 1.3 Modelo Genérico del Proceso Estadístico (GSBPM)
 
-## Unidad 2: Especificación de necesidades y diseño muestral {.smaller .dark-background}
+## Unidad 2: Especificación de necesidades y diseño muestral {.smaller}
 
 - 2.1 Especificación de necesidades
 - 2.2 Marcos muestrales y cobertura
 - 2.3 Diseño muestral complejo
 
-## Unidad 3: Construcción y validación de instrumentos {.smaller .dark-background}
+## Unidad 3: Construcción y validación de instrumentos {.smaller}
 
 - 3.1 El proceso de respuesta a encuestas
 - 3.2 Construcción de escalas y operacionalización
 - 3.3 Métodos de pretesteo
 
-## Unidad 4: Recolección y calidad de la información {.smaller .dark-background}
+## Unidad 4: Recolección y calidad de la información {.smaller}
 
 - 4.1 Modos de administración y trabajo de campo
 - 4.2 Seguimiento del terreno e indicadores AAPOR
 - 4.3 No respuesta y ajustes
 
-## Unidad 5: Análisis, calidad y diseminación {.smaller .dark-background}
+## Unidad 5: Análisis, calidad y diseminación {.smaller}
 
 - 5.1 Análisis de encuestas complejas
 - 5.2 Calidad de datos y procesamiento
 - 5.3 Publicación y control de divulgación
 
-## Cuatro Estrategias Pedagógicas {.smaller background-color="white"}
+## Cuatro Estrategias Pedagógicas {.smaller}
 
 ::: incremental
 - 📖 **Cátedras:** Marcos conceptuales (TSE, GSBPM) y contenidos técnicos centrales de cada unidad.
@@ -128,7 +128,7 @@ Al finalizar el semestre, ustedes serán capaces de:
 - 🎙️ **Charlas con profesionales invitados/as:** Tres sesiones con expositores del sector público, académico y de estudios de mercado/opinión pública.
 :::
 
-## Horario {.smaller background-color="white"}
+## Horario {.smaller}
 
 ::: {.callout-note icon=false title="📅 Cátedra"}
 **Viernes** · Módulos 5 y 6 · **14:50 a 17:20 hrs.**
@@ -142,7 +142,7 @@ Al finalizar el semestre, ustedes serán capaces de:
 Se exige un mínimo de **70%** de asistencia a clases para aprobar el curso.
 :::
 
-## Bibliografía Obligatoria {.smaller background-color="white"}
+## Bibliografía Obligatoria {.smaller}
 
 ::: {style="font-size: 1.3rem;"}
 - AAPOR (2022). *Standards and Best Practices for Survey Research*.
@@ -158,7 +158,7 @@ Se exige un mínimo de **70%** de asistencia a clases para aprobar el curso.
 - UNSD (2026). *Handbook of Surveys on Households and Individuals* (Final draft).
 :::
 
-## Sistema de Evaluación {.smaller background-color="white"}
+## Sistema de Evaluación {.smaller}
 
 El curso se estructura en torno a tres componentes complementarios: un **trabajo grupal integrador**, **tareas individuales** vinculadas a talleres, y **controles de lectura** en sala.
 
@@ -174,7 +174,7 @@ El curso se estructura en torno a tres componentes complementarios: un **trabajo
 Asistencia mínima de **70%** a clases para aprobar el curso.
 :::
 
-## Proyecto Grupal (60%) {.smaller background-color="white"}
+## Proyecto Grupal (60%) {.smaller}
 
 En grupos pequeños, se desarrolla un **análisis metodológico crítico** de una encuesta social existente y una **propuesta fundamentada de mejora** para una versión futura.
 
@@ -188,7 +188,7 @@ El trabajo aplica los marcos **TSE** y **GSBPM** para diagnosticar decisiones en
 | **Entrega 3** | Reporte final integrado con propuesta de mejora y **presentación oral grupal**. | 30% |
 :::
 
-## Tareas Aplicadas y Controles (40%) {.smaller background-color="white"}
+## Tareas Aplicadas y Controles (40%) {.smaller}
 
 ::: {.callout-tip title="Tareas Aplicadas (20%)"}
 **Cuatro tareas** breves (individuales o en pares), vinculadas a talleres específicos del semestre. Cada tarea exige una decisión metodológica argumentada y un producto entregable.
@@ -202,7 +202,7 @@ El trabajo aplica los marcos **TSE** y **GSBPM** para diagnosticar decisiones en
 **Cada control: 10%**
 :::
 
-## Uso de IA: Lineamientos ISUC {.smaller background-color="white"}
+## Uso de IA: Lineamientos ISUC {.smaller}
 
 Este curso se rige por la **Política de Uso Ético de IA del ISUC** (Instituto de Sociología UC).
 
@@ -214,7 +214,7 @@ El uso de IA **no exime** de dominar el contenido y los argumentos del trabajo. 
 - Cuando esté autorizado: se debe incluir un **anexo** con las herramientas usadas y para qué tareas.
 - Uso no autorizado → falta de integridad académica.
 
-## Política de IA en este curso {.smaller background-color="white"}
+## Política de IA en este curso {.smaller}
 
 ::: {style="font-size: 0.95em;"}
 | Evaluación | Uso de IA |
@@ -226,7 +226,7 @@ El uso de IA **no exime** de dominar el contenido y los argumentos del trabajo. 
 
 Detalle completo en la [Política de IA del curso](https://gabrielsotomayorl.github.io/escd/2026/ai-policy.html).
 
-## Integridad Académica {.smaller background-color="white"}
+## Integridad Académica {.smaller}
 
 Las y los estudiantes se adscriben al **Código de Honor UC** y al compromiso de actuar con veracidad, confianza, respeto, justicia, responsabilidad y honestidad.
 
@@ -239,7 +239,7 @@ Plagio, fraude y adulteración de documentos son derivados al **Comité de Integ
 - Guías de citación: [guiastematicas.bibliotecas.uc.cl](http://guiastematicas.bibliotecas.uc.cl)
 :::
 
-## Horario de Consultas {.smaller background-color="white"}
+## Horario de Consultas {.smaller}
 
 - Pueden agendar reuniones virtuales para cualquier consulta sobre el curso.
 - **Cuándo:** **martes de 16:00 a 17:00 hrs.**
@@ -251,7 +251,7 @@ Plagio, fraude y adulteración de documentos son derivados al **Comité de Integ
 
 Si no pueden en ese horario, escriban al correo del profesor ([gasotomayorl@uc.cl](mailto:gasotomayorl@uc.cl)) para coordinar otro momento.
 
-## Plataformas y Comunicación {.smaller .dark-background}
+## Plataformas y Comunicación {.smaller}
 
 ### 🌐 Página Web del Curso
 
@@ -271,7 +271,7 @@ Las comunicaciones con el equipo docente para **temas colectivos** deberán gest
 
 # Los números que organizan la vida pública
 
-## Encuestas operando en la sociedad chilena {.smaller background-color="white"}
+## Encuestas operando en la sociedad chilena {.smaller}
 
 ::: {style="font-size: 0.9em;"}
 Las encuestas no son un asunto solo académico: producen los números con que la sociedad chilena se describe y se gobierna.
@@ -285,7 +285,7 @@ Estos números definen quién cuenta como pobre, si "la delincuencia subió" y c
 
 :::
 
-## De la muestra a la población {.smaller background-color="white"}
+## De la muestra a la población {.smaller}
 
 ::: {style="font-size:0.85em;"}
 Ninguno de esos números proviene de contar a toda la población: se estiman a partir de **muestras** para describir a un país de casi 20 millones de personas. Ese salto abre las **dos preguntas que organizan este curso**:
@@ -303,7 +303,7 @@ Ambas dimensiones se integran en el marco del **Error Total de Encuesta (TSE)**,
 
 # La sociología como ciencia de la población
 
-## ¿Qué clase de ciencia es la sociología? {.smaller background-color="white"}
+## ¿Qué clase de ciencia es la sociología? {.smaller}
 
 La sociología clásica aspiró a formular **leyes generales** de la sociedad. Ese proyecto no se consolidó como programa científico. ¿Qué tipo de ciencia puede ser entonces la sociología?
 
@@ -314,7 +314,7 @@ Esto implica un cambio de mentalidad:
 - **Pensamiento tipológico:** buscar el caso "promedio" o esencial de una sociedad (el "hombre medio" de Quetelet). La variación es ruido.
 - **Pensamiento poblacional:** la **variación entre individuos es el fenómeno mismo**. No estudiamos a "el" chileno, sino cómo clase, género o educación alteran las *probabilidades* de distintos resultados de vida.
 
-## Dos tareas: hacer visible y hacer transparente {.smaller background-color="white"}
+## Dos tareas: hacer visible y hacer transparente {.smaller}
 
 Las regularidades sociales difieren en cuán fáciles son de **ver** y de **explicar**:
 
@@ -322,7 +322,7 @@ Las regularidades sociales difieren en cuán fáciles son de **ver** y de **expl
 
 2. **Hacerlas transparentes** (tarea explicativa): describir una brecha no explica *por qué* ocurre. Hay que identificar los **mecanismos**, acciones e interacciones individuales, que la producen.
 
-## El lugar de la encuesta {.smaller background-color="white"}
+## El lugar de la encuesta {.smaller}
 
 El principal logro científico de la investigación basada en encuestas ha sido su capacidad demostrada de **hacer visibles regularidades poblacionales que no podrían haberse observado de otra manera** (Goldthorpe, 2017).
 
@@ -336,7 +336,7 @@ Y los diseños más sofisticados —como los paneles, que siguen a las mismas pe
 
 # Medir la realidad social
 
-## Medir: asignar números según una regla {.smaller background-color="white"}
+## Medir: asignar números según una regla {.smaller}
 
 Asún (2006) propone tratar la metodología cuantitativa como una **tecnología** para explorar el medio social. Su rasgo definitorio: **delimitar conceptualmente propiedades de los sujetos, asignarles números y analizarlos estadísticamente**.
 
@@ -348,7 +348,7 @@ Pero no medimos como en física: no hay unidades de medida para la autoestima o 
 
 El nivel de medición de una variable **no depende solo de la propiedad, sino del instrumento con que la medimos**. La edad preguntada en años es de razón; preguntada en tramos, solo ordinal.
 
-## Constructos latentes, indicadores indirectos {.smaller background-color="white"}
+## Constructos latentes, indicadores indirectos {.smaller}
 
 - **Constructos latentes:** gran parte de nuestros conceptos (cohesión social, autoritarismo, pobreza multidimensional) no tienen manifestación directamente observable.
 
@@ -360,7 +360,7 @@ El nivel de medición de una variable **no depende solo de la propiedad, sino de
 
 Por eso es usual que dos estudios sobre "lo mismo" se contradigan: usaron definiciones conceptuales y operacionales distintas, es decir, **midieron objetos distintos con el mismo nombre**.
 
-## Qué se pierde y qué se gana al medir {.smaller .dark-background}
+## Qué se pierde y qué se gana al medir {.smaller}
 
 Traducir la realidad social a números implica un "sacrificio" consciente:
 
@@ -388,7 +388,7 @@ La apuesta del investigador cuantitativo: que la simplificación **rescata lo es
 
 # De la parte al todo
 
-## El problema fundacional {.smaller background-color="white"}
+## El problema fundacional {.smaller}
 
 Desde el siglo XIX, los Estados producen **censos** y registros: invaluables, pero **caros, lentos y con pocas variables**. Para conocer en detalle las condiciones de vida de una población se necesitaban **"estudios parciales"**: estudiar a *algunos* para hablar de *todos*.
 
@@ -400,7 +400,7 @@ Desde el siglo XIX, los Estados producen **censos** y registros: invaluables, pe
 
 Tres soluciones compitieron durante un siglo. La historia de esa competencia explica por qué la encuesta moderna es como es (Goldthorpe, 2017, cap. 6).
 
-## Dos intentos fallidos {.smaller background-color="white"}
+## Dos intentos fallidos {.smaller}
 
 **1. El caso "típico", Le Play (1855).** Monografías en profundidad de familias obreras europeas, seleccionadas por ser "típicas" según autoridades locales (funcionarios, párrocos, médicos).
 
@@ -412,7 +412,7 @@ Tres soluciones compitieron durante un siglo. La historia de esa competencia exp
 
 - **Gran avance** del pensamiento tipológico al poblacional, pero con un límite central: ninguna forma de saber **cuánto error** se cometía al generalizar.
 
-## La solución probabilística {.smaller background-color="white"}
+## La solución probabilística {.smaller}
 
 **3. El muestreo probabilístico**, Bowley (1906), Neyman (1934). Selección aleatoria, donde cada miembro de la población tiene una probabilidad conocida y distinta de cero de ser incluido.
 
@@ -424,7 +424,7 @@ Tres soluciones compitieron durante un siglo. La historia de esa competencia exp
 
 **El punto de inflexión:** la encuesta moderna nace cuando se desarrolla un **mecanismo sistemático** para ir de la parte al todo, con un error conocido y calculable.
 
-## 1936: el tamaño no corrige un mal diseño {.smaller background-color="white"}
+## 1936: el tamaño no corrige un mal diseño {.smaller}
 
 El ejemplo clásico con que Groves et al. (2009) ilustran este punto: la elección presidencial de EE.UU. de 1936.
 
@@ -436,7 +436,7 @@ El ejemplo clásico con que Groves et al. (2009) ilustran este punto: la elecci�
 
 Una muestra pequeña pero **bien diseñada** le ganó a una 1.000 veces más grande y sesgada. (En **1948** las cuotas también fallarían —"Dewey defeats Truman"—, consolidando el muestreo **probabilístico** como estándar.)
 
-## ¿El Big Data mató a la encuesta? {.smaller background-color="white"}
+## ¿El Big Data mató a la encuesta? {.smaller}
 
 El mismo debate, 80 años después. Savage & Burrows (2007): ante los datos transaccionales masivos, la encuesta quedaría condenada a la irrelevancia. La respuesta de Goldthorpe:
 
@@ -449,7 +449,7 @@ El mismo debate, 80 años después. Savage & Burrows (2007): ante los datos tran
 
 # ¿Qué es una encuesta?
 
-## Una definición de trabajo {.smaller background-color="white"}
+## Una definición de trabajo {.smaller}
 
 > Una encuesta es un **método sistemático** para recoger información de **(una muestra de) entidades**, con el fin de construir **descriptores cuantitativos** de los atributos de la **población mayor** de la que esas entidades son miembros.
 >
@@ -461,7 +461,7 @@ Tres rasgos delimitan las encuestas que estudiaremos en este curso:
 2. Las respuestas se recogen de forma **estandarizada**: mismas preguntas, mismo orden, para que las diferencias entre respuestas reflejen diferencias entre personas y no entre aplicaciones del instrumento (Cea d'Ancona, 2004).
 3. Se recoge información de **solo un subconjunto** de la población: una **muestra**.
 
-## El rasgo que define el campo {.smaller background-color="white"}
+## El rasgo que define el campo {.smaller}
 
 La información de encuesta es **indirecta**: declaraciones verbales sobre hechos, conductas y actitudes, no observación directa de la realidad.
 
@@ -473,7 +473,7 @@ Por eso su calidad **nunca puede darse por sentada**: depende de qué se pregunt
 
 La **metodología de encuestas** es, precisamente, el estudio de cómo cada decisión de diseño afecta esa calidad. Ese es el oficio que este curso busca formar.
 
-## La encuesta no es la única vía (ni la "mejor") {.smaller background-color="white"}
+## La encuesta no es la única vía (ni la "mejor") {.smaller}
 
 No hay una forma "correcta" de conocer una población; hay instrumentos con fortalezas y límites distintos (Groves et al., 2009):
 
@@ -488,7 +488,7 @@ No hay una forma "correcta" de conocer una población; hay instrumentos con fort
 
 Las fuentes se **complementan**: lo cualitativo alimenta el diseño del cuestionario; los registros validan y enriquecen los datos de encuesta.
 
-## Ejemplo: ¿cuánta delincuencia hay en Chile? {.smaller background-color="white"}
+## Ejemplo: ¿cuánta delincuencia hay en Chile? {.smaller}
 
 Los registros policiales solo capturan los delitos **denunciados** —y la propensión a denunciar varía por grupo social, por tipo de delito y por época. Un alza en las denuncias puede reflejar más delitos... o más confianza en denunciar.
 
@@ -500,7 +500,7 @@ Por eso existen las encuestas de **victimización** (la **ENUSC** en Chile, la N
 
 Ninguna de las dos fuentes es "la verdadera": **miden cosas distintas y se complementan**. Lo importante es ser capaz de identificar las **fortalezas y debilidades de cada fuente de información**.
 
-## Cinco preguntas para leer cualquier encuesta {.smaller background-color="white"}
+## Cinco preguntas para leer cualquier encuesta {.smaller}
 
 Groves et al. (2009) proponen las primeras preguntas que hay que hacerle a **toda** encuesta. Serán nuestra herramienta de trabajo durante el semestre:
 
@@ -512,7 +512,7 @@ Groves et al. (2009) proponen las primeras preguntas que hay que hacerle a **tod
 
 Y una sexta, clave en encuestas de hogares: **¿quién responde por quién?** ¿Cada persona por sí misma (autoinforme) o una persona por todo el hogar (proxy)?
 
-## Las dimensiones del diseño {.smaller background-color="white"}
+## Las dimensiones del diseño {.smaller}
 
 Las respuestas a esas preguntas generan la diversidad de encuestas existentes. No hay un "molde único", sino adaptación a la pregunta de investigación y a los recursos:
 
@@ -550,7 +550,7 @@ Las respuestas a esas preguntas generan la diversidad de encuestas existentes. N
 
 # ¿Quién produce encuestas en Chile?
 
-## Distintos contextos de producción {.smaller .dark-background}
+## Distintos contextos de producción {.smaller}
 
 Las encuestas son producidas en **contextos institucionales diversos**, que tienen objetivos, plazos y presupuestos distintos, y por tanto **priorizan distintas dimensiones de la calidad**.
 
@@ -562,7 +562,7 @@ Las encuestas son producidas en **contextos institucionales diversos**, que tien
 | 💼 **Comercial** | Empresas de estudios de mercado y opinión, consultoras | Decisiones de clientes, pauta de medios, contingencia | Rápido, presupuesto ajustado. Prioridad: **oportunidad** |
 :::
 
-## Leamos cuatro encuestas reales {.smaller background-color="white"}
+## Leamos cuatro encuestas reales {.smaller}
 
 Vamos a revisar **cuatro fichas técnicas** de encuestas chilenas, una estructura que usaremos todo el semestre.
 
@@ -570,7 +570,7 @@ Vamos a revisar **cuatro fichas técnicas** de encuestas chilenas, una estructur
 
 Para cada caso, intenten responder mentalmente las **cinco preguntas** de la sección anterior y detectar el **compromiso** que el contexto de producción le impone al diseño: ¿qué priorizó esta encuesta y qué sacrificó a cambio?
 
-## Encuesta CASEN 2024 {.smaller background-color="white"}
+## Encuesta CASEN 2024 {.smaller}
 
 ::: {style="font-size: 0.85em;"}
 - **Mandante:** Ministerio de Desarrollo Social y Familia (MDSF).
@@ -583,7 +583,7 @@ Para cada caso, intenten responder mentalmente las **cinco preguntas** de la sec
 - **Unidad Informante:** *Proxy* (Informante idóneo de 18+ años responde por el resto del hogar).
 :::
 
-## II ENUT 2023 {.smaller background-color="white"}
+## II ENUT 2023 {.smaller}
 
 ::: {style="font-size: 0.85em;"}
 - **Mandante y Ejecutor:** Instituto Nacional de Estadísticas (INE).
@@ -596,7 +596,7 @@ Para cada caso, intenten responder mentalmente las **cinco preguntas** de la sec
 - **Unidad Informante:** *Autoinforme* (Cuestionario Uso del Tiempo - CUT) y *Proxy* (Cuestionario del Hogar).
 :::
 
-## ELSOC (COES) {.smaller background-color="white"}
+## ELSOC (COES) {.smaller}
 
 ::: {style="font-size: 0.85em;"}
 - **Mandante:** COES (ANID) / **Ejecutor:** CMD (UChile).
@@ -609,7 +609,7 @@ Para cada caso, intenten responder mentalmente las **cinco preguntas** de la sec
 - **Unidad Informante:** Autoinforme directo.
 :::
 
-## Plaza Pública Cadem 2026 {.smaller background-color="white"}
+## Plaza Pública Cadem 2026 {.smaller}
 
 ::: {style="font-size: 0.85em;"}
 - **Mandante y Ejecutor:** Cadem.
@@ -624,7 +624,7 @@ Para cada caso, intenten responder mentalmente las **cinco preguntas** de la sec
 
 # Síntesis
 
-## No existe la encuesta perfecta {.smaller background-color="white"}
+## No existe la encuesta perfecta {.smaller}
 
 Lo que vimos hoy, en una página:
 
@@ -633,7 +633,7 @@ Lo que vimos hoy, en una página:
 3. El muestreo probabilístico dio a la investigación social un **mecanismo sistemático** para ir de la parte al todo, con error calculable; el tamaño no corrige por sí solo un diseño sesgado (Literary Digest, Google Flu Trends).
 4. Toda encuesta responde a **cinco decisiones de diseño** (población, marco, selección, modo, temporalidad), y en cada **contexto de producción** —público, académico, comercial— se resolverán bajo compromisos distintos entre teoría, error y costo.
 
-## Lo que viene {.smaller background-color="white"}
+## Lo que viene {.smaller}
 
 La próxima semana formalizamos esta intuición con los dos marcos que estructuran el curso:
 

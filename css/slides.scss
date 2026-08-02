@@ -86,36 +86,8 @@ span.tag {
 }
 
 // ==========================================
-// 5. DIAPOSITIVAS DE SECCIÓN OSCURAS
-// La clase .dark-background se usa en los .qmd para marcar diapositivas de
-// contraste (unidades, tablas panorámicas). Sin esta regla no producía nada.
+// 5. FONDO
+// Todas las diapositivas van en blanco; no se declaran fondos en los .qmd.
 // ==========================================
-.reveal section.dark-background {
-  background-color: $brand-main !important;
-  color: #ffffff;
-
-  h1, h2, h3, h4 { color: #ffffff; }
-  h2 { border-bottom-color: $brand-accent; }
-  strong { color: #ffffff; }
-  a { color: #8FD3E4; }
-
-  table {
-    color: #ffffff;
-    tr.header { background-color: rgba(255, 255, 255, 0.15); }
-    tr.odd { background-color: rgba(255, 255, 255, 0.06); }
-    td, th { border-color: rgba(255, 255, 255, 0.25); }
-  }
-
-  // Los callouts de Reveal no traen fondo propio: sobre navy quedarían
-  // ilegibles. Se les da un panel claro para que sigan leyéndose.
-  .callout {
-    background-color: rgba(255, 255, 255, 0.94);
-    color: #1a1a1a;
-    padding-right: 0.4em;
-
-    .callout-title, .callout-title-container, .callout-body, p, li, strong {
-      color: #1a1a1a;
-    }
-    a { color: $brand-accent-dk; }
-  }
-}
+.reveal .slide-background,
+.reveal .backgrounds { background-color: #ffffff; }

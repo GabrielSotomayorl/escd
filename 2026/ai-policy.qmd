@@ -5,7 +5,22 @@ format: html
 toc: true
 ---
 
-Este curso se rige por los lineamientos de la **Política de Uso Ético de IA del ISUC** (Instituto de Sociología, Pontificia Universidad Católica de Chile), que se resumen a continuación.  
+Este curso se rige por los lineamientos de la **Política de Uso Ético de IA del ISUC** (Instituto de Sociología, Pontificia Universidad Católica de Chile), que se resumen más abajo, y los concreta en la siguiente política propia.
+
+---
+
+## Política específica de este curso
+
+En este curso, el uso de IA generativa se regula según el tipo de evaluación:
+
+- **Proyecto grupal y tareas aplicadas:** uso **permitido como apoyo**, en tareas como revisión de redacción, corrección y documentación de código R, exploración de ideas y síntesis de material. Requiere el **anexo de declaración obligatorio** descrito más abajo.
+- **Controles de lectura:** uso **prohibido**. Se rinden presencialmente en sala, sin dispositivos electrónicos.
+
+::: {.callout-important}
+## Lo que la IA no reemplaza
+
+Las **decisiones metodológicas y su justificación** son el corazón de las evaluaciones de este curso y deben ser elaboración propia del o la estudiante (o del grupo). Un trabajo cuyo argumento central no pueda ser explicado y defendido oralmente por sus autores/as no acredita el aprendizaje que se evalúa.
+:::
 
 ---
 
