@@ -30,9 +30,11 @@ Si no puedes en ese horario, escribe al correo del profesor para coordinar otro 
 
 ## Ayudantes
 
+![](/figures/people/ayudante.jpg){fig-align="left" fig-alt="Foto de Amanda Vieira" style="object-fit: cover;width:5em;height:5em;border-radius: 50%;"}
 **Amanda Vieira** <br/>
 [Pontificia Universidad Católica de Chile](https://sociologia.uc.cl/)<br/>
 📧 [amanda.vieira@uc.cl](mailto:amanda.vieira@uc.cl)
+
 
 :::
 

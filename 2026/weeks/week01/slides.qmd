@@ -45,15 +45,25 @@ format:
 :::
 :::
 
-## Ayudante/s {.smaller}
+## Ayudante {.smaller}
 
-::: {.callout-note icon=false title="Amanda Vieira"}
-Ayudante del curso · Pontificia Universidad Católica de Chile
-
-📧 [amanda.vieira@uc.cl](mailto:amanda.vieira@uc.cl)
+::: columns
+::: {.column style="display:inline-block;width:40%;height:60%;border-radius:1em;margin:1%;padding:1.5%;background-color:#ffffff; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"}
+<figure style="text-align: center;">
+    <img src="/figures/people/ayudante.jpg" alt="Imagen de Amanda Vieira" role="presentation" style="object-fit: cover;width:6em;height:6em;border-radius: 50%;font-size:1em; margin: 0 auto;" class="img-responsive atto_image_button_text-bottom">
+    <figcaption style="margin-top: 15px;">
+        <strong>Amanda Vieira</strong>
+        <br/>Ayudante del curso
+        <br/>Pontificia Universidad Católica de Chile
+    </figcaption>
+</figure>
 :::
 
-El horario de ayudantía se usará primariamente para revisión d e la bibliografía del curso y como complemento al trabajo práctico de los talleres a realizar en los horarios de cátedra. 
+::: {.column style="width:50%;font-size:1em;margin-left:3%; margin-top:5%;"}
+- 📧 [amanda.vieira@uc.cl](mailto:amanda.vieira@uc.cl)
+- El horario de ayudantía se usará primariamente para la **revisión de la bibliografía** del curso y como complemento al **trabajo práctico de los talleres** realizados en los horarios de cátedra.
+:::
+:::
 
 ## ¿De qué trata este curso? {.smaller}
 
