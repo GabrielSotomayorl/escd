@@ -80,3 +80,7 @@ format:
       - goatcounter.html
     margin-header: |
       ![](/figures/logos/MY_INSTITUTION.png)
+
+  revealjs:
+    include-in-header:
+      - goatcounter.html
