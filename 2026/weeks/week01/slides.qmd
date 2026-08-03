@@ -165,16 +165,16 @@ El curso se estructura en torno a tres componentes complementarios: un **trabajo
 ::: {style="font-size: 1.4rem;"}
 | Componente | Ponderación |
 |:---|:---:|
-| **Proyecto grupal: análisis crítico y propuesta de mejora** | **60%** |
+| **Proyecto grupal: análisis crítico y propuesta de mejora** | **50%** |
 | **Tareas aplicadas** (4 tareas × 5%) | **20%** |
-| **Controles de lectura en sala** (2 controles × 10%) | **20%** |
+| **Controles de lectura en sala** (2 controles × 15%) | **30%** |
 :::
 
 ::: {.callout-important title="⚠️ Requisito de aprobación"}
 Asistencia mínima de **70%** a clases para aprobar el curso.
 :::
 
-## Proyecto Grupal (60%) {.smaller}
+## Proyecto Grupal (50%) {.smaller}
 
 En grupos pequeños, se desarrolla un **análisis metodológico crítico** de una encuesta social existente y una **propuesta fundamentada de mejora** para una versión futura.
 
@@ -183,12 +183,12 @@ El trabajo aplica los marcos **TSE** y **GSBPM** para diagnosticar decisiones en
 ::: {style="font-size: 1.3rem;"}
 | Entrega | Descripción | Ponderación |
 |:---|:---|:---:|
-| **Entrega 1** | Análisis crítico: marco conceptual, necesidades de información y diseño muestral. | 15% |
+| **Entrega 1** | Análisis crítico: marco conceptual, necesidades de información y diseño muestral. | 10% |
 | **Entrega 2** | Análisis del instrumento, recolección, procesamiento e identificación del problema metodológico central. | 15% |
-| **Entrega 3** | Reporte final integrado con propuesta de mejora y **presentación oral grupal**. | 30% |
+| **Entrega 3** | Reporte final integrado con propuesta de mejora y **presentación oral grupal**. | 25% |
 :::
 
-## Tareas Aplicadas y Controles (40%) {.smaller}
+## Tareas Aplicadas y Controles (50%) {.smaller}
 
 ::: {.callout-tip title="Tareas Aplicadas (20%)"}
 **Cuatro tareas** breves (individuales o en pares), vinculadas a talleres específicos del semestre. Cada tarea exige una decisión metodológica argumentada y un producto entregable.
@@ -196,10 +196,10 @@ El trabajo aplica los marcos **TSE** y **GSBPM** para diagnosticar decisiones en
 **Cada tarea: 5%**
 :::
 
-::: {.callout-note title="Controles de Lectura (20%)"}
+::: {.callout-note title="Controles de Lectura (30%)"}
 **Dos controles** breves en sala, sobre la bibliografía obligatoria de la primera y segunda mitad del semestre. Combinan preguntas de comprensión conceptual y de aplicación breve.
 
-**Cada control: 10%**
+**Cada control: 15%**
 :::
 
 ## Uso de IA: Lineamientos ISUC {.smaller}

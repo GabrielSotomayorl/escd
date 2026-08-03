@@ -94,27 +94,27 @@ La evaluación del curso se estructura en torno a tres componentes complementari
 
 | Componente | Ponderación |
 |:---|:---:|
-| **Proyecto grupal** | 60% |
+| **Proyecto grupal** | 50% |
 | **Tareas aplicadas** | 20% |
-| **Controles de lectura en sala** | 20% |
+| **Controles de lectura en sala** | 30% |
 
-### 1. Proyecto grupal: análisis crítico y propuesta de mejora (60%)
+### 1. Proyecto grupal: análisis crítico y propuesta de mejora (50%)
 
 En grupos pequeños, las y los estudiantes desarrollan durante el semestre un análisis metodológico crítico de una encuesta social existente y una propuesta fundamentada de mejora para una versión futura de la misma. El trabajo aplica los marcos del Error Total de Encuesta (TSE) y del Modelo Genérico del Proceso Estadístico (GSBPM) para diagnosticar las decisiones metodológicas en cada fase del ciclo de producción —especificación de necesidades, diseño muestral, construcción del instrumento, recolección, procesamiento, análisis y diseminación— y para fundamentar la propuesta. La evaluación se distribuye en tres entregas escalonadas, lo que permite a los estudiantes recibir retroalimentación formativa oportuna:
 
 | Entrega | Descripción | Ponderación |
 |:---|:---|:---:|
-| **Entrega 1** | Análisis crítico inicial centrado en marco conceptual, necesidades de información y diseño muestral. | 15% |
+| **Entrega 1** | Análisis crítico inicial centrado en marco conceptual, necesidades de información y diseño muestral. | 10% |
 | **Entrega 2** | Análisis del instrumento, recolección y procesamiento, e identificación del problema metodológico que la propuesta abordará. | 15% |
-| **Entrega 3** | Reporte final integrado con propuesta de mejora fundamentada y presentación oral grupal. | 30% |
+| **Entrega 3** | Reporte final integrado con propuesta de mejora fundamentada y presentación oral grupal. | 25% |
 
 ### 2. Tareas aplicadas (20%)
 
 Cuatro tareas breves, individuales o en pares, vinculadas a talleres específicos del semestre. Cada tarea aplica los contenidos y herramientas trabajados en el taller correspondiente y exige una decisión metodológica argumentada acompañada de un producto entregable. Cada tarea pondera un **5%**.
 
-### 3. Controles de lectura en sala (20%)
+### 3. Controles de lectura en sala (30%)
 
-Dos controles breves realizados en sala, sobre la bibliografía obligatoria correspondiente a la primera y a la segunda mitad del semestre, respectivamente. Combinan preguntas de comprensión conceptual y de aplicación breve. Cada control pondera un **10%**.
+Dos controles breves realizados en sala, sobre la bibliografía obligatoria correspondiente a la primera y a la segunda mitad del semestre, respectivamente. Combinan preguntas de comprensión conceptual y de aplicación breve. Cada control pondera un **15%**.
 
 ::: {.callout-important}
 **Requisito de asistencia:** 70% de las clases para aprobar el curso.
