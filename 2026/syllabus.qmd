@@ -13,13 +13,13 @@ toc: true
 | **Traducción** | Social Surveys for Diverse Contexts |
 | **Sigla** | SOL-314 |
 | **Créditos** | 10 |
-| **Módulos** | 3 por semana (2 de cátedra y 1 de ayudantía) |
-| **Requisito** | SOL208 |
+| **Módulos** | 3 módulos (2 de cátedra y 1 de ayudantía a la semana) |
+| **Requisitos** | SOL208 |
 | **Carácter** | Optativo |
 | **Tipo** | Cátedra |
 | **Formato** | Presencial |
 | **Calificación** | Estándar |
-| **Palabras clave** | Encuestas sociales, Diseño metodológico, Cuestionarios, Error total |
+| **Palabras clave** | Encuestas sociales, Diseño metodológico, Cuestionarios, Error total. |
 | **Nivel formativo** | Pregrado |
 | **Docente** | Gabriel Sotomayor<br>gasotomayorl@uc.cl |
 | **Ayudante** | Amanda Vieira<br>amanda.vieira@uc.cl |
@@ -100,7 +100,7 @@ La evaluación del curso se estructura en torno a tres componentes complementari
 
 ### 1. Proyecto grupal: análisis crítico y propuesta de mejora (50%)
 
-En grupos pequeños, las y los estudiantes desarrollan durante el semestre un análisis metodológico crítico de una encuesta social existente y una propuesta fundamentada de mejora para una versión futura de la misma. El trabajo aplica los marcos del Error Total de Encuesta (TSE) y del Modelo Genérico del Proceso Estadístico (GSBPM) para diagnosticar las decisiones metodológicas en cada fase del ciclo de producción —especificación de necesidades, diseño muestral, construcción del instrumento, recolección, procesamiento, análisis y diseminación— y para fundamentar la propuesta. La evaluación se distribuye en tres entregas escalonadas, lo que permite a los estudiantes recibir retroalimentación formativa oportuna:
+En grupos pequeños, las y los estudiantes desarrollan durante el semestre un análisis metodológico crítico de una encuesta social existente y una propuesta fundamentada de mejora para una versión futura de la misma. El trabajo aplica los marcos del Error Total de Encuesta (TSE) y del Modelo Genérico del Proceso Estadístico (GSBPM) para diagnosticar las decisiones metodológicas en cada fase del ciclo de producción, especificación de necesidades, diseño muestral, construcción del instrumento, recolección, procesamiento, análisis y diseminación, y para fundamentar la propuesta. La evaluación se distribuye en tres entregas escalonadas, lo que permite a los estudiantes recibir retroalimentación formativa oportuna:
 
 | Entrega | Descripción | Ponderación |
 |:---|:---|:---:|
@@ -110,14 +110,14 @@ En grupos pequeños, las y los estudiantes desarrollan durante el semestre un an
 
 ### 2. Tareas aplicadas (20%)
 
-Cuatro tareas breves, individuales o en pares, vinculadas a talleres específicos del semestre. Cada tarea aplica los contenidos y herramientas trabajados en el taller correspondiente y exige una decisión metodológica argumentada acompañada de un producto entregable. Cada tarea pondera un **5%**.
+Cuatro tareas breves, individuales o en pares, vinculadas a talleres específicos del semestre. Cada tarea aplica los contenidos y herramientas trabajados en el taller correspondiente y exige una decisión metodológica argumentada acompañada de un producto entregable. Cada tarea pondera **5%**.
 
 ### 3. Controles de lectura en sala (30%)
 
-Dos controles breves realizados en sala, sobre la bibliografía obligatoria correspondiente a la primera y a la segunda mitad del semestre, respectivamente. Combinan preguntas de comprensión conceptual y de aplicación breve. Cada control pondera un **15%**.
+Dos controles breves realizados en sala, sobre la bibliografía obligatoria correspondiente a la primera y a la segunda mitad del semestre, respectivamente. Combinan preguntas de comprensión conceptual y de aplicación breve. Cada control pondera **15%**.
 
 ::: {.callout-important}
-**Requisito de asistencia:** 70% de las clases para aprobar el curso.
+**Requisito de asistencia a clases para aprobar el curso:** 70%
 :::
 
 
@@ -137,7 +137,7 @@ Dos controles breves realizados en sala, sobre la bibliografía obligatoria corr
 - United Nations Economic Commission for Europe (UNECE). (2025). *Generic Statistical Business Process Model: GSBPM* (Version 5.2). UNECE.
 - United Nations Statistics Division. (2026). *Handbook of Surveys on Households and Individuals: Foundations and Emerging Approaches* (Final draft, updated version of April 30, 2026). Background document prepared for the 57th session of the United Nations Statistical Commission, New York, 3–6 March 2026.
 
-### Bibliografía Optativa
+### Bibliografía optativa
 
 - Díaz de Rada, V., Domínguez Álvarez, J. A., & Pasadas del Amo, S. (2019). *Internet como modo de administración de encuestas* (Cuaderno Metodológico 59). CIS.
 - Lohr, S. L. (2022). *Sampling: Design and Analysis* (3.ª ed.). Chapman & Hall/CRC.
@@ -146,18 +146,31 @@ Dos controles breves realizados en sala, sobre la bibliografía obligatoria corr
 - Zimmer, S. A., Powell, R. J., & Velásquez, I. C. (2024). *Exploring Complex Survey Data Analysis Using R: A Tidy Introduction with {srvyr} and {survey}*. Chapman & Hall: CRC Press.
 
 
-## VIII. Integridad Académica y Uso de IA
-
-### Integridad Académica
+## VIII. Integridad Académica y uso de IA
 
 Las faltas a la Integridad Académica son definidas como acciones de plagio, fraude y/o adulteración de documentación cometidas de forma individual o colectiva, que atenten contra los valores de honestidad, veracidad, confianza, justicia, respeto y responsabilidad, dentro del marco de actividades académicas.
 
-El o la docente responsable de la actividad donde fue cometida la falta podrá aplicar una medida académica de manera inmediata al estudiante, si lo considera pertinente (por ejemplo, sancionar al estudiante con un 1.0 en la evaluación correspondiente). Adicionalmente, conforme a la Política de Integridad Académica de la Universidad, toda falta será derivada al **Comité de Integridad Académica de la Facultad de Ciencias Sociales**. Este órgano definirá la gravedad de la falta (leve, moderada o grave) y las consecuencias de dicha falta, con foco formativo. Este órgano también realizará seguimiento del caso.
+El o la docente responsable de la actividad donde fue cometida la falta podrá aplicar una medida académica de manera inmediata al estudiante, si lo considera pertinente (por ejemplo, sancionar al estudiante con un 1.0 en la evaluación correspondiente). Adicionalmente, conforme a la Política de Integridad Académica de la Universidad, toda falta será derivada al Comité de Integridad Académica de la Facultad de Ciencias Sociales. Este órgano definirá la gravedad de la falta (leve, moderada o grave) y las consecuencias de dicha falta, con foco formativo. Este órgano también realizará seguimiento del caso.
 
-En caso de que la o el estudiante no aceptase las consecuencias establecidas por el Comité, podrá solicitar a este órgano la revisión de su caso. Una vez realizada la revisión, y si aún el o la estudiante no desea asumir las consecuencias planteadas por el Comité, podrá apelar a la Secretaría General de la Universidad.
-
-Asimismo, se recomienda consultar las guías de Bibliotecas UC sobre el uso ético de la información y la adecuada citación: [http://guiastematicas.bibliotecas.uc.cl](http://guiastematicas.bibliotecas.uc.cl). Los detalles de la política de integridad académica UC se encuentran en: [https://integridadacademica.uc.cl/](https://integridadacademica.uc.cl/)
+En caso de que la o el estudiante no aceptase las consecuencias establecidas por el Comité, podrá solicitar a este órgano la revisión de su caso. Una vez realizada la revisión, y si aún el o la estudiante no desea asumir las consecuencias planteadas por el Comité, podrá apelar a Secretaría General de la Universidad. Asimismo, se recomienda consultar las guías de Bibliotecas UC sobre el uso ético de la información y la adecuada citación ([http://guiastematicas.bibliotecas.uc.cl](http://guiastematicas.bibliotecas.uc.cl)). Los detalles de la política de integridad académica UC se encuentran aquí: [https://integridadacademica.uc.cl/](https://integridadacademica.uc.cl/)
 
 ### Uso Ético de IA
 
-Los cursos se rigen por los lineamientos de la **Política de Uso Ético de IA del ISUC**. Consulta la [🤖 Política de IA](ai-policy.qmd) del curso para más detalles.
+Los cursos se rigen por los lineamientos de la Política de Uso Ético de IA del ISUC, bajo el marco general de los Lineamientos UC que comprende, entre otros, que:
+
+Cada docente deberá indicar explícitamente en el programa de su curso y en las instrucciones de los trabajos y actividades si el uso de IA está prohibido, permitido o recomendado, especificando además para qué tareas y en qué medida puede utilizarse. **En el presente curso el uso de IA se encuentra permitido para el proyecto grupal y las tareas aplicadas, y prohibido en el caso de los controles de lectura. En todos los casos deberá presentarse una declaración detallada de uso de IA y compartirse los log de conversación, ya sea a través de un enlace o de la copia directa del historial en un archivo.**
+
+El uso de IA no exime al estudiantado de dominar el contenido y argumentos de sus trabajos. Las y los estudiantes son totalmente responsables por el contenido de sus trabajos, con independencia de la asistencia de IA generativa. Por ello, los y las docentes tendrán la facultad de citar a exposición oral de los trabajos entregados, sin necesidad de aviso previo, con el fin de evaluar el dominio real del/de la estudiante sobre el producto presentado. En base a estos antecedentes el/la docente podrá determinar la nota final del trabajo.
+
+Cuando el uso de IA sea tolerado (restringido, permitido, sugerido u obligatorio), las y los estudiantes deberán incluir un apartado en los anexos del trabajo indicando:
+
+- Qué herramientas de IA generativa fueron utilizadas.
+- Para qué tareas fueron utilizadas (por ejemplo: revisión de redacción, corrección de ortografía, corrección de código, análisis de datos, etc.)
+
+Este apartado será obligatorio y tendrá como finalidad garantizar la transparencia, trazabilidad y responsabilidad en el uso de estas tecnologías. En caso de no ser incluido, el trabajo podrá ser evaluado con nota mínima por la o el docente del curso. Además, las y los docentes podrán solicitar copia de los prompts utilizados para la interacción con la IA generativa.
+
+La evaluación de trabajos y pruebas seguirá siempre el criterio experto y académico del docente, por ende, la nota final podrá incluir tanto elementos de rúbricas estandarizadas que hayan sido definidas previamente, como consideraciones académicas de los profesores.
+
+En caso de constatar el uso no autorizado de IA generativa por parte de estudiantes en cualquier trabajo académico, las y los docentes se orientarán por los lineamientos de la universidad en atención a la correspondiente evaluación y sanción de la falta a la integridad académica.
+
+Consulta la [🤖 Política de IA](ai-policy.qmd) del curso para el detalle completo.

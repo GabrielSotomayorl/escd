@@ -220,7 +220,7 @@ Este curso se rige por la **Política de Uso Ético de IA del ISUC** (Instituto 
 El uso de IA **no exime** de dominar el contenido y los argumentos del trabajo. Las y los estudiantes son **totalmente responsables** por sus entregas, con independencia del uso de IA. El docente puede solicitar exposición oral sin aviso previo.
 :::
 
-- El docente indica explícitamente en cada evaluación si el uso de IA está prohibido, permitido o recomendado.
+- El docente indica explícitamente en el programa y en las instrucciones de cada trabajo si el uso de IA está prohibido, permitido o recomendado.
 - Cuando esté autorizado: se debe incluir un **anexo** con las herramientas usadas y para qué tareas.
 - Uso no autorizado → falta de integridad académica.
 
@@ -229,8 +229,12 @@ El uso de IA **no exime** de dominar el contenido y los argumentos del trabajo. 
 ::: {style="font-size: 0.95em;"}
 | Evaluación | Uso de IA |
 |:---|:---|
-| **Proyecto grupal y tareas aplicadas** | **Permitido como apoyo**: revisión de redacción, corrección y documentación de código R, exploración de ideas. Requiere **anexo obligatorio** declarando herramientas y usos. |
-| **Controles de lectura** |  **Prohibido**: se rinden presencialmente en sala, sin dispositivos. |
+| **Proyecto grupal y tareas aplicadas** | **Permitido.** |
+| **Controles de lectura** | **Prohibido**: se rinden presencialmente en sala, sin dispositivos. |
+:::
+
+::: {.callout-important title="En todos los casos"}
+Debe presentarse una **declaración detallada de uso de IA** y **compartirse los logs de conversación**, por enlace o copia directa del historial en un archivo. Si el anexo no se incluye, el trabajo podrá evaluarse con nota mínima.
 :::
 
 
