@@ -288,7 +288,7 @@ Las comunicaciones con el equipo docente para **temas colectivos** deberán gest
 ## Encuestas operando en la sociedad chilena {.smaller}
 
 ::: {style="font-size: 0.9em;"}
-Las encuestas no son un asunto solo académico: producen los números con que la sociedad chilena se describe y se gobierna.
+Las encuestas producen números con que la sociedad chilena se describe y se gobierna.
 
 - Cada mes, el **INE** publica estimaciones de la tasa de desocupación de la **ENE** para trimestres móviles: informa proyecciones económicas, decisiones de inversión y titulares.
 - En sus rondas periódicas, la **CASEN** entrega la tasa oficial de **pobreza**: orienta la asignación de recursos del Estado y la evaluación de las políticas sociales.
@@ -613,7 +613,7 @@ Para cada caso, intenten responder mentalmente las **cinco preguntas** de la sec
 ## ELSOC (COES) {.smaller}
 
 ::: {style="font-size: 0.85em;"}
-- **Mandante:** COES (ANID) / **Ejecutor:** CMD (UChile).
+- **Mandante:** COES  / **Ejecutor:** CMD (UChile).
 - **Año Inicio / Frecuencia:** 2016 / **Longitudinal (Panel Anual)**.
 - **Propósito:** Analizar la evolución intertemporal del conflicto y la cohesión social en Chile.
 - **Población Objetivo:** Adultos (18-75 años) en zonas urbanas de ciudades con >10.000 habitantes.
@@ -640,7 +640,7 @@ Para cada caso, intenten responder mentalmente las **cinco preguntas** de la sec
 
 ## No existe la encuesta perfecta {.smaller}
 
-Lo que vimos hoy, en una página:
+Lo que vimos hoy:
 
 1. La sociología es una **ciencia de la población**: busca regularidades probabilísticas en agregados, y la encuesta es su principal tecnología para **hacerlas visibles**.
 2. **Medir** lo social es asignar números según reglas, a constructos que solo alcanzamos por indicadores indirectos: un trato con pérdidas y ganancias que hay que administrar conscientemente.
@@ -658,5 +658,6 @@ La próxima semana formalizamos esta intuición con los dos marcos que estructur
 
 📖 **Lecturas obligatorias de esta semana:**
 
-- Asún (2006), "Medir la realidad social", pp. 31–61.
 - Goldthorpe (2017), "Estadística y métodos de recogida de datos", cap. 6.
+- Asún (2006), "Medir la realidad social", pp. 31–61.
+
