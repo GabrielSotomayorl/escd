@@ -1,0 +1,29 @@
+---
+title: "🗓️ Semana 02: Error Total de Encuesta y GSBPM"
+---
+
+En esta semana presentamos los dos marcos conceptuales que estructuran el curso. En el primer bloque abordamos el **Error Total de Encuesta (TSE)**: toda cifra de encuesta es una estimación que descansa en dos inferencias —de la respuesta al constructo y de los respondientes a la población— y el TSE organiza las siete fuentes de desvío (validez, medición, procesamiento, cobertura, muestreo, no respuesta y ajuste), sus componentes de sesgo y varianza, y su uso como lente de diseño y evaluación. En el segundo bloque presentamos el **Modelo Genérico del Proceso Estadístico (GSBPM)** como instrumento que ordena el trabajo de producción en ocho fases y actividades transversales, y la relación entre ambos marcos: el TSE entrega los criterios de calidad; el GSBPM, la organización del proceso.
+
+## Clase Expositiva
+
+Puedes navegar por las diapositivas directamente en el recuadro de abajo o hacer clic [aquí](slides.qmd) para ver la presentación en pantalla completa. Usa las flechas de tu teclado para avanzar.
+
+<div class="container" style="position: relative;overflow: hidden;width: 100%;min-height:600px;">
+<iframe src="slides.html" style="position: absolute;top: 0;left: 0;bottom: 0;right: 0;width: 100%;min-height:600px;"></iframe>
+</div>
+
+## Lecturas Obligatorias
+
+Para acompañar los contenidos de esta semana, por favor revisa el siguiente material:
+
+- Groves, R. M., Fowler, F. J., Couper, M. P., Lepkowski, J. M., Singer, E., & Tourangeau, R. (2009). *Survey Methodology* (2nd ed.). Wiley. Cap. 2: "Inference and Error in Surveys".
+- United Nations Economic Commission for Europe (UNECE). (2025). *Generic Statistical Business Process Model: GSBPM* (Version 5.2). Secciones I–II y panorama de fases (sección IV).
+
+## Lecturas Complementarias
+
+- Groves, R. M., & Lyberg, L. (2010). Total survey error: Past, present, and future. *Public Opinion Quarterly*, 74(5), 849–879.
+- Cea d'Ancona, M. Á. (2025). La calidad de la encuesta en la sociedad digital: avances y retrocesos. *Revista Española de Investigaciones Sociológicas*, 191, 25–42.
+
+## Dudas y Comunicación
+
+Recuerda que puedes utilizar los canales de comunicación establecidos o acercarte al profesor y ayudantes si tienes dudas sobre los contenidos de esta semana.

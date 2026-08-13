@@ -121,7 +121,48 @@ Dos controles breves realizados en sala, sobre la bibliografía obligatoria corr
 :::
 
 
-## VII. Bibliografía
+## VII. Programación de clases
+
+Las sesiones son los **viernes**, en dos bloques. El semestre tiene 15 sesiones, entre el 7 de agosto y el 27 de noviembre.
+
+| Semana | Fecha | Bloque 1 | Bloque 2 |
+|:---:|:---|:---|:---|
+| 1 | 07-08 | Presentación del curso | 1.1 Uso de encuestas en sociología e investigación social aplicada |
+| 2 | 14-08 | 1.2 El error total de encuesta (TSE) | 1.3 Modelo Genérico del Proceso Estadístico (GSBPM) |
+| 3 | 21-08 | 2.1 Especificación de necesidades | Taller aplicado 1: encargo simulado de necesidades |
+| 4 | 28-08 | 2.2 Marcos muestrales y cobertura | 2.3 Diseño muestral complejo (introducción) |
+| 5 | 04-09 | 2.3 Diseño muestral complejo (cierre) | Charla 1 |
+| 6 | 11-09 | 3.1 El proceso de respuesta a encuestas | 3.2 Construcción de escalas y operacionalización |
+| 7 | 25-09 | 3.3 Métodos de pretesteo | Taller aplicado 2: evaluación de preguntas reales |
+| 8 | 09-10 | Control de lectura 1 (Unidades 1–3) | Retroalimentación transversal de la Entrega 1 y avance del proyecto en grupos |
+| 9 | 16-10 | 4.1 Modos de administración y trabajo de campo | Charla 2 |
+| 10 | 23-10 | 4.2 Seguimiento del terreno e indicadores AAPOR | Taller computacional 1: paradata y tasas AAPOR en R |
+| 11 | 30-10 | 4.3 No respuesta y ajustes | Charla 3 |
+| 12 | 06-11 | 5.1 Análisis de encuestas complejas | Taller computacional 2: estimación con diseño complejo y calidad de las estimaciones |
+| 13 | 13-11 | 5.2 Calidad de datos y procesamiento | 5.3 Publicación, confidencialidad y evaluación de la ronda |
+| 14 | 20-11 | Control de lectura 2 (Unidades 4–5) | Sesión de trabajo del proyecto: consultas de la Entrega 3 |
+| 15 | 27-11 | Presentaciones orales del proyecto | Presentaciones orales, discusión comparativa y cierre del curso |
+
+::: {.callout-note}
+**Viernes sin clases:** 18 de septiembre (receso de docencia y feriado) y 2 de octubre (suspensión de actividades desde las 13:30).
+:::
+
+### Calendario de evaluaciones
+
+| Evaluación | Se asigna | Vence | Ponderación |
+|:---|:---|:---|:---:|
+| **Tarea 1** | Semana 3 · 21-08 | Semana 4 · 28-08 | 5% |
+| **Entrega 1** | — | Semana 6 · 11-09 | 10% |
+| **Tarea 2** | Semana 7 · 25-09 | Semana 8 · 09-10 | 5% |
+| **Control de lectura 1** | — | Semana 8 · 09-10, en sala | 15% |
+| **Tarea 3** | Semana 10 · 23-10 | Semana 11 · 30-10 | 5% |
+| **Entrega 2** | — | Semana 12 · final de la semana | 15% |
+| **Tarea 4** | Semana 12 · 06-11 | Semana 13 · mitad de la semana | 5% |
+| **Control de lectura 2** | — | Semana 14 · 20-11, en sala | 15% |
+| **Entrega 3** | — | Presentación oral en la semana 15 · 27-11; informe escrito al final de esa semana | 25% |
+
+
+## VIII. Bibliografía
 
 ### Bibliografía Obligatoria
 
@@ -146,7 +187,7 @@ Dos controles breves realizados en sala, sobre la bibliografía obligatoria corr
 - Zimmer, S. A., Powell, R. J., & Velásquez, I. C. (2024). *Exploring Complex Survey Data Analysis Using R: A Tidy Introduction with {srvyr} and {survey}*. Chapman & Hall: CRC Press.
 
 
-## VIII. Integridad Académica y uso de IA
+## IX. Integridad Académica y uso de IA
 
 Las faltas a la Integridad Académica son definidas como acciones de plagio, fraude y/o adulteración de documentación cometidas de forma individual o colectiva, que atenten contra los valores de honestidad, veracidad, confianza, justicia, respeto y responsabilidad, dentro del marco de actividades académicas.
 
