@@ -1,0 +1,324 @@
+---
+subtitle: "Encuestas Sociales para Contextos Diversos"
+title: "<font style='font-size:1em;'>🗓️ Semana 03<br/> Especificación de necesidades</font>"
+author: Prof. [Gabriel Sotomayor](https://gabrielsotomayorl.github.io/)
+institute: '[Pontificia Universidad Católica de Chile](https://sociologia.uc.cl/)'
+date: "2026-08-21"
+date-meta: "2026"
+date-format: "dddd DD [de] MMMM [de] YYYY"
+toc: true
+toc-depth: 1
+toc-title: "Contenidos de hoy:"
+center-title-slide: false
+from: markdown+emoji
+format:
+  revealjs:
+    fig-responsive: true
+    theme: [simple, ../../../css/slides.scss]
+    slide-number: true
+    mouse-wheel: false
+    preview-links: auto
+    logo: /figures/icons/course_favicon.png
+    footer: 'Encuestas Sociales para Contextos Diversos'
+---
+
+# Antes de la primera pregunta
+
+## Un encargo típico {.smaller}
+
+Imaginen que entran a trabajar a un ministerio, una consultora o un centro de estudios, y reciben este correo:
+
+> "Necesitamos una **encuesta nacional sobre la caida en la tasa de natalidad**"
+
+Casi ninguna encuesta nace de una pregunta de investigación pulida. Nace de una **demanda** —vaga, urgente, escrita en el lenguaje de quien la necesita, no del que la va a medir.
+
+**La pregunta de hoy:** ¿qué hay que hacer entre ese correo y el primer cuestionario? En ese trabajo —previo al terreno y a los datos— se juega buena parte de la calidad de la encuesta.
+
+## La primera estación del ciclo {.smaller}
+
+La semana pasada vimos dos mapas: el **TSE** (las fuentes de error) y el **GSBPM** (el proceso de producción). Hoy entramos a la **fase 1 del GSBPM: especificar necesidades**.
+
+Antes de diseñar una muestra o redactar una pregunta, alguien debe responder con precisión:
+
+::: {style="border-radius:0.7em;padding:0.8em 1em;background-color:#f2f2f2;font-size:0.9em;"}
+**qué** información se necesita, **para quién**, **para qué decisión**, con **qué calidad** — y, antes que nada, **si una encuesta nueva es realmente la respuesta**.
+:::
+
+El *Handbook* de encuestas de hogares de la ONU (2026) organiza esta fase en torno a tres preguntas encadenadas:
+
+**Necesidad** (¿qué se demanda?) → **Alcance** (¿qué encuesta lo resuelve?) → **Financiamiento** (¿se puede pagar?).
+
+# Demanda, pregunta y objetivo
+
+## Tres niveles que no son lo mismo {.smaller}
+
+El primer trabajo metodológico es traducir entre tres registros que se confunden con facilidad:
+
+::: {style="font-size:0.82em;"}
+| Nivel | Qué expresa | Ejemplo |
+|:---|:---|:---|
+| **Demanda de información** | una necesidad institucional o práctica | "necesitamos medir pobreza para orientar política social" |
+| **Pregunta de investigación** | una pregunta analítica o explicativa | "¿qué factores explican la persistencia de la pobreza multidimensional?" |
+| **Objetivo estadístico** | un producto medible: población, concepto, dominio y precisión | "estimar la proporción de personas en pobreza por ingresos y multidimensional, por región y grupo de población" |
+:::
+
+Una encuesta puede alimentar muchas preguntas de investigación, pero su diseño se ordena alrededor de **objetivos estadísticos**.
+
+## Traducir una demanda en decisiones metodológicas {.smaller}
+
+La primera tarea es convertir una demanda en una serie de decisiones:
+
+::: {style="font-size:0.9em;"}
+1. **Demanda:** "necesitamos datos sobre X".
+2. **Usuarios:** quién usará la información y para qué decisión.
+3. **Conceptos:** qué significa exactamente X.
+4. **Productos:** qué indicadores, tabulados, bases o informes deben salir.
+5. **Calidad requerida:** desagregación, oportunidad, comparabilidad, precisión.
+6. **Viabilidad:** si ya existen datos, si una encuesta es necesaria, cuánto cuesta y qué carga impone.
+:::
+
+Si esta fase queda mal resuelta, el error reaparece —más caro— al final: validez débil, cuestionarios inflados, estimaciones inútiles o productos que nadie usa.
+
+## La validez se decide en esta fase {.smaller}
+
+En el lenguaje del TSE, esta fase decide la **validez**: la brecha entre el constructo y lo que terminamos midiendo.
+
+> Una encuesta puede tener muestra probabilística, buen terreno y procesamiento impecable, y aun así fallar si el concepto medido no corresponde a la necesidad que la originó.
+
+Especificar mal el constructo es elegir mal desde el principio:
+
+- medir **"bienestar"** solo como satisfacción con la vida;
+- medir **"trabajo"** solo como empleo remunerado;
+- medir **"discapacidad"** solo como diagnóstico médico;
+- medir **"satisfacción con el gobierno"** sin distinguir desempeño, confianza, aprobación y expectativas.
+
+Ningún tamaño muestral corrige un constructo equivocado.
+
+# La fase 1, paso a paso
+
+## Necesidad, alcance, financiamiento {.smaller}
+
+El *Handbook* describe la fase de inicio como tres elementos que **se solapan y rara vez son lineales**:
+
+::: {style="font-size:0.88em;"}
+- **Necesidad:** identificar y clarificar la demanda de datos del stakeholder.
+- **Alcance:** diseñar una encuesta que responda a esa necesidad — decisiones de **alto nivel** (modo, largo del cuestionario, población, marco, tamaño muestral) y **productos** esperados.
+- **Financiamiento:** conseguir los recursos para implementar ese alcance.
+:::
+
+::: {style="border-radius:0.7em;padding:0.8em 1em;background-color:#f2f2f2;font-size:0.85em;"}
+Es un proceso no lineal:si el presupuesto no alcanza para estimaciones a nivel comunal, se recorta el **alcance** (muestra más chica, solo nivel nacional), y eso obliga a renegociar la **necesidad** con quien la pidió. Las tres conversaciones ocurren a la vez.
+:::
+
+## La misma fase, en el GSBPM {.smaller}
+
+El GSBPM formaliza esa fase en **seis subprocesos**. El *Handbook* es la versión "de terreno" de lo mismo:
+
+::: {style="font-size:0.8em;"}
+| Subproceso GSBPM | Pregunta central | Elemento |
+|:---|:---|:---:|
+| **1.1 Identificar necesidades** | ¿qué información falta o debe revisarse? | Necesidad |
+| **1.2 Consultar y confirmar necesidades** | ¿quién necesita qué, cuándo, cómo y por qué? | Necesidad |
+| **1.3 Establecer objetivos del producto** | ¿qué productos y con qué calidad? | Alcance |
+| **1.4 Identificar conceptos** | ¿qué conceptos medir, según los usuarios? | Alcance |
+| **1.5 Verificar disponibilidad de datos** | ¿ya existen datos suficientes y adecuados? | Necesidad |
+| **1.6 Preparar el caso de negocio** | ¿se justifica producir o rediseñar? | Financiamiento |
+:::
+
+Se presentan en orden, pero **iteran**: una consulta puede cambiar los conceptos; una revisión de fuentes puede hacer innecesaria toda la encuesta.
+
+## De dónde viene la necesidad {.smaller}
+
+En una Oficina estadísitica nacional, una necesidad de datos casi siempre llega desde una de cuatro fuentes:
+
+::: {style="font-size:0.85em;"}
+| Fuente | Ejemplo |
+|:---|:---|
+| **La propia institución** | la oficina evalúa una ronda anterior y detecta que su medición quedó corta |
+| **Prioridades de gobierno** | un mandato legal, un plan nacional, un ministerio que necesita datos para diseñar política |
+| **Socios internacionales** | un nuevo estándar (OIT, ODS) que obliga a medir un fenómeno de otra forma |
+| **Sociedad civil** | organizaciones que exigen visibilizar un grupo o problema antes no medido |
+:::
+
+Identificar la necesidad no es solo preguntarle al usuario "qué quiere", sino que **es documentar la brecha de información**: qué decisión se va a tomar, qué datos faltan hoy para tomarla y por qué los existentes no bastan.
+
+## Del concepto al producto {.smaller}
+
+Dos subprocesos hacen el trabajo conceptual fino, y conviene no confundirlos:
+
+::: {style="font-size:0.9em;"}
+- **1.4 Identificar conceptos** (fase 1): decide *qué* se entenderá por el fenómeno. ¿"Discapacidad" es diagnóstico, deficiencia, limitación funcional, dependencia o participación social?
+- **2.2 Diseñar variables** (fase 2, próximas semanas): decide *cómo* convertir esa definición en preguntas, escalas y clasificaciones.
+:::
+
+Y **1.3 Establecer objetivos del producto** convierte la necesidad en entregables concretos: indicadores, dominios de estimación, tabulados, microdatos, periodicidad, oportunidad, precisión.
+
+::: {style="border-radius:0.7em;padding:0.8em 1em;background-color:#f2f2f2;font-size:0.85em;"}
+Aquí aparece la tensión que recorrerá todo el diseño: **más dominios y más desagregación** exigen muestras más grandes, instrumentos más largos o más presupuesto. Cada objetivo de producto tiene un costo.
+:::
+
+# ¿Conviene hacerla?
+
+## Primero: revisar lo que ya existe {.smaller}
+
+El *Handbook* propone un principio que hoy es casi obligatorio: **"revisar primero"** (*review first*).
+
+Antes de aprobar una encuesta nueva, hay que verificar sistemáticamente si la necesidad puede cubrirse con lo que ya hay:
+
+::: {style="font-size:0.9em;"}
+- registros administrativos (salud, educación, tributarios);
+- encuestas anteriores o de otras instituciones que cubran el dominio;
+- datos privados, geoespaciales o digitales que puedan complementar.
+:::
+
+Y preguntarse si los conceptos **administrativos calzan** con los estadísticos, y si hay continuidad, seguridad y calidad suficientes.
+
+La respuesta muchas veces no es "hagamos una encuesta", sino **integrar fuentes, rediseñar una existente o agregar un módulo** a una que ya está en terreno.
+
+## Ocho preguntas para decidir si proceder {.smaller}
+
+El *Handbook* resume la decisión en ocho preguntas. La regla: se avanza solo si la respuesta es **"sí" a las ocho**.
+
+::: {style="font-size:0.8em;"}
+1. ¿La institución está **obligada** (por ley o mandato) a recoger estos datos?
+2. ¿Es **necesaria** una recolección nueva, en vez de usar datos existentes?
+3. ¿Es coherente con los **Principios Fundamentales** de las Estadísticas Oficiales?
+4. ¿Responde a **prioridades críticas**, nacionales o internacionales?
+5. ¿Cae dentro del **mandato** de la institución?
+6. ¿El **financiamiento** es suficiente y sostenible?
+7. ¿Es **factible** operativa y técnicamente en el plazo dado?
+8. ¿Puede hacerse **sin dañar** otras estadísticas del sistema (series, carga de respuesta)?
+:::
+
+Un "no" en cualquiera no es el fin: obliga a **reformular, pausar o declinar** — y a comunicar por qué. Decir que no a tiempo también es trabajo metodológico.
+
+## La carga de respuesta también cuenta {.smaller}
+
+La pregunta 8 esconde algo que se olvida fácil: cada encuesta nueva **gasta** un recurso común y agotable —la disposición de la población a responder.
+
+::: {style="font-size:0.9em;"}
+- Un módulo nuevo, por sí solo, rara vez cambia la actitud del público.
+- Pero el **efecto acumulado** de pedir cada vez más, a las mismas personas, erosiona la participación de todo el sistema estadístico.
+:::
+
+Por eso el caso de negocio sopesa el **valor** de los datos nuevos contra su **costo** para respondientes y para el resto de las encuestas. La fatiga de encuesta de hoy afectará la no respuesta futura, una de las siete fuentes de error del TSE.
+
+## El caso de negocio cierra la fase {.smaller}
+
+El subproceso 1.6 documenta todo y pide la aprobación. Un buen caso de negocio responde:
+
+::: {style="font-size:0.85em;"}
+- qué se hace hoy y qué problema tiene;
+- qué solución se propone y qué beneficios genera;
+- qué costos, riesgos y restricciones tiene;
+- qué carga impone a respondientes y productores;
+- qué recursos humanos, técnicos y legales requiere;
+- gobernanza, plazos, productos esperados y plan de sostenibilidad.
+:::
+
+En términos prácticos, es el punto donde el proceso es aprobado o rechazado. Ser transparente sobre **lo que aún no se sabe** suele valer tanto como presentar lo que sí.
+
+# Stakeholders y tensiones
+
+## "Stakeholder" no es solo "usuario" {.smaller}
+
+En el GSBPM los stakeholders incluyen usuarios, respondientes, proveedores y custodios de datos, y otros actores afectados. Cada uno quiere algo distinto:
+
+::: {style="font-size:0.8em;"}
+| Actor | Qué tiende a querer |
+|:---|:---|
+| Ministerio mandante | indicadores útiles para política y rendición de cuentas |
+| Hacienda / finanzas | costo controlado y plazos realistas |
+| Instituto estadístico | calidad, continuidad, comparabilidad, estándares |
+| Expertos temáticos | validez conceptual y comparabilidad internacional |
+| Ejecutores de campo | cuestionarios aplicables y protocolos claros |
+| Respondientes | menor carga, privacidad, preguntas comprensibles |
+| Investigadores | microdatos, metadatos, desagregaciones |
+| Medios y público | resultados oportunos y fáciles de interpretar |
+:::
+
+## Las tensiones son parte del diseño {.smaller}
+
+No todos los actores quieren lo mismo, y eso es parte normal del proceso:
+
+- Salud pide prevalencias finas por región; Hacienda pide menor costo.
+- Los expertos exigen comparabilidad internacional; el equipo de campo advierte que el cuestionario es demasiado largo.
+- Los investigadores piden microdatos detallados; la institución debe proteger la confidencialidad.
+
+La especificación de necesidades **no elimina** estas tensiones. Las vuelve **visibles y explícitas**, para resolverlas con criterios —relevancia, validez, viabilidad, carga— en vez de por inercia o por la parte con más influencia sobre las decisiones.
+
+# Marcos internacionales
+
+## Por qué no partir de una hoja en blanco {.smaller}
+
+Los grandes dominios sociales rara vez se especifican desde cero. Se recurre a **marcos internacionales** porque ofrecen, de una vez:
+
+- definiciones conceptuales ya discutidas y clasificaciones comparables;
+- indicadores validados y cuestionarios o módulos probados;
+- eficiencia (no reinventar cada dimensión) y legitimidad frente a usuarios técnicos y organismos internacionales.
+
+Adoptar un marco **no es copiarlo**. Es traducirlo: decidir qué se mantiene, qué se adapta al contexto local y qué se documenta como diferencia.
+
+## Una selección útil para encuestas sociales {.smaller}
+
+::: {style="font-size:0.66em;"}
+| Dominio | Marco(s) de referencia | Qué aporta |
+|:---|:---|:---|
+| **Bienestar subjetivo** | OECD, *Guidelines on Measuring Subjective Well-being* | distingue evaluación de vida, afecto y eudaimonía |
+| **Uso del tiempo** | CAUTAL (CEPAL), HETUS (Eurostat) | clasificación para ordenar actividades y trabajo no remunerado |
+| **Niñez y hogares** | UNICEF MICS | módulos e indicadores comparables sobre infancia y hogares |
+| **Ingresos** | Canberra Group; recomendaciones CIET/OIT | criterios de ingreso del hogar, fuentes y agregación |
+| **Empleo** | OIT / CIET; CIUO-08 | definiciones laborales, ocupaciones y educación |
+| **Pobreza multidimensional** | Alkire-Foster / MPI; adaptación nacional | dimensiones, privaciones, cortes y agregación |
+| **Discapacidad** | CIF-OMS; WHO Model Disability Survey; Washington Group | funcionamiento, limitaciones y comparabilidad |
+:::
+
+
+## Criterios para elegir un marco {.smaller}
+
+::: {style="font-size:0.86em;"}
+1. **Pertinencia:** ¿el marco define el fenómeno que queremos medir?
+2. **Comparabilidad:** ¿necesitamos comparar con otros países, rondas o metas?
+3. **Viabilidad:** ¿cabe en el cuestionario y el modo de aplicación?
+4. **Validación previa:** ¿hay experiencia empírica con sus preguntas?
+5. **Ajuste local:** ¿requiere adaptación cultural, lingüística o legal?
+:::
+
+::: {style="border-radius:0.7em;padding:0.8em 1em;background-color:#f2f2f2;font-size:0.85em;"}
+Utilizar un marco internacional tambien tiene costos, puede imponer categorías que no calzan con el contexto, alargar el cuestionario, privilegiar la comparabilidad por sobre la relevancia nacional o estar pensado para otro modo. Debe decidirse **qué adaptar, qué mantener y qué documentar**.
+:::
+
+## Qué debería quedar documentado {.smaller}
+
+Al cerrar la fase 1, una operación debería poder mostrar por escrito:
+
+::: {style="font-size:0.86em;"}
+- la necesidad de información y las decisiones que los datos informarán;
+- los stakeholders consultados;
+- la población objetivo preliminar y los conceptos principales;
+- los productos esperados;
+- las fuentes existentes revisadas, y la razón para hacer una encuesta nueva, rediseñar una o integrar fuentes;
+- las restricciones de costo, tiempo, ética y carga de respuesta.
+:::
+
+Es el **respaldo** que permite, más adelante, evaluar si el diseño muestral, el cuestionario y el terreno tienen sentido.
+
+# Síntesis
+
+## Síntesis {.smaller}
+
+1. Una encuesta no nace de una pregunta pura, sino de una **demanda de información** que hay que traducir a **objetivos estadísticos**: población, concepto, dominio, precisión.
+2. La fase 1 del GSBPM organiza esa traducción —**necesidad → alcance → financiamiento**— en seis subprocesos que iteran entre sí.
+3. Es una **decisión de calidad**: aquí se juega la validez, antes del cuestionario, la muestra y el terreno. Un constructo mal elegido no se arregla después.
+4. Antes de levantar nada hay que **revisar lo existente** y considerar la pertinencia del nuevo proceso: a veces la respuesta correcta es no hacer la encuesta.
+
+
+## Próxima clase {.smaller}
+
+Con la necesidad especificada, la próxima semana pasamos de **qué se quiere saber** a **a quién se quiere representar** — la fase 2 del GSBPM empieza por la muestra:
+
+- población objetivo y unidades de análisis;
+- marcos muestrales y cobertura;
+- subcobertura y sobrecobertura.
+
+📖 **Lecturas de esta semana:** UNSD (2026), *Handbook of Surveys on Households and Individuals*, cap. 2 ("Survey Needs Assessment and Initiation"); UNECE (2025), *GSBPM v5.2*, fase 1 ("Specify Needs").

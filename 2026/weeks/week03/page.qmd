@@ -1,0 +1,32 @@
+---
+title: "🗓️ Semana 03: Especificación de necesidades"
+---
+
+En esta semana comenzamos la **Unidad 2** del curso entrando a la primera fase del GSBPM: la especificación de necesidades. La clase aborda cómo una encuesta pasa de una demanda institucional —un ministerio, un cliente, un centro de investigación, una oficina estadística— a objetivos de información claros, conceptos definidos y productos estadísticos viables. Revisaremos la tríada necesidad–alcance–financiamiento y los seis subprocesos de la fase 1 del GSBPM, el principio de "revisar primero" y las ocho preguntas para decidir si proceder, el papel de los stakeholders y sus tensiones, el uso de marcos internacionales para especificar constructos.
+
+## Clase Expositiva
+
+Puedes navegar por las diapositivas directamente en el recuadro de abajo o hacer clic [aquí](slides.qmd) para ver la presentación en pantalla completa. Usa las flechas de tu teclado para avanzar.
+
+<div class="container" style="position: relative;overflow: hidden;width: 100%;min-height:600px;">
+<iframe src="slides.html" style="position: absolute;top: 0;left: 0;bottom: 0;right: 0;width: 100%;min-height:600px;"></iframe>
+</div>
+
+## Lecturas Obligatorias
+
+Para acompañar los contenidos de esta semana, por favor revisa el siguiente material:
+
+- United Nations Statistics Division. (2026). *Handbook of Surveys on Households and Individuals: Foundations and Emerging Approaches* (Final draft, updated version of April 30, 2026). Cap. 2: "Survey Needs Assessment and Initiation".
+- United Nations Economic Commission for Europe (UNECE). (2025). *Generic Statistical Business Process Model: GSBPM* (Version 5.2). Fase 1: "Specify Needs".
+
+## Lecturas Complementarias
+
+- OECD. (2013). [*Guidelines on Measuring Subjective Well-being*](https://www.oecd.org/en/publications/oecd-guidelines-on-measuring-subjective-well-being_9789264191655-en.html). OECD Publishing.
+- Comisión Económica para América Latina y el Caribe (CEPAL). (2016). [*Clasificación de Actividades de Uso del Tiempo para América Latina y el Caribe (CAUTAL)*](https://www.cepal.org/es/publicaciones/40170).
+- UNICEF. [Multiple Indicator Cluster Surveys (MICS)](https://mics.unicef.org/).
+- Washington Group on Disability Statistics. [*Washington Group Short Set on Functioning (WG-SS)*](https://www.washingtongroup-disability.com/question-sets/wg-short-set-on-functioning-wg-ss/).
+- Ministerio de Desarrollo Social y Familia (2024). *Metodología de medición de la pobreza multidimensional en Chile. Actualización 2024* y *Metodología de medición de la pobreza por ingresos. Actualización 2024*. División Observatorio Social, [Casen 2024](https://observatorio.ministeriodesarrollosocial.gob.cl/encuesta-casen-2024).
+
+## Dudas y Comunicación
+
+Recuerda que puedes utilizar los canales de comunicación establecidos o acercarte al profesor y ayudantes si tienes dudas sobre los contenidos de esta semana.
