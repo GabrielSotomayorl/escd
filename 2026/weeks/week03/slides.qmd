@@ -79,9 +79,9 @@ La primera tarea es convertir una demanda en una serie de decisiones:
 
 Si esta fase queda mal resuelta, el error reaparece —más caro— al final: validez débil, cuestionarios inflados, estimaciones inútiles o productos que nadie usa.
 
-## La validez se decide en esta fase {.smaller}
+## Especificación de necesidades y validez {.smaller}
 
-En el lenguaje del TSE, esta fase decide la **validez**: la brecha entre el constructo y lo que terminamos midiendo.
+En el lenguaje del TSE, esta fase decide parte de la **validez**: la brecha entre el constructo y lo que terminamos midiendo.
 
 > Una encuesta puede tener muestra probabilística, buen terreno y procesamiento impecable, y aun así fallar si el concepto medido no corresponde a la necesidad que la originó.
 
@@ -140,7 +140,7 @@ En una Oficina estadísitica nacional, una necesidad de datos casi siempre llega
 | **Sociedad civil** | organizaciones que exigen visibilizar un grupo o problema antes no medido |
 :::
 
-Identificar la necesidad no es solo preguntarle al usuario "qué quiere", sino que **es documentar la brecha de información**: qué decisión se va a tomar, qué datos faltan hoy para tomarla y por qué los existentes no bastan.
+Identificar la necesidad no es solo preguntarle al usuario "qué quiere", sino que requiere **documentar la brecha de información**: qué decisión se va a tomar, qué datos faltan hoy para tomarla y por qué los existentes no bastan.
 
 ## Del concepto al producto {.smaller}
 
