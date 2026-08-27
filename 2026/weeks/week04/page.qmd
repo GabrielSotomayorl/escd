@@ -1,0 +1,28 @@
+---
+title: "🗓️ Semana 04: Marcos muestrales y diseño muestral complejo (I)"
+---
+
+En esta semana pasamos de *qué se quiere saber* a *a quién se puede alcanzar*. En el primer bloque abordamos el **marco muestral**: el dispositivo que da acceso a la población objetivo, sus propiedades (cobertura, contacto, información auxiliar), sus problemas típicos (subcobertura, no elegibles, duplicación, conglomerados, envejecimiento) y cómo se administran. Lo ilustramos con el Marco Muestral de Viviendas del INE y con un caso real de decisión: el estudio de marcos para la Encuesta de Niñez 2026, que comparó un marco de áreas, un registro administrativo de residentes y un marco bifásico. En el segundo bloque introducimos el **diseño muestral complejo** —estratificación, conglomerados, selección sistemática y probabilidad proporcional al tamaño— y lo vemos operando en el diseño de la Casen 2024.
+
+## Clase Expositiva
+
+Puedes navegar por las diapositivas directamente en el recuadro de abajo o hacer clic [aquí](slides.qmd) para ver la presentación en pantalla completa. Usa las flechas de tu teclado para avanzar.
+
+<div class="container" style="position: relative;overflow: hidden;width: 100%;min-height:600px;">
+<iframe src="slides.html" style="position: absolute;top: 0;left: 0;bottom: 0;right: 0;width: 100%;min-height:600px;"></iframe>
+</div>
+
+## Lecturas Obligatorias
+
+Para acompañar los contenidos de esta semana, por favor revisa el siguiente material:
+
+- Groves, R. M., Fowler, F. J., Couper, M. P., Lepkowski, J. M., Singer, E., & Tourangeau, R. (2009). *Survey Methodology* (2nd ed.). Wiley. Cap. 3: "Target Populations, Sampling Frames, and Coverage Error".
+
+## Lecturas Complementarias
+
+- United Nations Statistics Division. (2026). *Handbook of Surveys on Households and Individuals*. Cap. 5: "Frames and Sampling".
+- Ministerio de Desarrollo Social y Familia. (2026). *Metodología de Diseño Muestral, Casen 2024*. Documentos metodológicos Casen 2024.
+
+## Dudas y Comunicación
+
+Recuerda que puedes utilizar los canales de comunicación establecidos o acercarte al profesor y ayudantes si tienes dudas sobre los contenidos de esta semana.

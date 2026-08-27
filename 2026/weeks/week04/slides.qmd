@@ -1,0 +1,426 @@
+---
+subtitle: "Encuestas Sociales para Contextos Diversos"
+title: "<font style='font-size:1em;'>🗓️ Semana 04<br/> Marcos muestrales y cobertura · Diseño muestral complejo (I)</font>"
+author: Prof. [Gabriel Sotomayor](https://gabrielsotomayorl.github.io/)
+institute: '[Pontificia Universidad Católica de Chile](https://sociologia.uc.cl/)'
+date: "2026-08-28"
+date-meta: "2026"
+date-format: "dddd DD [de] MMMM [de] YYYY"
+toc: true
+toc-depth: 1
+toc-title: "Contenidos de hoy:"
+center-title-slide: false
+from: markdown+emoji
+format:
+  revealjs:
+    fig-responsive: true
+    theme: [simple, ../../../css/slides.scss]
+    slide-number: true
+    mouse-wheel: false
+    preview-links: auto
+    logo: /figures/icons/course_favicon.png
+    footer: 'Encuestas Sociales para Contextos Diversos'
+---
+
+# El problema: encontrar a la población
+
+## Encuesta de Bienestar en NNA {.smaller}
+
+El Ministerio de Desarrollo Social prepara una encuesta nacional de **bienestar en la niñez y adolescencia**, y encargó un estudio para responder una pregunta previa a cualquier cuestionario:
+
+::: {style="border-radius:0.7em;padding:0.8em 1em;background-color:#f2f2f2;font-size:0.95em;"}
+La población objetivo son los cerca de **4,5 millones** de niños, niñas y adolescentes de 0 a 17 años. **No existe una lista de ellos.** ¿Dónde los buscamos, y cuánto cuesta encontrarlos?
+:::
+
+La semana pasada especificamos *qué* se quiere saber y *sobre quién*. Hoy discutiremos cómo llegar desde esa población definida en el papel hasta **personas concretas a las que tocarles la puerta**.
+
+Dos decisiones lo resuelven, y son los dos bloques de hoy:
+
+1. el **marco muestral**: el dispositivo que nos da acceso a la población (¿dónde buscar?), 
+2. el **diseño muestral**: el mecanismo de selección sobre ese marco (¿cómo elegir?).
+
+## De la población objetivo al marco {.smaller}
+
+Recuperemos la rama de representación del TSE, ahora con más detalle:
+
+::: {style="font-size:0.9em;"}
+- **Población objetivo:** el conjunto que queremos describir, delimitado en contenido, espacio y tiempo. Es una definición conceptual: "personas de 0 a 17 años residentes en Chile en 2026".
+- **Marco muestral:** el conjunto de unidades **al que realmente tenemos acceso** para seleccionar — una lista, un registro, un conjunto de áreas.
+- **Población marco:** las personas efectivamente alcanzables a través del marco. Casi nunca coincide con la objetivo.
+:::
+
+La distancia entre la población objetivo y la población marco es el territorio del **error de cobertura**.
+
+::: {style="border-radius:0.7em;padding:0.8em 1em;background-color:#f2f2f2;font-size:0.85em;"}
+La población objetivo se **define**; el marco se **consigue**. Por eso el marco casi nunca se elige entre las opciones ideales, sino entre las disponibles: la pregunta práctica no es "¿cuál es el marco perfecto?", sino "¿qué parte de mi población objetivo puedo alcanzar con lo que existe, y qué parte no?".
+:::
+
+## Qué queda fuera: el marco de la Casen {.smaller}
+
+La población objetivo de la Casen son los **hogares en viviendas particulares ocupadas** del territorio nacional. Su marco, en cambio, **excluye por diseño**:
+
+::: {style="font-size:0.9em;"}
+- diez comunas completas de difícil acceso;
+- otras zonas apartadas dentro de comunas incluidas;
+- en total, del orden de **15 mil viviendas**.
+:::
+
+Esas exclusiones son deliberadas y están documentadas: llegar a esos territorios costaría más de lo que aporta a las estimaciones nacionales. Pero tienen dos consecuencias que hay que nombrar.
+
+::: {style="border-radius:0.7em;padding:0.8em 1em;background-color:#f2f2f2;font-size:0.85em;"}
+Primero, la población marco de la Casen es **más chica** que su población objetivo, y la ficha técnica debería decirlo. Segundo, esas exclusiones **pueden** producir sesgo — solo si las zonas excluidas difieren de las cubiertas en lo que se está midiendo. La ponderación reduce ese riesgo bajo supuestos, pero no lo elimina.
+:::
+
+# El marco muestral
+
+## Tres dimensiones de calidad de un marco {.smaller}
+
+El *Handbook* de la ONU (2026) evalúa la utilidad de cualquier marco por tres dimensiones:
+
+::: {style="font-size:0.9em;"}
+1. **Cobertura:** ¿qué parte de la población objetivo está incluida? ¿Con qué vacíos, excesos y duplicaciones?
+2. **Información de contacto:** ¿el marco permite *llegar* a las unidades? Direcciones para cara a cara, teléfonos para CATI, correos para web. Sin contacto utilizable, estar "en el marco" es teórico.
+3. **Información auxiliar:** variables asociadas a cada unidad (ubicación, área urbano/rural, características sociodemográficas) que permiten **estratificar**, asignar la muestra, y luego ajustar y calibrar.
+:::
+
+::: {style="border-radius:0.7em;padding:0.8em 1em;background-color:#f2f2f2;font-size:0.85em;"}
+Las tres dimensiones rara vez vienen juntas: un registro puede tener excelente información auxiliar y contactos desactualizados; un marco de áreas puede cubrir bien y no traer ningún dato de las personas. Elegir marco es elegir **qué dimensión se privilegia**.
+:::
+
+## Tipos de marco y sus compromisos {.smaller}
+
+::: {style="font-size:0.72em;"}
+| Tipo de marco | Qué lista | Fortaleza | Límite |
+|:---|:---|:---|:---|
+| **De áreas** (censal) | zonas geográficas → viviendas | alta cobertura territorial | no lista personas: exige varias etapas y campo caro |
+| **Registro administrativo** | personas o viviendas | selección directa e información auxiliar | cobertura desigual y contactos obsoletos |
+| **De teléfonos** | listas o rangos de números | barato y rápido de construir | duplicación y números sin uso; tasas de respuesta en caída; casi sin información auxiliar |
+| **Panel online** (no probabilístico) | voluntarios reclutados en internet | costo y oportunidad | cobertura digital **y** autoselección de quienes se inscriben |
+
+: {tbl-colwidths="[20,22,24,34]"}
+:::
+
+Y cuando ninguno basta por sí solo, se combinan: **marcos múltiples o duales**, con reglas explícitas para las unidades que aparecen en más de uno.
+
+## El marco de viviendas del INE {.smaller}
+
+El marco de área de referencia en Chile es el **Marco Muestral de Viviendas (MMV)** del INE — el que usan la Casen, la ENE, la EPF y buena parte de las encuestas de hogares del país:
+
+::: {style="font-size:0.85em;"}
+- **Base:** Censo de Población y Vivienda 2017 y Precenso 2016.
+- **Unidades:** UPM — áreas geográficas homogéneas en cantidad de viviendas particulares ocupadas (excluye viviendas colectivas y de temporada).
+- **Información auxiliar:** estratificación por comuna, área urbano/rural y **nivel socioeconómico** (modelo estadístico con datos censales).
+- **Cobertura:** 345 de las 346 comunas del país (excluye la Antártica).
+- **Actualización continua:** cartografía (ACON), certificados de recepción final de obras, y la enumeración en terreno de las propias encuestas que lo usan (ENE, EPF).
+:::
+
+El punto conceptual: un marco muestral **requiere actualización constante**. El MMV es infraestructura estadística compartida — cada encuesta que lo usa también lo alimenta.
+
+# Los problemas de todo marco
+
+## Cuatro desajustes entre marco y población {.smaller}
+
+Groves et al. ordenan los problemas posibles en cuatro tipos:
+
+::: {style="font-size:0.85em;"}
+| Problema | Qué pasa | Ejemplo |
+|:---|:---|:---|
+| **Subcobertura** | población objetivo que no está en el marco | viviendas nuevas o informales ausentes del marco censal; personas sin teléfono |
+| **Unidades no elegibles** | el marco incluye lo que no corresponde | viviendas desocupadas o de temporada; números de teléfono sin uso |
+| **Duplicación** | una unidad aparece más de una vez | una persona con dos números; una familia con dos direcciones |
+| **Conglomerado** | la unidad del marco agrupa varios elementos | una vivienda con dos hogares; un hogar con varias personas elegibles |
+:::
+
+No son cuatro versiones del mismo problema: uno es irreparable y tres son administrables.
+
+## Subcobertura: el desajuste que no se arregla {.smaller}
+
+Quien no está en el marco tiene **probabilidad cero** de ser seleccionado. Como consecuencia:
+
+::: {style="border-radius:0.7em;padding:0.8em 1em;background-color:#f2f2f2;font-size:0.9em;"}
+**Ningún tamaño muestral recupera a quien no está en el marco.** Multiplicar por diez la muestra multiplica por diez las entrevistas a la población cubierta, y por cero las de la población ausente. Es el punto donde "encuestar a más gente" deja de ser una solución.
+:::
+
+Por eso la subcobertura se ataca solo por dos vías, ambas anteriores a la selección: **agregar al marco** lo que le falta —listando en terreno, sumando otra fuente, actualizando el registro— o **cambiar de marco**. Todo lo demás es mitigación posterior con supuestos.
+
+## Los otros tres se administran con reglas {.smaller}
+
+Los tres desajustes restantes no impiden la inferencia, pero exigen decisiones explícitas y aplicadas de manera sistemática:
+
+::: {style="font-size:0.9em;"}
+- **Unidades no elegibles:** se filtran en terreno. La regla debe fijarse *antes*, porque también define el denominador con que después se calcularán las tasas de respuesta (lo veremos en la unidad 4).
+- **Duplicación:** o se depura la lista, o se registra cuántas veces aparece cada unidad para **corregir su probabilidad de selección** en la ponderación. Ignorarla no es neutral: sobrerrepresenta justamente a quienes aparecen más veces.
+- **Conglomerado:** cuando la unidad del marco agrupa varios elementos —una vivienda con dos hogares, un hogar con tres adultos— hay que seleccionar dentro de ella **con probabilidad conocida** (por ejemplo, una tabla de Kish). Dejarlo al criterio del encuestador rompe el diseño probabilístico.
+:::
+
+Los tres solo producen sesgo **si se manejan mal**. Pero manejarlos mal es fácil y frecuente.
+
+## Del desajuste al sesgo de cobertura {.smaller}
+
+Groves et al. insisten en una distinción que conviene fijar:
+
+::: {style="border-radius:0.7em;padding:0.8em 1em;background-color:#f2f2f2;font-size:0.9em;"}
+La subcobertura, la duplicación y el conglomerado son **problemas del marco**. El **error de cobertura** es el efecto que esos problemas tienen sobre una estimación concreta.
+:::
+
+La consecuencia práctica es que el sesgo de cobertura **no es una propiedad de la encuesta, sino de cada cifra que produce**. Una misma encuesta puede tener un sesgo grande en una estimación y ninguno en otra, con el mismo marco y la misma muestra.
+
+Su magnitud depende de dos cosas, y hacen falta las dos:
+
+::: {style="font-size:0.9em;"}
+1. **Qué proporción de la población queda fuera** del marco.
+2. **Cuán distintos son los ausentes** de los cubiertos, en la variable que se está midiendo.
+:::
+
+Si los ausentes se parecen a los cubiertos en esa variable, el sesgo es pequeño aunque falte mucha gente. Si son muy distintos, una subcobertura chica puede producir un sesgo grande. Por eso "¿cuánta gente falta?" es una pregunta incompleta: siempre hay que agregar "¿falta *quién*, y para medir *qué*?".
+
+## De dónde vienen los desajustes: el envejecimiento {.smaller}
+
+Los marcos muestrales **se van desactualizando en el tiempo**. Un marco construido sobre un censo pierde vigencia año a año:
+
+- se construyen viviendas nuevas y se demuelen otras;
+- la población migra — entre comunas, entre regiones, entre países;
+- las direcciones y teléfonos registrados dejan de servir para contactar.
+
+::: {style="border-radius:0.7em;padding:0.8em 1em;background-color:#f2f2f2;font-size:0.9em;"}
+El envejecimiento no es uniforme: golpea más donde el territorio cambia más rápido — zonas de expansión urbana, asentamientos informales, comunas con alta migración reciente. Es decir, **el marco puede perder primero a grupos que son de mayor interés para la política social**.
+:::
+
+Por eso la actualización continua del MMV es una necesidad para que el marco siga funcionando en el tiempo.
+
+## Qué se hace con un marco imperfecto {.smaller}
+
+Ningún marco es perfecto; el oficio consiste en **conocer y administrar** sus defectos:
+
+::: {style="font-size:0.9em;"}
+- **Actualizar y listar en terreno:** enumerar las viviendas de las áreas seleccionadas antes de la encuesta (como hace el INE en las UPM de la muestra), con reglas para incorporar viviendas nuevas.
+- **Combinar fuentes:** complementar el marco con registros administrativos, cartografía u otras encuestas — o usar marcos duales.
+- **Filtrar y deduplicar:** reglas explícitas para no elegibles y duplicados, aplicadas de forma sistemática.
+- **Ajustar al final:** la calibración a proyecciones de población puede *reducir* el sesgo de cobertura — pero solo bajo el supuesto de que, dentro de cada celda de ajuste, cubiertos y no cubiertos se parezcan en la variable de interés (lo vimos como error de ajuste).
+- **Documentar:** dejar registrado qué población marco cubre la encuesta y qué quedó fuera. La honestidad de la ficha técnica empieza aquí.
+:::
+
+# Caso: un marco para la encuesta de niñez
+
+## Tres candidatos para encontrar a la niñez {.smaller}
+
+El estudio para la ENA evaluó tres marcos posibles — tres respuestas distintas a "¿dónde están los niños?":
+
+::: {style="font-size:0.85em;"}
+- **MAG — marco de áreas geográficas** (el MMV): buscar viviendas en áreas censales y **descubrir en terreno** cuáles tienen niños. Cobertura territorial completa, pero encontrar a la subpoblación exige tocar muchas puertas sin niños.
+- **BRR — registro de residentes:** un registro administrativo de las personas residentes en el país, con información demográfica básica. Permite **seleccionar directamente** a niños, niñas y adolescentes por edad, sin buscar.
+- **MBF — marco bifásico:** reutilizar los hogares ya entrevistados por la **Casen 2022**, donde ya sabemos si hay niños y tenemos su dirección. Una encuesta sirviendo de marco para otra.
+:::
+
+Cada candidato privilegia una propiedad distinta: el MAG, la **cobertura**; el BRR, la **selección directa y la información auxiliar**; el MBF, el **contacto ya validado en terreno**.
+
+## La evidencia: cobertura {.smaller}
+
+El estudio (DESUC, 2025) comparó los **conteos** de cada marco contra las proyecciones de población, mediante el **Índice de Desviación del Marco** (IDM). Un IDM de 1 significa que el conteo agregado coincide con la referencia — no demuestra cobertura perfecta: vacíos y duplicados pueden compensarse, y un marco puede tener el número correcto de personas sin tener a las personas correctas.
+
+::: {style="font-size:0.8em;"}
+| Marco | IDM total 0–17 | Dónde falla |
+|:---|:---:|:---|
+| **MBF** (Casen 2022) | ≈ 1,00 | subcobertura rural (0,91) |
+| **MAG** (Censo 2017) | ≈ 0,95 | envejecimiento: baja hasta ≈ 0,86 en regiones con alta migración reciente |
+| **BRR** (registro 2023) | 0,90 | **0 a 5 años: 0,75**; urbano 0,89 (Región Metropolitana 0,84); rural en cambio bien (1,01) |
+:::
+
+## Qué muestra esa comparación {.smaller}
+
+::: {style="font-size:0.95em;"}
+1. **Cada marco falla en un lugar distinto**, y el patrón de falla es informativo: el registro pierde a los niños más pequeños; el marco basado en el censo pierde donde hubo migración reciente.
+2. La cobertura no se evalúa "en total": se evalúa **por subgrupo**, porque ahí se esconde el riesgo de sesgo.
+3. Ninguna opción domina a las demás. La decisión va a necesitar más criterios que la cobertura.
+:::
+
+::: {style="border-radius:0.7em;padding:0.8em 1em;background-color:#f2f2f2;font-size:0.85em;"}
+**Una advertencia sobre la tabla.** El MBF parte con ventaja: viene de la muestra de la Casen 2022, cuyos ponderadores ya están calibrados contra las mismas proyecciones que aquí sirven de referencia. El registro administrativo, en cambio, "por diseño, no incorpora ningún tipo de corrección" (DESUC, 2025). Su IDM de 1,00 mide también ese ajuste previo, no solo cobertura.
+:::
+
+## La evidencia: precisión, eficiencia y costo {.smaller}
+
+El segundo bloque de evidencia comparó qué diseño muestral permite cada marco. En las simulaciones del estudio:
+
+::: {style="font-size:0.9em;"}
+- **BRR y MBF listan personas** → permiten seleccionar directamente a la población objetivo, con diseños más simples que, en las alternativas evaluadas, mostraron **menor error de muestreo** para el mismo tamaño.
+- **El MAG solo lista áreas** → obliga a un muestreo multietápico, que en las simulaciones resultó menos eficiente. Y usar comunas como conglomerados de primera etapa penalizó aún más la eficiencia.
+:::
+
+## Precisión y costo {.smaller}
+
+Dos consideraciones adicionales inclinan la comparación:
+
+::: {style="font-size:0.9em;"}
+- El MBF es **una muestra de una muestra**: la probabilidad final de cada niño combina la de haber entrado a la Casen 2022 con la de la segunda selección, y arrastra la estructura compleja del diseño de origen.
+- El costo de terreno del MAG es el mayor: encontrar una **subpoblación** con marco de áreas significa pagar muchos contactos que no producen entrevista. Es el problema clásico de las poblaciones poco frecuentes — hay que tamizar mucha vivienda para dar con las que califican.
+:::
+
+::: {style="border-radius:0.7em;padding:0.8em 1em;background-color:#f2f2f2;font-size:0.85em;"}
+El vínculo entre los dos bloques de hoy: **el marco condiciona el diseño**. Los conceptos que esta comparación usa — etapas, eficiencia, efecto diseño — se tratarán en el segundo bloque.
+:::
+
+## La decisión: BRR, con mitigaciones {.smaller}
+
+El estudio recomendó construir el marco de la ENA sobre el **BRR** — a pesar de su subcobertura — porque gana en precisión, costo y flexibilidad operativa. Las mitigaciones que acompañan la recomendación son de dos tipos distintos:
+
+::: {style="font-size:0.9em;"}
+- **Sobre contacto y diseño:** actualizar y estandarizar la información de contacto; integrar información territorial para estratificar; un **piloto** un año antes para probar protocolos y estimar parámetros.
+- **Sobre la cobertura misma:** evaluación continua de la calidad del registro y actualización con las fuentes que capturan lo que falta — en particular, los nacimientos recientes que explican el hoyo en los 0 a 5 años.
+:::
+
+
+## Por qué la mitigación no basta por sí sola {.smaller}
+
+::: {style="border-radius:0.7em;padding:0.8em 1em;background-color:#f2f2f2;font-size:0.9em;"}
+Sobremuestrear a los niños de 0 a 5 que **sí** están en el registro mejora la precisión de las estimaciones de ese grupo, pero **no recupera a los ausentes**: seguir teniendo probabilidad cero no cambia porque se entreviste a más de los que sí están. La subcobertura solo se ataca agregando al marco lo que le falta.
+:::
+
+La lección del caso: **no existe el marco perfecto; existe el mejor compromiso, documentado y mitigado.**
+
+Y una apuesta de más largo plazo del propio informe: usar registros administrativos como marco contribuye a fortalecerlos dentro del sistema estadístico — la encuesta que se apoya en el registro también obliga a mejorarlo.
+
+## El mismo dilema, resuelto distinto: Cadem {.smaller}
+
+Ya vimos este trade-off antes, en otro régimen de producción. Cuando Plaza Pública pasó de telefonía (CATI) al **panel online**, cambió más que el marco: cambió el modo y el mecanismo de selección a la vez.
+
+::: {style="font-size:0.9em;"}
+- **Ganó** costo, rapidez y continuidad operativa: mediciones semanales sostenibles.
+- **Cedió** la base de la inferencia probabilística, con dos filtros encadenados: la **cobertura digital** (quedan fuera quienes no usan internet) y, entre quienes sí la tienen, la **autoselección** de quienes se inscriben en el panel.
+:::
+
+La estructura de la decisión se parece a la de la ENA — pero el punto de equilibrio elegido es otro, porque los objetivos y los incentivos del régimen comercial son otros.
+
+En ambos casos la documentación metodológica permite **evaluar** el compromiso adoptado. Pero documentar un procedimiento no modifica sus propiedades: en un panel de voluntarios las probabilidades de selección siguen siendo desconocidas, por completa que sea la ficha técnica.
+
+# El diseño muestral complejo
+
+## El punto de partida: muestreo aleatorio simple {.smaller}
+
+Con el marco resuelto, falta el mecanismo de selección. El punto de partida conceptual es el **muestreo aleatorio simple (MAS)**:
+
+- toda muestra posible del mismo tamaño tiene la **misma probabilidad** de ser seleccionada — una condición más exigente que la sola igualdad de probabilidades individuales;
+- las fórmulas de varianza y margen de error que conocen suponen, en su versión básica, este diseño;
+- por eso el MAS es el **estándar de comparación**: la vara contra la que se mide cualquier diseño real.
+
+## Por qué el MAS casi no se usa {.smaller}
+
+En encuestas de hogares cara a cara, sin embargo, el MAS casi nunca se usa. Dos razones:
+
+1. **El marco no lo permite:** no hay lista nacional de personas — el MMV lista áreas y viviendas.
+2. **El costo lo prohíbe:** una muestra aleatoria simple queda dispersa por todo el territorio; visitar 70.000 viviendas repartidas al azar entre Visviri y Puerto Williams es impagable.
+
+El **diseño complejo** existe para resolver estos dos problemas *sin renunciar* a probabilidades de selección conocidas.
+
+## Estratificación {.smaller}
+
+**Estratificar** es dividir el marco en grupos (estratos) usando la información auxiliar, y seleccionar una muestra **dentro de cada uno**:
+
+::: {style="font-size:0.9em;"}
+- Garantiza presencia de todos los estratos en la muestra — nada queda al azar entre regiones, áreas o niveles socioeconómicos.
+- **Puede reducir la varianza**: la ganancia aparece cuando la variable de estratificación se asocia con lo que se quiere medir y la asignación es adecuada.
+- La asignación puede ser **proporcional** al tamaño del estrato o **no proporcional**: sobremuestrear estratos pequeños cuando se necesitan estimaciones para ellos (las regiones chicas en la Casen). El costo: ponderadores más desiguales, que pueden devolver parte de la varianza ganada.
+:::
+
+::: {style="border-radius:0.7em;padding:0.8em 1em;background-color:#f2f2f2;font-size:0.85em;"}
+La estratificación es la razón de ser de la **información auxiliar** del marco: el MMV trae comuna, área y nivel socioeconómico precisamente para esto.
+:::
+
+## Conglomerados {.smaller}
+
+La otra pieza va en dirección contraria. Seleccionar **conglomerados** (áreas, y dentro de ellas viviendas) concentra el trabajo de campo: un solo viaje, muchas entrevistas.
+
+El ahorro tiene un precio estadístico:
+
+::: {style="font-size:0.9em;"}
+- Las personas de una misma UPM **se parecen** entre sí — comparten barrio, nivel socioeconómico, acceso a servicios. Esa similitud se mide con la correlación intraclase ($\rho$), que **cambia según la variable**: no hay un único efecto diseño por encuesta.
+- Por esa similitud, cada entrevista adicional en el mismo conglomerado aporta **menos información nueva** que una entrevista en un lugar distinto.
+- El costo se aproxima con el **efecto diseño** (para conglomerados de tamaño similar): $\text{deff} = 1 + \rho\,(b - 1)$, con $b$ entrevistas por conglomerado. Un deff de 2 significa que la varianza **se duplica**: la muestra equivale, en precisión, a un MAS de aproximadamente **la mitad** de su tamaño.
+:::
+
+::: {style="border-radius:0.7em;padding:0.8em 1em;background-color:#f2f2f2;font-size:0.85em;"}
+**Para discutir:** con presupuesto fijo, ¿qué conviene — 500 UPM con 10 entrevistas cada una, o 250 UPM con 20? ¿Qué información necesitan para responder?
+:::
+
+## Selección sistemática y probabilidad proporcional al tamaño {.smaller}
+
+Dos técnicas completan la caja de herramientas:
+
+::: {style="font-size:0.9em;"}
+- **Selección sistemática:** ordenar el listado, fijar un salto $k$ y seleccionar cada $k$-ésima unidad desde un arranque aleatorio. Con el listado bien ordenado funciona como una estratificación implícita. Su riesgo: si el listado tiene un patrón que se repite cada $k$ unidades, la muestra queda siempre en la misma posición del ciclo.
+- **Probabilidad proporcional al tamaño (PPT):** las UPM grandes tienen más probabilidad de entrar en la primera etapa y, en compensación, dentro de cada una se selecciona un número fijo de viviendas. Con la medida de tamaño actualizada, las probabilidades finales quedan aproximadamente iguales y la carga de trabajo pareja.
+:::
+
+Y cuando la unidad final es una persona dentro del hogar, hace falta una última selección con probabilidad conocida — por ejemplo, la **tabla de Kish**.
+
+## El paquete completo {.smaller}
+
+Armadas las piezas, este es el diseño típico de una encuesta de hogares — el "diseño muestral complejo" del nombre de esta unidad:
+
+::: {style="font-size:0.9em;"}
+1. **Estratificar** el marco con la información auxiliar (comuna, área, nivel socioeconómico).
+2. **Primera etapa:** seleccionar UPM dentro de cada estrato, con PPT.
+3. *(Actualizar el listado de viviendas de las UPM seleccionadas en terreno.)*
+4. **Segunda etapa:** seleccionar viviendas dentro de cada UPM, sistemáticamente.
+5. **Última etapa** (si corresponde): seleccionar personas dentro del hogar con probabilidad conocida.
+:::
+
+Cada eslabón mantiene la propiedad que separa a este diseño de un panel de voluntarios: **toda unidad de la población marco tiene una probabilidad de selección conocida y distinta de cero**. Sobre eso descansa todo lo que la estadística puede prometer.
+
+# El diseño de la Casen 2024
+
+## El diseño en cifras {.smaller}
+
+::: {style="border-radius:0.7em;padding:0.8em 1em;background-color:#f2f2f2;font-size:0.85em;"}
+**Casen 2024 — diseño muestral (INE / MDSF)**
+
+- **Marco:** ad hoc a partir del MMV 2021; 335 comunas (las del diseño de la ENE), organizado en **763 estratos**.
+- **Diseño:** probabilístico, **estratificado** (comuna – área urbano/rural y, donde correspondía, nivel socioeconómico) y **bietápico**.
+- **Primera etapa:** UPM seleccionadas de forma sistemática con **PPT** según viviendas, dentro de cada estrato.
+- **Segunda etapa:** viviendas seleccionadas sistemáticamente dentro de cada UPM, con directorios actualizados **íntegramente en gabinete** (metodología ENINT: cartografía, registros administrativos y enumeraciones previas).
+- **Informante:** todos los hogares y residentes habituales de la vivienda (con informante idóneo de 18+).
+- **Tamaño:** objetivo de **74.668** viviendas logradas; para alcanzarlo, considerando el no logro esperado, se seleccionaron **112.448 viviendas en 12.761 UPM**.
+- **Precisión esperada:** tasa de pobreza nacional con error absoluto de 0,3% (relativo 3,9%); errores absolutos regionales bajo 2,4%.
+:::
+
+Reconozcan las piezas: estratos construidos con la información auxiliar del marco, PPT en la primera etapa, selección sistemática en la segunda. Y noten la distancia entre viviendas **seleccionadas** y **logradas**: el diseño ya descuenta la no respuesta que espera encontrar.
+
+## Cómo se decidió el tamaño de la muestra {.smaller}
+
+El tamaño y la distribución de esa muestra no salieron de una fórmula, sino de un proceso: el INE **simuló escenarios** de tamaño muestral y distribución — con los parámetros de campo de la Casen 2022 — y los discutió con el MDSF hasta fijar el escenario que cumplía los requerimientos de precisión **dentro del presupuesto disponible**.
+
+::: {style="font-size:0.9em;"}
+- Más precisión regional exige más muestra en regiones chicas; más muestra cuesta más terreno; el presupuesto es fijo. Las simulaciones hacen visibles esos intercambios **antes** de comprometerse.
+- Es la misma lógica que el estudio de marcos de la ENA: **balancear precisión muestral, factibilidad de campo y presupuesto** — la parte del error total que el diseño muestral puede administrar.
+:::
+
+El diseño muestral es una decisión estadística *y* económica. Los documentos metodológicos que registran estas decisiones son la evidencia con que ustedes, como analistas, podrán juzgarlas.
+
+# Síntesis
+
+## Síntesis: el marco {.smaller}
+
+::: {style="font-size:0.95em;"}
+1. Entre la población objetivo y la muestra está el **marco muestral**, el dispositivo de acceso. La distancia entre población objetivo y población marco es el territorio del **error de cobertura**.
+2. Un marco se evalúa por tres dimensiones: **cobertura, contacto e información auxiliar**. Rara vez vienen juntas, así que elegir marco es elegir cuál se privilegia.
+3. Todo marco sufre cuatro desajustes: **subcobertura, no elegibles, duplicados y conglomerados**. Los tres últimos se administran con reglas; la subcobertura no, porque implica probabilidad cero de selección.
+4. El **sesgo de cobertura** depende de cuánta gente falta *y* de cuán distinta es en la variable medida. Es propiedad de cada estimación, no de la encuesta.
+:::
+
+## Síntesis: el diseño {.smaller}
+
+::: {style="font-size:0.95em;"}
+5. Los marcos se **desactualizan con el tiempo**, y de manera desigual: pierden primero a los grupos que más cambian de lugar. Por eso la actualización es continua.
+6. El caso ENA muestra la decisión real: tres marcos que fallan en lugares distintos, y una elección — el BRR — que privilegia precisión y costo **asumiendo** una subcobertura conocida y mitigada. El marco condiciona el diseño.
+7. El **diseño complejo** —estratificación, conglomerados, PPT, selección sistemática— existe para muestrear con probabilidades conocidas cuando no hay lista de personas y el presupuesto importa: la estratificación puede ganar precisión, los conglomerados ahorran terreno pagando efecto diseño.
+8. La Casen 2024 arma el paquete completo sobre el MMV: 763 estratos, 12.761 UPM y 112.448 viviendas seleccionadas para lograr 74.668, con un tamaño fijado mediante **simulaciones y acuerdo bajo presupuesto**.
+:::
+
+## Próxima clase {.smaller}
+
+La próxima semana cerramos el diseño muestral complejo:
+
+- el **efecto diseño** en profundidad: cómo se estima y cómo se usa para dimensionar muestras;
+- **ponderadores**: de las probabilidades de selección a los factores de expansión.
+
+📖 **Lectura obligatoria de esta semana:** Groves et al. (2009), *Survey Methodology*, cap. 3.
