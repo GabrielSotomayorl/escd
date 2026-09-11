@@ -1,0 +1,29 @@
+---
+title: "🗓️ Semana 05: Diseño muestral complejo (II): efecto diseño y ponderadores"
+---
+
+En esta semana cerramos el diseño muestral complejo. Partimos con un repaso de las dos decisiones que lo estructuran, estratificar y conglomerar, y de por qué la conglomeración cuesta precisión. En el primer bloque profundizamos en el **efecto diseño**: qué mide, por qué es una propiedad de cada estimación y no de la encuesta, cómo leerlo en una ficha técnica y cómo se usa para dimensionar una muestra, con la cadena de cálculo de la Casen 2024 como caso. En el segundo bloque recorremos la **cadena completa de ajustes** que va del peso base al factor de expansión —elegibilidad, no contacto, no respuesta, suavizamiento, calibración y redondeo—, siguiéndola paso a paso en la construcción de los factores de expansión de la **ELPI 2024** y contrastándola con la de la **Casen 2024**. Cerramos con qué pasa si no se pondera, qué cuesta ponderar y por qué la varianza se estima con el diseño.
+
+## Clase Expositiva
+
+Puedes navegar por las diapositivas directamente en el recuadro de abajo o hacer clic [aquí](slides.qmd) para ver la presentación en pantalla completa. Usa las flechas de tu teclado para avanzar.
+
+<div class="container" style="position: relative;overflow: hidden;width: 100%;min-height:600px;">
+<iframe src="slides.html" style="position: absolute;top: 0;left: 0;bottom: 0;right: 0;width: 100%;min-height:600px;"></iframe>
+</div>
+
+## Lecturas Obligatorias
+
+Para acompañar los contenidos de esta semana, por favor revisa el siguiente material:
+
+- Groves, R. M., Fowler, F. J., Couper, M. P., Lepkowski, J. M., Singer, E., & Tourangeau, R. (2009). *Survey Methodology* (2nd ed.). Wiley. Cap. 4: "Sample Design and Sampling Error" (secciones 4.4 a 4.7).
+
+## Lecturas Complementarias
+
+- United Nations Statistics Division. (2026). *Handbook of Surveys on Households and Individuals*. Cap. 5, sección 5.4: "Sampling".
+- Ministerio de Desarrollo Social y Familia. (2026). *Metodología de Diseño Muestral, Casen 2024*. Documentos metodológicos Casen 2024.
+- Instituto Nacional de Estadísticas y Ministerio de Desarrollo Social y Familia. (2025). *Informe de construcción de factores de expansión. Encuesta Longitudinal de Primera Infancia, cuarta ronda 2024*.
+
+## Dudas y Comunicación
+
+Recuerda que puedes utilizar los canales de comunicación establecidos o acercarte al profesor y ayudantes si tienes dudas sobre los contenidos de esta semana.

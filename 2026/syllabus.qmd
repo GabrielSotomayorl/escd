@@ -131,7 +131,7 @@ Las sesiones son los **viernes**, en dos bloques. El semestre tiene 15 sesiones,
 | 2 | 14-08 | 1.2 El error total de encuesta (TSE) | 1.3 Modelo Genérico del Proceso Estadístico (GSBPM) |
 | 3 | 21-08 | 2.1 Especificación de necesidades | Taller aplicado 1: encargo simulado de necesidades |
 | 4 | 28-08 | 2.2 Marcos muestrales y cobertura | 2.3 Diseño muestral complejo (introducción) |
-| 5 | 04-09 | 2.3 Diseño muestral complejo (cierre) | Charla 1 |
+| 5 | 04-09 | 2.3 Diseño muestral complejo: efecto diseño | Ponderadores y factores de expansión |
 | 6 | 11-09 | 3.1 El proceso de respuesta a encuestas | 3.2 Construcción de escalas y operacionalización |
 | 7 | 25-09 | 3.3 Métodos de pretesteo | Taller aplicado 2: evaluación de preguntas reales |
 | 8 | 09-10 | Control de lectura 1 (Unidades 1–3) | Retroalimentación transversal de la Entrega 1 y avance del proyecto en grupos |
@@ -152,7 +152,7 @@ Las sesiones son los **viernes**, en dos bloques. El semestre tiene 15 sesiones,
 | Evaluación | Se asigna | Vence | Ponderación |
 |:---|:---|:---|:---:|
 | **Tarea 1** | Semana 3 · 21-08 | Semana 4 · 28-08 | 5% |
-| **Entrega 1** | — | Semana 6 · 11-09 | 10% |
+| **Entrega 1** | — | Semana 7 · 25-09 | 10% |
 | **Tarea 2** | Semana 7 · 25-09 | Semana 8 · 09-10 | 5% |
 | **Control de lectura 1** | — | Semana 8 · 09-10, en sala | 15% |
 | **Tarea 3** | Semana 10 · 23-10 | Semana 11 · 30-10 | 5% |
