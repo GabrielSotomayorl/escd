@@ -1,0 +1,28 @@
+---
+title: "🗓️ Semana 06: El proceso de respuesta, operacionalización y escalas"
+---
+
+Esta semana abre la Unidad 3 y pasamos a la columna de **medición** del Error Total de Encuesta. En el primer bloque estudiamos el **proceso de respuesta**: sus cuatro etapas (comprensión, recuperación, estimación y juicio, reporte), las fuentes de error de cada una y los criterios que de ahí se derivan para escribir preguntas. En el segundo bloque pasamos al diseño: la **operacionalización** de conceptos en preguntas, la reutilización y adaptación de preguntas existentes, y los formatos de respuesta y **escalas**. Esta semana **vence la Entrega 1** del proyecto grupal.
+
+## Clase Expositiva
+
+Puedes navegar por las diapositivas directamente en el recuadro de abajo o hacer clic [aquí](slides.qmd) para ver la presentación en pantalla completa. Usa las flechas de tu teclado para avanzar.
+
+<div class="container" style="position: relative;overflow: hidden;width: 100%;min-height:600px;">
+<iframe src="slides.html" style="position: absolute;top: 0;left: 0;bottom: 0;right: 0;width: 100%;min-height:600px;"></iframe>
+</div>
+
+## Lecturas Obligatorias
+
+Para acompañar los contenidos de esta semana, por favor revisa el siguiente material:
+
+- Groves, R. M., Fowler, F. J., Couper, M. P., Lepkowski, J. M., Singer, E., & Tourangeau, R. (2009). *Survey Methodology* (2nd ed.). Wiley. Cap. 7: "Questions and Answers in Surveys".
+- Asún, R. (2006). "Construcción de cuestionarios y escalas: El proceso de la producción de información cuantitativa". En M. Canales (Ed.), *Metodologías de investigación social. Introducción a los oficios* (pp. 63–113). LOM Ediciones.
+
+## Lecturas Complementarias
+
+- United Nations Statistics Division. (2026). *Handbook of Surveys on Households and Individuals*. Cap. 4, sección 4.2: "Questionnaire content".
+
+## Dudas y Comunicación
+
+Recuerda que puedes utilizar los canales de comunicación establecidos o acercarte al profesor y ayudantes si tienes dudas sobre los contenidos de esta semana.

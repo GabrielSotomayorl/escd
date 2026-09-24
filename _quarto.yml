@@ -64,7 +64,12 @@ website:
               collapse: false
               contents:
                 - href: 2026/weeks/week05/page.qmd
-                  text: "👨‍🏫 Material de clase"                  
+                  text: "👨‍🏫 Material de clase"
+            - section: "Semana 06"
+              collapse: false
+              contents:
+                - href: 2026/weeks/week06/page.qmd
+                  text: "👨‍🏫 Material de clase"
   navbar:
     background: primary
   page-footer:
