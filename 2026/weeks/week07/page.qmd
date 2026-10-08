@@ -1,0 +1,28 @@
+---
+title: "🗓️ Semana 07: Métodos de pretesteo y taller QAS"
+---
+
+Esta semana cerramos la Unidad 3. En el primer bloque revisamos los **métodos de evaluación de preguntas**: los tres estándares que toda pregunta debe cumplir y cinco familias de métodos (revisión de expertos, grupos focales, entrevistas cognitivas, pretest de campo y experimentos de formulación). Profundizamos en el diseño de **entrevistas cognitivas**, con dos casos chilenos: las pruebas de los cuestionarios de la EANNA y la ELPI. En el segundo bloque, **taller aplicado**: en parejas aplicamos el formulario **QAS-99** a preguntas reales de cuestionarios chilenos. Del taller sale la **Tarea 2**, cuya pauta está disponible en Canvas.
+
+## Clase Expositiva
+
+Puedes navegar por las diapositivas directamente en el recuadro de abajo o hacer clic [aquí](slides.qmd) para ver la presentación en pantalla completa. Usa las flechas de tu teclado para avanzar.
+
+<div class="container" style="position: relative;overflow: hidden;width: 100%;min-height:600px;">
+<iframe src="slides.html" style="position: absolute;top: 0;left: 0;bottom: 0;right: 0;width: 100%;min-height:600px;"></iframe>
+</div>
+
+## Lecturas Obligatorias
+
+Para acompañar los contenidos de esta semana, por favor revisa el siguiente material:
+
+- Groves, R. M., Fowler, F. J., Couper, M. P., Lepkowski, J. M., Singer, E., & Tourangeau, R. (2009). *Survey Methodology* (2nd ed.). Wiley. Cap. 8: "Evaluating Survey Questions".
+
+## Lecturas Complementarias
+
+- United Nations Statistics Division. (2026). *Handbook of Surveys on Households and Individuals*. Cap. 4, sección 4.6 ("Questionnaire evaluation and testing").
+- Willis, G. B., & Lessler, J. T. (1999). *Question Appraisal System QAS-99*. Research Triangle Institute. (El formulario que usamos en el taller.)
+
+## Dudas y Comunicación
+
+Recuerda que puedes utilizar los canales de comunicación establecidos o acercarte al profesor y ayudantes si tienes dudas sobre los contenidos de esta semana.

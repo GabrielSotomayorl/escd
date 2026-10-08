@@ -1,0 +1,444 @@
+---
+subtitle: "Encuestas Sociales para Contextos Diversos"
+title: "<font style='font-size:1em;'>🗓️ Semana 07<br/> Métodos de pretesteo · Taller: QAS-99 y entrevista cognitiva</font>"
+author: Prof. [Gabriel Sotomayor](https://gabrielsotomayorl.github.io/)
+institute: '[Pontificia Universidad Católica de Chile](https://sociologia.uc.cl/)'
+date: "2026-10-09"
+date-meta: "2026"
+date-format: "dddd DD [de] MMMM [de] YYYY"
+toc: true
+toc-depth: 1
+toc-title: "Contenidos de hoy:"
+center-title-slide: false
+from: markdown+emoji
+format:
+  revealjs:
+    fig-responsive: true
+    theme: [simple, ../../../css/slides.scss]
+    slide-number: true
+    mouse-wheel: false
+    preview-links: auto
+    logo: /figures/icons/course_favicon.png
+    footer: 'Encuestas Sociales para Contextos Diversos'
+---
+
+# Mirar una pregunta no basta
+
+## Un ejercicio para partir {.smaller}
+
+La clase pasada cerramos con criterios para escribir buenas preguntas. Apliquémoslos a esta, que es **hipotética**: imaginen que llega en el borrador de un cuestionario.
+
+::: {style="border-radius:0.7em;padding:0.9em 1.1em;background-color:#f2f2f2;font-size:1.05em;"}
+*"En los últimos meses, ¿con qué frecuencia ha utilizado los servicios de salud de su comuna y qué tan conforme ha quedado con la atención?"*
+
+Muy conforme · Conforme · Poco conforme
+:::
+
+<br>
+
+Tómense dos minutos: ¿qué problemas le ven?
+
+## Lo que probablemente encontraron {.smaller}
+
+Varios problemas, y probablemente **no los mismos** que su compañero de al lado:
+
+- ¿"los últimos meses" son cuántos?
+- ¿qué cuenta como "servicios de salud"?
+- ¿son dos preguntas en una?
+- ¿dónde responde quien no se ha atendido?
+- ¿las categorías responden a la frecuencia o solo a la conformidad?
+
+<br>
+
+::: {style="border-radius:0.7em;padding:0.9em 1.1em;background-color:#f2f2f2;"}
+Ese desacuerdo es el punto de hoy: **mirar una pregunta no basta para saber si funciona.** Incluso los expertos discrepan sobre qué está mal y cuánto importa. Hoy vemos los métodos que permiten pasar de la opinión a la evidencia, antes de que la pregunta llegue a terreno.
+:::
+
+## Tres estándares {.smaller}
+
+Groves organiza la evaluación de preguntas en torno a tres estándares distintos:
+
+::: {style="font-size:1.0em;"}
+- **Contenido:** ¿la pregunta pide la información correcta, la que el análisis necesita?
+- **Cognitivo:** ¿los respondentes la entienden todos igual y como el diseñador quería, tienen la información y pueden y quieren formular una respuesta?
+- **Usabilidad:** ¿respondentes y entrevistadores pueden completar el cuestionario con facilidad, tal como fue diseñado?
+:::
+
+Una pregunta puede fallar en cualquiera de los tres. Cada método de hoy sirve mejor a unos estándares que a otros.
+
+# Cinco métodos de evaluación
+
+## Métodos de evaluación {.smaller}
+
+Groves distingue cinco familias de métodos para evaluar preguntas antes del terreno:
+
+::: {style="font-size:1.0em;"}
+1. **Revisión de expertos:** especialistas leen el borrador y marcan problemas.
+2. **Grupos focales:** conversación guiada con miembros de la población, antes de redactar.
+3. **Entrevistas cognitivas:** se aplica el borrador a una persona a la vez y se indaga cómo llegó a su respuesta.
+4. **Pretest de campo:** un ensayo en pequeño de la recolección, a veces con codificación de conducta.
+5. **Experimentos de formulación:** submuestras aleatorias reciben versiones distintas de la pregunta.
+:::
+
+<br>
+
+Responden preguntas distintas, en momentos distintos y a costos distintos.
+
+## Revisión de expertos {.smaller}
+
+Personas con experiencia leen el borrador y marcan problemas. Dos perfiles revisan cosas distintas:
+
+::: {style="font-size:1.0em;"}
+- **expertos temáticos:** ¿las preguntas capturan los conceptos que el estudio necesita? (contenido);
+- **expertos en cuestionarios:** redacción, alternativas de respuesta, orden e instrucciones (cognitivo y usabilidad).
+:::
+
+En la comparación clásica de métodos (Presser y Blair, 1994), los paneles de expertos identificaron en promedio unos **160 problemas**, frente a cerca de 90 de los demás métodos, y fueron el método más eficiente en costo.
+
+**Límites:** es subjetiva, y marca muchos problemas que quizás **no afectan los datos**. Su mejor uso es temprano: filtrar el borrador y decidir qué preguntas llevar a pruebas con respondentes.
+
+## Grupos focales {.smaller}
+
+Conversación guiada por un moderador con 6 a 10 miembros de la población objetivo. Su lugar natural es **antes** de redactar el cuestionario:
+
+::: {style="font-size:1.0em;"}
+- qué sabe y qué no sabe la población sobre el tema, y cómo organiza ese conocimiento;
+- qué **términos usa espontáneamente**, la materia prima para redactar preguntas que se entiendan;
+- qué rango de experiencias tendrán que cubrir las alternativas de respuesta.
+:::
+
+<br>
+
+**Límites:** no sirve para evaluar la redacción de preguntas específicas ni para ver cómo una persona llega a su respuesta; sus resultados son cualitativos y difíciles de replicar.
+
+## Entrevistas cognitivas {.smaller}
+
+Un entrevistador aplica las preguntas en borrador a **una persona a la vez** e indaga cómo las entendió y cómo construyó su respuesta.
+
+<br>
+
+Es el método más directo para observar el **proceso de respuesta** que vimos la clase pasada, y por eso el que mejor sirve al estándar cognitivo. En el estudio de Presser y Blair, las entrevistas cognitivas encontraron sobre todo **problemas de comprensión**, y ninguno de administración por parte del entrevistador.
+
+
+## Pretest de campo {.smaller}
+
+El **pretest** es un ensayo en pequeño de la recolección: algunas decenas de entrevistas con procedimientos lo más parecidos posible a los del estudio real. Evalúa la **usabilidad** del instrumento completo, con tres tipos de evidencia:
+
+::: {style="font-size:0.95em;"}
+1. el ***debriefing*** de los entrevistadores: qué preguntas costaron y dónde se trabó;
+2. la **tabulación de los datos:** no respuesta por ítem, valores fuera de rango, ítems sin variación;
+3. la **codificación de conducta:** con las entrevistas grabadas, se registra si el entrevistador leyó la pregunta tal como estaba escrita, o si el respondente interrumpió o pidió aclaración.
+:::
+
+La codificación de conducta es **replicable**: dos equipos que probaron las mismas preguntas obtuvieron tasas de problemas que correlacionaron entre 0,75 y 0,90. Su límite es que detecta *que* algo falla, más que *por qué*.
+
+## Experimentos de formulación {.smaller}
+
+El único método que **estima el efecto** de una decisión de redacción: submuestras aleatorias reciben versiones distintas de la pregunta y se comparan los resultados (*split-ballot*).
+
+::: {style="border-radius:0.7em;padding:0.8em 1.1em;background-color:#f2f2f2;font-size:0.95em;"}
+*"Los días que bebe alcohol, ¿cuántos tragos toma habitualmente: uno, dos, o tres o más?"*
+
+*"…¿uno o dos, tres o cuatro, cinco o seis, o siete o más?"*
+:::
+
+Quienes recibieron la segunda versión reportaron más tragos con mucha mayor frecuencia (Sudman y Bradburn, 1982).
+
+**Su límite:** demuestra que las versiones producen respuestas *distintas*, pero no dice cuál es *mejor*. Para eso hace falta un criterio externo. Es además el método más caro, y se reserva para decisiones grandes, como cambiar una serie.
+
+## Qué detecta cada método {.smaller}
+
+::: {style="font-size:0.8em;"}
+| Método | Estándar al que sirve | Momento | Costo |
+|:---|:---|:---|:---|
+| Revisión de expertos | Los tres, sobre todo contenido | Sobre el borrador | Bajo |
+| Grupos focales | Contenido y vocabulario | Antes de redactar | Bajo a medio |
+| Entrevistas cognitivas | Cognitivo | Sobre el borrador | Medio |
+| Pretest y codificación de conducta | Usabilidad | Instrumento casi final | Medio a alto |
+| Experimentos de formulación | Efecto de la redacción | Decisiones específicas | Alto |
+:::
+
+Los métodos encuentran problemas **en parte distintos**, así que no son intercambiables: los estudios serios los **encadenan**, de los grupos focales a la revisión de expertos, las entrevistas cognitivas y el pretest.
+
+## El techo del pretesteo {.smaller}
+
+Estos métodos **detectan problemas, pero no cuantifican su efecto** sobre el dato final. Saber que una pregunta es ambigua no dice cuánto sesgo introduce.
+
+<br>
+
+Para eso hay que evaluar con datos ya recolectados:
+
+::: {style="font-size:1.0em;"}
+- **validez y sesgo:** comparar las respuestas con un criterio externo, como registros administrativos (los estudios clásicos contrastaron reportes de hospitalización con las fichas de los hospitales);
+- **confiabilidad:** repetir la medición, reentrevistando a una submuestra o usando varios ítems del mismo constructo.
+:::
+
+<br>
+
+Para el proyecto: al analizar el instrumento de su encuesta, la pregunta no es solo si está bien redactado, sino **qué evidencia de evaluación reporta la documentación**.
+
+# La entrevista cognitiva en detalle
+
+## Qué busca una entrevista cognitiva {.smaller}
+
+En una entrevista de encuesta interesa **la respuesta**. En una entrevista cognitiva interesa **cómo se llegó a ella**.
+
+<br>
+
+::: {style="font-size:1.0em;"}
+- Se entrevista a personas de la población objetivo, una a la vez, en sesiones largas y fuera de la situación real de encuesta.
+- Se aplica la pregunta en borrador tal como se aplicaría en terreno.
+- Después, o durante, se indaga en lo que ocurrió en cada etapa: qué entendió, qué recordó, cómo armó la respuesta, por qué eligió esa alternativa.
+:::
+
+<br>
+
+El resultado no es una estimación: es evidencia sobre **si la pregunta funciona como el diseñador cree**, y si no, en qué etapa falla.
+
+## Seis procedimientos {.smaller}
+
+Groves agrupa bajo "entrevista cognitiva" varios procedimientos, que se combinan:
+
+::: {style="font-size:0.82em;"}
+| Procedimiento | Qué se le pide al respondente |
+|:---|:---|
+| Pensar en voz alta concurrente | Verbalizar lo que piensa *mientras* responde |
+| Pensar en voz alta retrospectivo | Contar cómo llegó a la respuesta, *después* |
+| Calificación de confianza | Evaluar qué tan seguro está de su respuesta |
+| Parafraseo | Repetir la pregunta con sus propias palabras |
+| Definiciones | Definir los términos clave de la pregunta |
+| Sondeos | Responder preguntas de seguimiento sobre cómo respondió |
+:::
+
+## Pensar en voz alta o sondear {.smaller}
+
+::: {style="font-size:1.0em;"}
+**Pensar en voz alta.** El entrevistador interviene poco, así que influye poco en lo que se observa. Pero es exigente: a muchas personas les cuesta verbalizar su razonamiento, y el material que produce es abundante y poco enfocado.
+:::
+
+<br>
+
+::: {style="font-size:1.0em;"}
+**Sondeos.** El entrevistador hace preguntas dirigidas a lo que quiere averiguar. Son más fáciles para el respondente y producen información enfocada en las dudas del diseño. El riesgo es que el entrevistador sugiera respuestas, o que solo encuentre lo que fue a buscar.
+:::
+
+<br>
+
+En la práctica se combinan: una consigna general de contar en voz alta, y sondeos sobre los puntos que el equipo quiere poner a prueba.
+
+## ¿Durante o después? {.smaller}
+
+::: {style="font-size:1.0em;"}
+**Sondeo concurrente:** se indaga justo después de cada pregunta. El razonamiento está fresco, pero la entrevista se interrumpe una y otra vez, y deja de parecerse a una entrevista real.
+:::
+
+<br>
+
+::: {style="font-size:1.0em;"}
+**Sondeo retrospectivo:** se aplica el cuestionario completo y se indaga al final. Conserva el flujo real, útil para evaluar la usabilidad o un cuestionario autoadministrado, pero depende de que el respondente recuerde cómo razonó varias preguntas atrás.
+:::
+
+<br>
+
+La elección depende de lo que se quiere observar: para problemas de comprensión de una pregunta específica conviene el concurrente; para el comportamiento del instrumento completo, el retrospectivo.
+
+## Sondeos según la etapa que se quiere indagar {.smaller}
+
+::: {style="font-size:0.82em;"}
+| Etapa | Ejemplos de sondeo |
+|:---|:---|
+| Comprensión | "¿Qué entendió por 'servicios de salud'?" · "¿Me podría decir la pregunta con sus palabras?" |
+| Recuperación | "¿Qué período consideró?" · "¿Cómo recordó esas consultas?" |
+| Estimación y juicio | "¿Cómo llegó a ese número?" · "¿Qué tan seguro está de su respuesta?" |
+| Reporte | "¿Entre qué alternativas dudó?" · "¿Hubo algo que prefirió no decir?" |
+:::
+
+Los sondeos **generales** ("¿cómo llegó a su respuesta?", "¿le resultó fácil o difícil?") sirven para abrir, pero no reemplazan a los específicos.
+
+## Sondeos planificados y espontáneos {.smaller}
+
+::: {style="font-size:1.0em;"}
+**Planificados:** se escriben antes de la entrevista, a partir de lo que el equipo sospecha que puede fallar. Garantizan que todas las entrevistas indaguen lo mismo y que los resultados se puedan comparar.
+:::
+
+<br>
+
+::: {style="font-size:1.0em;"}
+**Espontáneos:** surgen durante la entrevista, cuando el respondente duda, contesta algo inesperado o da una respuesta incompatible con otra anterior. Capturan los problemas que nadie anticipó.
+:::
+
+<br>
+
+Un buen protocolo tiene los dos: sondeos planificados por escrito, y espacio para que el entrevistador siga lo que aparezca.
+
+## De la hipótesis al sondeo {.smaller}
+
+Cada sondeo planificado responde a una **hipótesis**: algo que el equipo sospecha que puede fallar. Con la pregunta de empleo de la Casen que vimos la clase pasada:
+
+::: {style="border-radius:0.7em;padding:0.7em 1.1em;background-color:#f2f2f2;font-size:0.9em;"}
+*"La semana pasada, ¿trabajó al menos una hora, sin considerar los quehaceres del hogar?"*
+:::
+
+::: {style="font-size:0.88em;"}
+| Hipótesis | Sondeo | Qué la confirmaría |
+|:---|:---|:---|
+| "Trabajar" se interpreta distinto en los casos límite | "¿Qué actividades incluyó al pensar en 'trabajar'?" | Personas con la misma actividad la incluyen o excluyen según quién responda |
+| "La semana pasada" no designa los mismos días | "¿A qué días se refería cuando le dije 'la semana pasada'?" | Unos piensan en lunes a domingo y otros en los últimos siete días |
+:::
+
+## Cómo se ve un protocolo {.smaller}
+
+Para cada pregunta que se pone a prueba, el protocolo especifica:
+
+::: {style="font-size:1.0em;"}
+1. **la pregunta tal como se aplica**, con sus alternativas e instrucciones;
+2. **la hipótesis o el foco de indagación:** qué se sospecha que puede fallar, en qué etapa, y qué se observaría si ocurre;
+3. **el momento:** sondeo concurrente o retrospectivo;
+4. **los sondeos planificados**, en el orden en que se aplicarán;
+5. **el perfil de participantes:** las poblaciones en que las hipótesis deben contrastarse.
+:::
+
+
+## Cómo se leen los resultados {.smaller}
+
+::: {style="font-size:1.0em;"}
+- Las rondas son **pequeñas**: decenas de entrevistas, no cientos. Lo que importa no es cuántos tuvieron un problema, sino **qué problemas aparecen y en qué tipo de persona**.
+- Se trabaja en **rondas**: probar, corregir la pregunta y volver a probar la versión nueva.
+- Los resultados se reportan pregunta por pregunta, con la evidencia que respalda cada recomendación.
+:::
+
+<br>
+
+**Límites:** son muestras de voluntarios, sin generalización estadística; los resultados dependen en parte de cómo indaga cada entrevistador; y no dice cuánto sesgo produce el problema en la encuesta real.
+
+# Dos casos chilenos
+
+## Las etapas no fallan igual en toda población {.smaller}
+
+Casi toda la evidencia sobre el proceso de respuesta viene de adultos. Cuando cambia el respondente, cambia el mapa de fallas.
+
+El caso chileno: la **EANNA 2023**, con que el MDSF, junto al Ministerio del Trabajo, la OIT y UNICEF, estima el trabajo infantil y adolescente.
+
+::: {style="border-radius:0.7em;padding:0.9em 1.1em;background-color:#f2f2f2;font-size:1.0em;"}
+Pregunta por actividades realizadas *"durante la semana pasada, entre el último lunes y el último domingo"*.
+:::
+
+Es la misma ventana de referencia de la pregunta de empleo de la Casen, aquí incluso con la definición de semana explicitada en el enunciado.
+
+## EANNA: qué mostró la prueba cognitiva {.smaller}
+
+Las pruebas cualitativas del cuestionario (44 entrevistas cognitivas) mostraron que en el tramo de **5 a 8 años** esa referencia falla gravemente:
+
+::: {style="font-size:0.95em;"}
+- gran parte no logra definir "una semana" ni "la semana pasada": las respuestas van de «siete días atrás» a «un día entero»;
+- leer la definición en voz alta no mejoró la comprensión, y un calendario ayudó solo a los mayores del tramo;
+- sin ventana temporal firme, la **recuperación** deriva a lo habitual: reportan lo que *suelen* hacer.
+:::
+
+El estudio recomendó descartar esa referencia en ese tramo, o cambiar el formato: "¿alguna vez…?" y luego "¿cuándo fue la última vez?".
+
+::: {style="border-radius:0.7em;padding:0.7em 1.1em;background-color:#f2f2f2;font-size:0.95em;"}
+**El proceso de respuesta no es universal.**
+:::
+
+## EANNA: cómo se llegó a ese hallazgo {.smaller}
+
+::: {style="font-size:0.95em;"}
+1. **Revisión de escritorio primero:** el equipo de MIDE UC evaluó las preguntas candidatas con cinco de los ocho pasos del QAS-99 (claridad, supuestos, conocimiento y memoria, sensibilidad, categorías), el formulario que usarán hoy en el taller, para decidir qué someter a prueba y diseñar los sondeos.
+2. **Después, 44 entrevistas cognitivas** con sondeo concurrente y protocolo escrito: qué lee textual el entrevistador y qué sondeos siguen a cada pregunta.
+3. **Una muestra pensada para que el problema apareciera:** segmentada por edad (5 a 8, 9 a 13 y 14 a 17 años), sexo y condición de trabajo.
+:::
+
+<br>
+
+Es la secuencia completa de hoy: revisión sistematizada para formular hipótesis, y entrevistas cognitivas para ponerlas a prueba con quienes iban a responder.
+
+## ELPI: una recomendación por etapa {.smaller}
+
+En la cuarta ronda de la **ELPI**, el Centro de Microdatos de la U. de Chile aplicó **50 entrevistas cognitivas** a responsables principales y adolescentes. Tres de sus recomendaciones:
+
+::: {style="font-size:0.95em;"}
+- **Comprensión:** "régimen de cuidado personal compartido" confundía a parte de los entrevistados; el término que la gente conoce es "tuición compartida".
+- **Estimación:** "¿a qué hora se despierta el o la adolescente?" resultaba fácil en período escolar, pero la hora varía, y más en vacaciones; se propuso preguntar "en promedio" y usar **rangos horarios**.
+- **Límites del reporte por terceros:** las horas de pantalla del hijo resultaron difíciles de estimar para cuidadores que no están todo el día en el hogar.
+:::
+
+Las recomendaciones alimentaron además la **capacitación de los encuestadores** y dejaron marcado qué volver a probar en el piloto.
+
+# Síntesis
+
+## Síntesis {.smaller}
+
+::: {style="font-size:1.0em;"}
+- Mirar una pregunta no basta: la evaluación debe pasar de la opinión a la **evidencia**, y toda pregunta debe cumplir tres estándares: **contenido, cognitivo y usabilidad**.
+- Hay cinco familias de métodos, que detectan **problemas distintos** y se encadenan: expertos, grupos focales, entrevistas cognitivas, pretest con codificación de conducta y experimentos de formulación.
+- La entrevista cognitiva observa el proceso de respuesta. Se diseña a partir de **hipótesis**, con sondeos neutrales y planificados según la etapa que se quiere indagar, y en las poblaciones donde esas hipótesis deben contrastarse.
+- El pretesteo detecta problemas pero no cuantifica su efecto; para eso hay que evaluar con datos ya recolectados.
+:::
+
+# Taller: QAS-99 y entrevista cognitiva
+
+## La revisión sistematizada: el QAS-99 {.smaller}
+
+El QAS-99 (Willis y Lessler, 1999) **obliga a revisar cada pregunta de forma sistemática**, en 8 pasos:
+
+::: {style="font-size:0.75em;"}
+| Paso | Qué revisa |
+|:---|:---|
+| 1. Lectura | ¿El entrevistador puede leerla igual a todos? |
+| 2. Instrucciones | ¿Introducciones y explicaciones claras y consistentes? |
+| 3. Claridad | Redacción, términos técnicos, vaguedad, período de referencia |
+| 4. Supuestos | Supuestos indebidos, conducta asumida constante, pregunta doble |
+| 5. Conocimiento y memoria | ¿El respondente sabe, recuerda, puede calcular? |
+| 6. Sensibilidad y sesgo | Contenido o redacción sensible, respuesta socialmente aceptable |
+| 7. Categorías de respuesta | Desajuste, traslape, categorías faltantes, orden ilógico |
+| 8. Otros | Lo que no cayó en los pasos anteriores |
+:::
+
+## Qué esperar del QAS {.smaller}
+
+Aplicado con rigor, el QAS **encuentra problemas en casi todas las preguntas**, porque la pregunta perfecta no existe. Eso cambia cómo se lee el resultado:
+
+::: {style="font-size:1.0em;"}
+- **lo importante es detectar el problema, no su código exacto:** si un problema calza en dos códigos, basta con registrarlo en uno y describirlo bien;
+- **los problemas difieren en gravedad:** algunos vuelven la pregunta mejorable y otros vuelven inútil la información;
+- que una pregunta tenga problemas **no significa no hacerla**, sino conocer sus límites.
+:::
+
+<br>
+
+::: {style="border-radius:0.7em;padding:0.9em 1.1em;background-color:#f2f2f2;"}
+Y muchos de los problemas que marca son **hipótesis**: el QAS los sospecha, pero solo una prueba con respondentes puede confirmarlos. Ese es el puente entre las dos partes de la tarea.
+:::
+
+## El taller {.smaller}
+
+En parejas, sobre **preguntas reales de cuestionarios chilenos**, con el formulario y el set de la pauta de la tarea:
+
+::: {style="font-size:1.0em;"}
+1. Todas las parejas trabajan con el **mismo set de tres preguntas**, de la Encuesta de Bienestar Social y la Encuesta Nacional de Juventudes, con su contexto completo: enunciado, alternativas, instrucciones, filtros y modo de aplicación.
+2. Para cada pregunta, recorran los **8 pasos** del formulario y **anoten por escrito** cada problema que marquen. Ante la duda, marquen.
+3. Al terminar, identifiquen qué problemas se pueden documentar desde el escritorio y cuáles requerirían una prueba con respondentes.
+:::
+
+Tiempo de trabajo: unos 45 minutos.
+
+## Tarea 2 {.smaller}
+
+En parejas. Pondera **5%**. Se entrega el **miércoles 14 de octubre**, hasta las 23:59, por Canvas.
+
+::: {style="font-size:1.0em;"}
+**a) Aplicación del QAS-99** al set de tres preguntas trabajado en el taller, con una síntesis de los problemas más relevantes y su gravedad.
+
+**b) Pauta de entrevista cognitiva** para **dos preguntas** del set: para cada una, la hipótesis o el foco de indagación, el momento del sondeo, los sondeos planificados y el perfil de los participantes.
+:::
+
+<br>
+
+Incluye la **Declaración de uso de IA**, en los mismos términos que el proyecto grupal. La pauta completa, con el formulario y los sets, está en Canvas.
+
+## Próxima clase {.smaller}
+
+::: {style="border-radius:0.7em;padding:0.9em 1.1em;background-color:#f2f2f2;font-size:1.2em;"}
+**Control de lectura.**
+:::
