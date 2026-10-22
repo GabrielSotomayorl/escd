@@ -1,0 +1,28 @@
+---
+title: "🗓️ Semana 09: Modos de administración y el entrevistador"
+---
+
+Esta semana abre la **Unidad 4 (recolección)**. En el primer bloque estudiamos los **modos de administración**: las cinco dimensiones que describen un modo y sus efectos sobre la cobertura, la no respuesta, la medición y los costos. En el segundo bloque vemos al **entrevistador como parte del instrumento** (sesgo, varianza y estandarización), los **diseños mixtos** y tres casos chilenos de cambio de modo: Casen en Pandemia, ELSOC y Cadem. La clase cierra con un ejercicio sobre el modo de la encuesta de cada proyecto.
+
+## Clase Expositiva
+
+Puedes navegar por las diapositivas directamente en el recuadro de abajo o hacer clic [aquí](slides.qmd) para ver la presentación en pantalla completa. Usa las flechas de tu teclado para avanzar.
+
+<div class="container" style="position: relative;overflow: hidden;width: 100%;min-height:600px;">
+<iframe src="slides.html" style="position: absolute;top: 0;left: 0;bottom: 0;right: 0;width: 100%;min-height:600px;"></iframe>
+</div>
+
+## Lecturas Obligatorias
+
+Para acompañar los contenidos de esta semana, por favor revisa el siguiente material:
+
+- Groves, R. M., Fowler, F. J., Couper, M. P., Lepkowski, J. M., Singer, E., & Tourangeau, R. (2009). *Survey Methodology* (2nd ed.). Wiley. Cap. 5: "Methods of Data Collection".
+
+## Lecturas Complementarias
+
+- Groves, R. M., et al. (2009). *Survey Methodology* (2nd ed.). Wiley. Cap. 9: "Survey Interviewing" (secciones 9.2, 9.3 y 9.5: sesgo, varianza y estandarización del entrevistador).
+- United Nations Statistics Division. (2026). *Handbook of Surveys on Households and Individuals*. Cap. 6: "Data collection" (secciones de planificación e implementación).
+
+## Dudas y Comunicación
+
+Recuerda que puedes utilizar los canales de comunicación establecidos o acercarte al profesor y ayudantes si tienes dudas sobre los contenidos de esta semana.
