@@ -24,7 +24,7 @@ format:
 
 # El modo de recolección y el error total de encuesta
 
-## El modo no es logística {.smaller}
+## Modo de recolección y errores {.smaller}
 
 Con esta clase abrimos la **Unidad 4**. Ya vimos a quién preguntar y qué preguntar; ahora viene el encuentro entre la encuesta y las personas.
 
@@ -32,7 +32,7 @@ El **modo de administración** parece una decisión operativa: ¿visitamos a las
 
 <br>
 
-Pero es la decisión de diseño que **más errores toca a la vez**: cambia la cobertura, la no respuesta, la medición y los costos al mismo tiempo. Elegir un modo es elegir qué errores se aceptan a cambio de cuáles se reducen.
+Pero es una decisión de diseño que **toca múltiples errores a la vez**: cambia la cobertura, la no respuesta, la medición y los costos al mismo tiempo. Elegir un modo es elegir qué errores se aceptan a cambio de cuáles se reducen.
 
 <br>
 
@@ -56,7 +56,7 @@ Groves describe los métodos de recolección según cinco dimensiones:
 
 <br>
 
-Cuando dos modos producen resultados distintos, la explicación está en **qué dimensión cambió**, no en la etiqueta. Por eso conviene desconfiar de frases como "las encuestas telefónicas dan X".
+Cuando dos modos producen resultados distintos, la explicación está en **qué dimensión cambió**, no en la etiqueta.
 
 ## Los modos en dos de esas dimensiones {.smaller .nostretch}
 
@@ -73,7 +73,7 @@ Un mismo operativo puede combinar posiciones: una entrevista presencial puede in
 |:---|:---|:---|:---|:---|
 | Casen 2024 | Presencial (CAPI) | Sí, en el hogar | Auditivo con apoyo visual | Una persona informa por el hogar |
 | II ENUT 2023 | Presencial (CAPI) | Sí, en el hogar | Auditivo con tarjetas | Cada persona por su tiempo |
-| ELSOC | Presencial; en olas posteriores, presencial y telefónico | Sí | Auditivo | Cada persona por sí misma |
+| ELSOC | Presencial; telefónico en 2021 y mixto en 2022 | Sí | Auditivo | Cada persona por sí misma |
 | Cadem Plaza Pública | Web sobre panel en línea | No | Visual | Cada persona por sí misma |
 :::
 
@@ -262,9 +262,9 @@ En el estudio de Schuman y Converse, con entrevistadores afroamericanos y blanco
 
 Para el resto de los temas, los entrevistadores logran un contexto bastante neutral.
 
-## Sesgo: la experiencia {.smaller}
+## Sesgo: experiencia y capacitación {.smaller}
 
-Un hallazgo incómodo: los entrevistadores con más experiencia no siempre producen mejores datos.
+La experiencia del entrevistador no garantiza por sí sola mejores datos, y sus efectos pueden ir en direcciones opuestas.
 
 <br>
 
@@ -274,7 +274,7 @@ En la encuesta estadounidense de consumo de drogas (NSDUH), los entrevistadores 
 
 <br>
 
-La evidencia sugiere que los entrevistadores con experiencia tienden a ser menos cuidadosos al leer las preguntas tal como están escritas y al seguir los protocolos. A la vez, suelen lograr mejores tasas de respuesta. Experiencia no es lo mismo que calidad de medición.
+Los entrevistadores con experiencia suelen lograr mejores tasas de respuesta, pero en algunos estudios se vuelven menos rigurosos al leer las preguntas tal como están escritas y al seguir los protocolos. Por eso la **capacitación y la supervisión** importan durante todo el terreno, y no solo al inicio.
 
 ## Varianza: cada entrevistador es un conglomerado {.smaller}
 
@@ -328,7 +328,7 @@ Mientras más tiene que aclarar o sondear el entrevistador para obtener una resp
 
 <br>
 
-Una pregunta que se entiende a la primera deja poco espacio para que el entrevistador importe. Aquí se cierra el círculo con las clases 6 y 7: el proceso de respuesta y el pretesteo también son defensas contra el error del entrevistador.
+Una pregunta que se entiende a la primera deja poco espacio para que el entrevistador importe. Por eso es relevante contar con las herramientas de revisión de la claridad de las preguntas que vimos la clase pasada, como el QAS y las entrevistas cognitivas.
 
 # Modos mixtos
 
@@ -387,19 +387,23 @@ Es un diseño mixto secuencial nacido de una emergencia. Toca todas las columnas
 
 ## ELSOC {.smaller}
 
-El Estudio Longitudinal Social de Chile **comenzó con entrevistas presenciales** y, en las olas posteriores a la pandemia, **combinó entrevistas presenciales y telefónicas**.
+El Estudio Longitudinal Social de Chile se aplicaba en **formato presencial con tablet**. La pandemia obligó a cambiarlo:
 
 <br>
 
-Es el patrón clásico de un panel:
-
-- la entrevista cara a cara establece la relación con las personas;
-- el teléfono la sostuvo en las olas siguientes, a menor costo.
+::: {style="font-size:1.0em;"}
+- **2021:** de manera excepcional, la ola se aplicó por **teléfono**, debido a la contingencia del COVID-19;
+- **2022:** pasó a un formato **mixto**, que combinó entrevistas presenciales y telefónicas.
+:::
 
 <br>
 
 ::: {style="border-radius:0.7em;padding:0.9em 1.1em;background-color:#f2f2f2;"}
-La pregunta que queda abierta en todo panel que cambia de modo: cuando una respuesta cambia entre olas, ¿cambió la persona o cambió el modo?
+Es el problema central de un panel que cambia de modo: cuando una respuesta cambia entre olas, ¿cambió la persona o cambió el modo?
+:::
+
+::: {style="font-size:0.8em;color:#5A6472;"}
+Fuente: COES, *Radiografía del Cambio Social en Chile 2016-2022*, anexo técnico.
 :::
 
 ## Cadem Plaza Pública {.smaller}
@@ -441,7 +445,7 @@ Es la base de la sección "La recolección" de la Entrega 2.
 ## Síntesis {.smaller}
 
 ::: {style="font-size:0.95em;"}
-- El modo es la decisión que **cambia todos los errores a la vez**, y se elige junto con el marco, el diseño muestral y el presupuesto.
+- El modo es una decisión que **toca múltiples errores a la vez**, y se define en conjunto con el marco, el diseño muestral y el presupuesto.
 - Se describe por **cinco dimensiones**; los efectos de modo se explican por las dimensiones, no por las etiquetas.
 - Los efectos más sólidos: la autoadministración mejora el reporte de lo sensible, el canal produce efectos de orden y el modo presencial logra más respuesta. En preguntas no sensibles, modos comparables dan resultados parecidos.
 - El **entrevistador es parte del instrumento**: introduce sesgo cuando el tema activa sus características y varianza como un conglomerado. Las defensas son la estandarización y las buenas preguntas.
