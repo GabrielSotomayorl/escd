@@ -1,0 +1,287 @@
+---
+title: "🧪 Taller semana 10: reporte de terreno con códigos de disposición en R"
+resources:
+  - data/cdf_casen2024_simulada.rds
+df-print: kable
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+
+**Descarga:** [📄 base `cdf_casen2024_simulada.rds`](data/cdf_casen2024_simulada.rds)
+
+## La base
+
+Es una **base simulada**: **ningún registro corresponde a una vivienda real**. Emula la base de disposición final de casos de la Casen 2024, con una fila por vivienda seleccionada. Se construyó para que reproduzca las cifras publicadas en el *Documento metodológico del proceso estadístico Casen 2024* del Observatorio Social: el total de viviendas seleccionadas, las viviendas logradas y las tasas por región y área, el avance semanal y la duración de la entrevista. El resto (fechas de cada caso, visitas, encuestadoras, UPM y códigos detallados) se simuló.
+
+La base viene en formato `.rds` y sus variables tienen **etiquetas**: el código de disposición final trae la glosa de cada código, y la región y el área sus nombres.
+
+| Variable | Descripción |
+|:---|:---|
+| `folio` | Identificador de la vivienda (ficticio) |
+| `region` | Región, numerada de norte a sur (1 = Arica y Parinacota, 16 = Magallanes) |
+| `area` | Urbano o Rural |
+| `cod_upm` | Unidad primaria de muestreo (ficticia) |
+| `cdf` | Código de disposición final |
+| `fecha_cdf`, `semana` | Fecha del resultado final y semana de terreno (viernes a jueves, desde el 1 de noviembre de 2024) |
+| `n_visitas` | Visitas realizadas hasta cerrar el caso |
+| `id_encuestador` | Encuestadora que cerró el caso (ficticia) |
+| `n_personas`, `duracion_min` | Solo para entrevistas logradas: integrantes del hogar y duración en minutos |
+
+: {tbl-colwidths="[28,72]"}
+
+Las viviendas sin gestión (códigos 510 y 520) no tienen fecha, visitas ni encuestadora.
+
+## Paso 0. Antes del taller
+
+1. Instalar **R** ([CRAN](https://cran.r-project.org/)) y **RStudio Desktop** ([posit.co](https://posit.co/download/rstudio-desktop/)).
+2. Instalar los paquetes en la consola de R:
+
+```{.r}
+install.packages(c("haven", "dplyr", "ggplot2", "ggrepel"))
+```
+
+3. Crear un **proyecto de RStudio**: *File > New Project > New Directory > New Project*, con un nombre como `taller10`. RStudio crea una carpeta con un archivo `.Rproj`; trabajar dentro del proyecto hace que R encuentre los archivos de esa carpeta sin escribir rutas completas.
+4. Descargar la base y guardarla **en la carpeta del proyecto**. Abrir el proyecto (doble clic en el archivo `.Rproj`) y crear un script nuevo (*File > New File > R Script*) para ir copiando el código de esta guía.
+
+Si algo falla, vengan igual: se puede trabajar en parejas.
+
+## Paso 1. Cargar y mirar la base
+
+```{r}
+#| eval: false
+library(haven)
+library(dplyr)
+library(ggplot2)
+library(ggrepel)
+
+base <- readRDS("cdf_casen2024_simulada.rds")
+```
+
+```{r}
+#| include: false
+library(haven)
+library(dplyr)
+library(ggplot2)
+library(ggrepel)
+base <- readRDS("data/cdf_casen2024_simulada.rds")
+```
+
+```{r}
+glimpse(base)
+```
+
+La función `as_factor()` de `haven` muestra las etiquetas en vez de los números:
+
+```{r}
+base |>
+  count(cdf = as_factor(cdf))
+```
+
+## Paso 2. Agrupar los códigos
+
+Cada código se asigna a una categoría según el esquema de la clase:
+
+| Categoría | Códigos |
+|:---|:---|
+| Entrevistada (E) | 110 |
+| Rechazo (R) | 211, 212 |
+| No contacto (NC) | 223, 224, 225 |
+| Otras no entrevistadas (O) | 231, 232, 233, 236 |
+| Elegibilidad desconocida (ED) | 317, 318, 390 |
+| No elegible (NE) | 451 a 463 |
+| Sin gestión (SG) | 510, 520 |
+
+: {tbl-colwidths="[40,60]"}
+
+```{r}
+base <- base |>
+  mutate(grupo = case_when(
+    cdf == 110                     ~ "E",
+    cdf %in% c(211, 212)           ~ "R",
+    cdf %in% c(223, 224, 225)      ~ "NC",
+    cdf %in% c(231, 232, 233, 236) ~ "O",
+    cdf %in% c(317, 318, 390)      ~ "ED",
+    cdf >= 451 & cdf <= 463        ~ "NE",
+    cdf %in% c(510, 520)           ~ "SG"
+  ))
+```
+
+## Paso 3. La tabla de disposición final
+
+```{r}
+base |>
+  count(grupo) |>
+  mutate(porcentaje = round(100 * n / sum(n), 1))
+```
+
+## Paso 4. Las tasas nacionales
+
+Primero se cuentan las categorías en una sola fila, y después se calculan las tasas:
+
+```{r}
+conteo <- base |>
+  summarise(
+    total = n(),
+    E  = sum(grupo == "E"),
+    R  = sum(grupo == "R"),
+    NC = sum(grupo == "NC"),
+    O  = sum(grupo == "O"),
+    ED = sum(grupo == "ED"),
+    NE = sum(grupo == "NE")
+  )
+
+conteo |>
+  transmute(
+    respuesta    = round(E / (E + R + NC + O + ED), 3),
+    contacto     = round((E + R + O) / (E + R + NC + O + ED), 3),
+    cooperacion  = round(E / (E + R + O), 3),
+    rechazo      = round(R / (E + R + NC + O + ED), 3),
+    elegibilidad = round((E + R + NC + O) / total, 3)
+  )
+```
+
+Son las cifras nacionales publicadas para la Casen 2024.
+
+Ahora las tres versiones de la tasa de respuesta de AAPOR. La *e* se estima como la proporción de elegibles entre los casos cuya elegibilidad se conoce:
+
+```{r}
+conteo |>
+  transmute(
+    e   = round((E + R + NC + O) / (E + R + NC + O + NE), 3),
+    RR1 = round(E / (E + R + NC + O + ED), 3),
+    RR3 = round(E / (E + R + NC + O + e * ED), 3),
+    RR5 = round(E / (E + R + NC + O), 3)
+  )
+```
+
+¿Cuánto cambia la tasa según el supuesto sobre los casos de elegibilidad desconocida? ¿Por qué en este caso la diferencia es pequeña?
+
+## Paso 5. Tasas por área y región
+
+El mismo cálculo, agrupado. Con `as_factor()` la tabla muestra los nombres de las regiones:
+
+```{r}
+tasas_region <- base |>
+  group_by(region = as_factor(region)) |>
+  summarise(
+    E  = sum(grupo == "E"),
+    R  = sum(grupo == "R"),
+    NC = sum(grupo == "NC"),
+    O  = sum(grupo == "O"),
+    ED = sum(grupo == "ED")
+  ) |>
+  mutate(
+    respuesta   = round(100 * E / (E + R + NC + O + ED), 1),
+    contacto    = round(100 * (E + R + O) / (E + R + NC + O + ED), 1),
+    cooperacion = round(100 * E / (E + R + O), 1),
+    rechazo     = round(100 * R / (E + R + NC + O + ED), 1)
+  )
+
+tasas_region
+```
+
+Repitan el cálculo agrupando por `as_factor(area)`. Después grafiquen contacto contra cooperación. `geom_text_repel()`, del paquete `ggrepel`, evita que los nombres se superpongan:
+
+```{r}
+#| fig-width: 8
+#| fig-height: 5
+ggplot(tasas_region, aes(contacto, cooperacion, label = region)) +
+  geom_point(color = "#0A3564", size = 2.5) +
+  geom_text_repel(size = 3) +
+  labs(x = "Tasa de contacto (%)", y = "Tasa de cooperación (%)") +
+  theme_minimal()
+```
+
+¿En qué regiones el problema es encontrar a las personas, y en cuáles convencerlas?
+
+## Paso 6. El avance del terreno
+
+Las entrevistas logradas por semana y su acumulado, comparados con la muestra objetivo de 74.668 viviendas:
+
+```{r}
+#| fig-width: 8
+#| fig-height: 4.5
+avance <- base |>
+  filter(grupo == "E") |>
+  count(semana) |>
+  mutate(acumulado = cumsum(n))
+
+ggplot(avance, aes(semana, acumulado)) +
+  geom_line(color = "#0A3564") +
+  geom_point(color = "#0A3564", size = 2.5) +
+  geom_hline(yintercept = 74668, linetype = "dashed") +
+  labs(x = "Semana de terreno", y = "Entrevistas logradas acumuladas") +
+  theme_minimal()
+```
+
+Y dos indicadores de esfuerzo:
+
+```{r}
+# Promedio de visitas según el resultado final
+base |>
+  filter(grupo != "SG") |>
+  group_by(grupo) |>
+  summarise(visitas_promedio = round(mean(n_visitas), 2))
+```
+
+```{r}
+# Encuestadoras activas por semana (con al menos una entrevista lograda)
+base |>
+  filter(grupo == "E") |>
+  group_by(semana) |>
+  summarise(activas = n_distinct(id_encuestador))
+```
+
+¿En qué semana se alcanzó la muestra objetivo? ¿Qué pasa con el número de encuestadoras activas a medida que avanza el terreno? ¿Cuánto esfuerzo consumieron los casos que nunca se lograron?
+
+## Paso 7. Indicadores por encuestadora
+
+El monitoreo también mira a cada encuestadora. Como ejemplo, la tasa de cooperación de cada una en todo el terreno. Se consideran solo las que cerraron al menos 30 casos, porque con pocos casos una tasa varía mucho por azar:
+
+```{r}
+por_encuestadora <- base |>
+  filter(grupo != "SG") |>
+  group_by(region = as_factor(region), id_encuestador) |>
+  summarise(
+    casos = n(),
+    E = sum(grupo == "E"),
+    R = sum(grupo == "R"),
+    O = sum(grupo == "O"),
+    .groups = "drop"
+  ) |>
+  filter(casos >= 30) |>
+  mutate(cooperacion = round(100 * E / (E + R + O), 1))
+
+nrow(por_encuestadora)
+```
+
+Cada encuestadora trabaja en una sola región, así que conviene compararla con las demás de su región. Un gráfico de cajas por región muestra la distribución: la caja va del percentil 25 al 75, y los puntos sueltos son las encuestadoras que se alejan más de 1,5 veces el rango intercuartílico.
+
+```{r}
+#| fig-width: 8
+#| fig-height: 6
+ggplot(por_encuestadora, aes(cooperacion, region)) +
+  geom_boxplot(color = "#0A3564", outlier.size = 2) +
+  scale_y_discrete(limits = rev) +
+  labs(x = "Tasa de cooperación por encuestadora (%)", y = NULL) +
+  theme_minimal()
+```
+
+La misma regla permite listar a las encuestadoras atípicas por abajo dentro de su región:
+
+```{r}
+por_encuestadora |>
+  group_by(region) |>
+  mutate(limite = round(quantile(cooperacion, 0.25) - 1.5 * IQR(cooperacion), 1)) |>
+  filter(cooperacion < limite) |>
+  select(region, id_encuestador, casos, cooperacion, limite)
+```
+
+¿Cuántas encuestadoras quedan marcadas? Con más de mil encuestadoras, ¿cuántas esperarían marcar solo por azar? ¿Qué otra información necesitarían para decidir si una de ellas tiene un problema real?
+
+## Fuentes
+
+- AAPOR (2023). *Standard Definitions: Final Dispositions of Case Codes and Outcome Rates for Surveys* (10.ª ed.).
+- Observatorio Social, Ministerio de Desarrollo Social y Familia (2026). *Documento metodológico del proceso estadístico Casen 2024*. Tablas 20 a 23, gráficos 2 y 3, y Anexo 1.

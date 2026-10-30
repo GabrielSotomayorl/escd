@@ -1,0 +1,33 @@
+---
+title: "🗓️ Semana 10: Seguimiento del terreno y tasas de respuesta · Taller en R"
+---
+
+Esta semana la encuesta está **en terreno**. En el primer bloque vemos los **códigos de disposición final** de los casos, las **tasas** que se calculan sobre ellos (respuesta, contacto, cooperación, rechazo y elegibilidad, con las definiciones de AAPOR) y el **monitoreo del terreno** con la paradata, usando la Casen 2024 como caso. En el segundo bloque, primer **taller computacional** del curso: un reporte de terreno en R con una base simulada que emula la base de disposición final de casos de la Casen 2024. Del taller sale la **Tarea 3**, cuya pauta está disponible en Canvas.
+
+**Material del taller:** [🧪 Guía del taller](taller.qmd)
+
+**Para el taller:** traer computador con **R y RStudio instalados** y los paquetes `readr`, `dplyr` y `ggplot2` (instrucciones en el paso 0 de la guía). Si no pueden instalar, vengan igual: se puede trabajar en parejas.
+
+## Clase Expositiva
+
+Puedes navegar por las diapositivas directamente en el recuadro de abajo o hacer clic [aquí](slides.qmd) para ver la presentación en pantalla completa. Usa las flechas de tu teclado para avanzar.
+
+<div class="container" style="position: relative;overflow: hidden;width: 100%;min-height:600px;">
+<iframe src="slides.html" style="position: absolute;top: 0;left: 0;bottom: 0;right: 0;width: 100%;min-height:600px;"></iframe>
+</div>
+
+## Lecturas Obligatorias
+
+Para acompañar los contenidos de esta semana, por favor revisa el siguiente material:
+
+- Groves, R. M., Fowler, F. J., Couper, M. P., Lepkowski, J. M., Singer, E., & Tourangeau, R. (2009). *Survey Methodology* (2nd ed.). Wiley. Cap. 6, secciones 6.1–6.2: "Nonresponse in Sample Surveys" (introducción y tasas de respuesta).
+
+## Lecturas Complementarias
+
+- AAPOR (2023). *Standard Definitions: Final Dispositions of Case Codes and Outcome Rates for Surveys* (10ª ed.). [Disponible gratis en aapor.org](https://aapor.org/standards-and-ethics/standard-definitions/). (La referencia estándar de códigos y tasas.)
+- United Nations Statistics Division. (2026). *Handbook of Surveys on Households and Individuals*. Cap. 6, secciones 6.7 ("Production monitoring") y 6.8 ("Quality control").
+- Observatorio Social, Ministerio de Desarrollo Social y Familia (2026). *Documento metodológico del proceso estadístico Casen 2024*. Sección 8.6: resultados de la recolección.
+
+## Dudas y Comunicación
+
+Recuerda que puedes utilizar los canales de comunicación establecidos o acercarte al profesor y ayudantes si tienes dudas sobre los contenidos de esta semana.
