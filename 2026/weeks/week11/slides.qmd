@@ -1,0 +1,540 @@
+---
+subtitle: "Encuestas Sociales para Contextos Diversos"
+title: "<font style='font-size:1em;'>🗓️ Semana 11<br/> Del terreno a la base de datos: procesamiento, no respuesta e imputación</font>"
+author: Prof. [Gabriel Sotomayor](https://gabrielsotomayorl.github.io/)
+institute: '[Pontificia Universidad Católica de Chile](https://sociologia.uc.cl/)'
+date: "2026-11-06"
+date-meta: "2026"
+date-format: "dddd DD [de] MMMM [de] YYYY"
+toc: true
+toc-depth: 1
+toc-title: "Contenidos de hoy:"
+center-title-slide: false
+from: markdown+emoji
+format:
+  revealjs:
+    fig-responsive: true
+    theme: [simple, ../../../css/slides.scss]
+    slide-number: true
+    mouse-wheel: false
+    preview-links: auto
+    logo: /figures/icons/course_favicon.png
+    footer: 'Encuestas Sociales para Contextos Diversos'
+---
+
+# Del terreno a la base de datos
+
+## De la entrevista a la cifra {.smaller}
+
+::: {style="font-size:0.85em;"}
+La última entrevista de la Casen 2024 se hizo el **2 de febrero de 2025**. Los resultados de pobreza e ingresos y las bases de datos se publicaron en **enero de 2026**.
+
+::: {style="font-size:0.9em;"}
+| Período | Qué ocurrió |
+|:---|:---|
+| Nov 2024 a feb 2025 | Recolección. El contratista envía bases parciales cada semana y cada mes, y el Ministerio las revisa |
+| Nov 2024 a jul 2025 | Procesamiento de la base: validación, edición y codificación. La base se aprueba el 9 de julio de 2025 |
+| Jul 2025 | El INE entrega el factor de expansión |
+| Jul a oct 2025 | Comisión asesora y definición de la nueva metodología de pobreza |
+| Ago a dic 2025 | La Cepal corrige la no respuesta de ingresos y calcula la pobreza por ingresos; el PNUD calcula la pobreza multidimensional |
+| Ene 2026 | Publicación |
+
+: {tbl-colwidths="[22,78]"}
+:::
+
+::: {style="font-size:0.8em;color:#5A6472;"}
+Fuente: Documento metodológico Casen 2024, hitos del proyecto y capítulo 9.
+:::
+
+Parte de la demora se explica por el cambio de metodología de pobreza. El resto es el trabajo que vemos hoy.
+:::
+
+## El plan de hoy {.smaller}
+
+**¿Qué le pasa a los datos entre la entrevista y la base que descarga quien analiza, y qué errores se producen o se corrigen en ese camino?**
+
+1. Qué significa la **no respuesta** que dejó el terreno.
+2. **Validar, editar y codificar**: de las respuestas registradas a datos utilizables.
+3. La **no respuesta al ítem** y la **imputación**.
+4. La **base final**: variables construidas y documentación.
+5. Actividad: el procesamiento de la encuesta de su proyecto.
+
+# Qué significa la no respuesta
+
+## La tasa no es el sesgo {.smaller}
+
+::: {style="font-size:0.85em;"}
+La Casen 2024 terminó con una tasa de respuesta de 74,1%. ¿Cuánto sesgo produce lo que falta? La tasa sola no lo dice.
+
+::: {style="border-radius:0.7em;padding:0.6em 1.1em;background-color:#f2f2f2;font-size:1.05em;text-align:center;"}
+$$\text{Sesgo}(\bar{y}_r) = \frac{M}{N}\,\left(\bar{y}_r - \bar{y}_m\right)$$
+:::
+
+::: {style="font-size:0.95em;"}
+- $M/N$ es la proporción de no respondentes; $\bar{y}_r$, la media de quienes respondieron; $\bar{y}_m$, la media de quienes no respondieron, que casi nunca se conoce.
+- El sesgo es el **producto** de dos factores: cuántos faltan y cuánto se diferencian de quienes respondieron. Si no se diferencian en la variable medida, no hay sesgo, aunque falten muchos.
+- Una formulación más actual trata la respuesta como una **propensión** de cada persona. El sesgo depende entonces de cuánto se relaciona esa propensión con la variable medida.
+:::
+
+Por eso, como el efecto diseño, el sesgo de no respuesta **varía de una estimación a otra** dentro de una misma encuesta.
+:::
+
+## Lo que muestra la evidencia {.smaller}
+
+::: {style="font-size:0.95em;"}
+Groves y Peytcheva (2008) reunieron 59 estudios diseñados para medir el sesgo de no respuesta, con **959 estimaciones** y tasas de no respuesta entre 14% y 72%. Encontraron que:
+
+::: {style="font-size:1.0em;"}
+- hay sesgos grandes;
+- la mayor parte de la variación del sesgo ocurre **entre estimaciones de una misma encuesta**;
+- la tasa de no respuesta de la encuesta predice muy poco el sesgo: una regresión simple entre ambas tendría un R² de **0,04**.
+:::
+
+::: {style="border-radius:0.7em;padding:0.9em 1.1em;background-color:#f2f2f2;"}
+Esto no significa que la tasa dé lo mismo. En una encuesta concreta, subir la tasa puede reducir el sesgo, dejarlo igual o incluso aumentarlo, según quiénes se incorporen. Hay casos documentados en que subir la tasa aumentó el sesgo. La tasa indica un **riesgo**; el sesgo depende de **quiénes** faltan.
+:::
+:::
+
+## Tres escenarios causales {.smaller}
+
+::: {style="font-size:0.85em;"}
+::: {style="font-size:0.92em;"}
+| Escenario | Qué ocurre | Ejemplo | ¿Se puede corregir? |
+|:---|:---|:---|:---|
+| **Causas separadas** | Lo que lleva a no responder no se relaciona con la variable | La encuestadora se enfermó y la visita no se reprogramó; se mide la escolaridad | No hace falta: no hay sesgo |
+| **Causa común** | Una tercera variable causa a la vez la no respuesta y la variable | Trabajar todo el día fuera de casa dificulta el contacto y define el uso del tiempo que se mide | Sí, si esa tercera variable se observa y se usa en el ajuste |
+| **La variable es la causa** | Lo que se mide causa la no respuesta | En una encuesta de ingresos, si los hogares de ingresos altos rechazan más por desconfianza | No con la información disponible: la no respuesta es **no ignorable** |
+:::
+
+Los ajustes por no respuesta de la clase 5, como los grupos de propensión de la Casen, suponen el segundo escenario: dentro de cada grupo, quienes faltan se parecen a quienes respondieron en lo que se mide. El tercer escenario no se corrige con ponderadores.
+:::
+
+## Datos sobre quienes faltan {.smaller}
+
+::: {style="font-size:0.95em;"}
+Para estudiar o corregir el sesgo se necesita algo de información sobre quienes faltan. Las fuentes habituales:
+
+::: {style="font-size:1.0em;"}
+- variables del **marco muestral**, conocidas para toda la muestra (región, área, características de la UPM);
+- **registros administrativos** que se pueden vincular a los casos de la muestra;
+- **observaciones de la encuestadora** y paradata, registradas también en los casos no logrados;
+- un **seguimiento intensivo** de una submuestra de no respondentes.
+:::
+
+::: {style="border-radius:0.7em;padding:0.9em 1.1em;background-color:#f2f2f2;"}
+En la Casen 2024, la base de disposición final que el Ministerio entregó al INE para calcular los factores de expansión incluye, a nivel de vivienda, el número de visitas y lo que la encuestadora observó del entorno: tipo de acceso, estado de las construcciones, presencia de basura y de daño a la propiedad.
+:::
+:::
+
+# Validar y editar
+
+## La base llega con errores {.smaller}
+
+::: {style="font-size:0.85em;"}
+Aun con cuestionario en tablet, la base tiene errores: respuestas inconsistentes entre sí, valores improbables, preguntas respondidas por quien no correspondía. La **validación** consiste en detectarlos con reglas explícitas, que son de tres tipos:
+
+::: {style="font-size:0.9em;"}
+| Tipo | Qué detecta | Ejemplo |
+|:---|:---|:---|
+| **Universo** | Respuestas de personas a quienes no correspondía la pregunta | Datos del módulo de trabajo para una persona menor de 15 años |
+| **Rango** | Valores imposibles o fuera de lo esperado | Más de 168 horas trabajadas en una semana; un arriendo muy por sobre el del sector |
+| **Contenido** | Inconsistencias entre dos o más variables | Una edad que no calza con la fecha de nacimiento |
+
+: {tbl-colwidths="[16,38,46]"}
+:::
+
+::: {style="font-size:0.95em;"}
+- Muchas reglas se programan en el cuestionario electrónico. Las de **error** impiden avanzar hasta corregir; las de **advertencia** solo avisan y permiten mantener la respuesta si la persona la confirma.
+- Otras se aplican después sobre la base, porque eran demasiado exigentes para la entrevista o usan variables que se construyen después.
+:::
+:::
+
+## Reglas de contenido: ejemplos {.smaller}
+
+::: {style="font-size:0.85em;"}
+::: {style="font-size:0.95em;"}
+| Variables | Regla |
+|:---|:---|
+| Parentesco y edad | Entre una madre o un padre y su hijo o hija debe haber al menos 11 años de diferencia (criterio de la Casen 2024) |
+| Parentesco y sexo | Si alguien se registra como «esposo(a) o pareja de distinto sexo» de la jefatura, su sexo debe ser distinto del de la jefatura |
+| Edad y nivel educativo | Una persona de 16 años no puede haber cursado educación universitaria; un magíster a los 19 años es improbable |
+| Edad y pensión | Una persona de 35 años que declara pensión de vejez: como existen pensiones anticipadas, corresponde una advertencia y no un error |
+| Ocupación y educación | Una persona sin estudios superiores cuya ocupación se codificó como profesional de la salud |
+
+: {tbl-colwidths="[24,76]"}
+:::
+
+Algunas inconsistencias se pueden evitar desde el diseño. En la tablet de la Casen 2024, las alternativas de nivel educacional dependen de la edad: a una persona de 14 a 16 años solo se le muestran alternativas hasta la educación media, y magíster y doctorado aparecen desde los 20 años. El error no se corrige después porque no se puede registrar.
+:::
+
+## Qué revisa la validación {.smaller}
+
+::: {style="font-size:0.85em;"}
+::: {style="font-size:0.95em;"}
+- **Valores extremos.** En ingresos y vivienda, se revisaron a mano los montos bajo el percentil 2 o sobre el percentil 98 de la Casen 2022, actualizados a pesos de noviembre de 2024. Para el sueldo líquido, todo valor fuera de **\$127.800 a \$2.662.500**. La revisión mira la educación, la ocupación y la comuna de la persona: un monto extremo puede ser correcto.
+- **Consistencia entre hogares.** En viviendas con más de un hogar, las preguntas sobre la vivienda (cuántas personas viven en ella, materiales, metros cuadrados) se hacen a cada hogar y deben coincidir.
+:::
+
+::: {style="border-radius:0.7em;padding:0.9em 1.1em;background-color:#f2f2f2;"}
+Cada regla tiene una **acción esperada**. En general, es volver a contactar al informante para recuperar o confirmar el dato. Cuando eso no es posible, en algunos casos se aplica una regla de edición.
+:::
+:::
+
+## Validar durante el terreno {.smaller}
+
+::: {style="font-size:0.95em;"}
+Recontactar funciona mientras el terreno sigue abierto: los equipos están en la zona y el hogar recuerda la entrevista. Cerrado el terreno, lo que no se recuperó solo puede editarse, imputarse o quedar como dato faltante.
+
+::: {style="font-size:1.0em;"}
+- En la Casen 2024, el Ministerio revisó periódicamente durante el terreno la calidad de los datos y pidió recontactar a los hogares para recuperar, confirmar o corregir datos.
+- Aun así, buena parte del trabajo quedó para después del cierre: el contratista entregó versiones corregidas de la base en marzo y abril de 2025, y luego cuatro más.
+- La evaluación del proceso concluyó que había que **adelantar** la validación, la recuperación y la edición para acortar la brecha entre recolección y procesamiento.
+:::
+
+::: {style="border-radius:0.7em;padding:0.9em 1.1em;background-color:#f2f2f2;"}
+Es la misma lógica del monitoreo de la clase 10: los controles de calidad sirven cuando todavía se puede actuar sobre lo que detectan.
+:::
+:::
+
+## Una herramienta: el paquete `validate` {.smaller}
+
+::: {style="font-size:0.85em;"}
+La malla de validación de la Casen 2024 se programó en R con el paquete [`validate`](https://data-cleaning.github.io/validate/), que permite escribir las reglas de forma ordenada, confrontarlas con la base y generar reportes. Un ejemplo con datos inventados:
+
+::: {style="font-size:1.45em;"}
+```r
+library(validate)
+
+reglas <- validator(
+  rango_edad  = edad >= 0 & edad <= 110,
+  rango_horas = horas <= 168,
+  edad_nivel  = if (nivel == "Profesional") edad >= 20,
+  pareja_sexo = if (parentesco == "Pareja distinto sexo") sexo != sexo_jefatura
+)
+
+res <- confront(personas, reglas)
+summary(res)              # cuántos casos pasan y fallan cada regla
+violating(personas, res)  # los casos que no cumplen alguna regla
+```
+:::
+
+Las reglas quedan escritas en un solo lugar y se pueden volver a correr sobre cada base que llega del terreno. Para profundizar: [*The Data Validation Cookbook*](https://data-cleaning.github.io/validate/), de Mark van der Loo.
+:::
+
+## El problema de editar {.smaller}
+
+::: {style="font-size:0.85em;"}
+**Editar** es cambiar un dato registrado para que cumpla las reglas. El riesgo es corregir en la dirección equivocada. Un ejemplo de Groves y coautores:
+
+::: {style="font-size:0.95em;"}
+- un registro dice que una persona de 14 años tiene un doctorado;
+- su ocupación y su relación de parentesco (hijo del jefe de hogar) calzan con 14 años, así que se corrige la educación;
+- pero otra pregunta dice que publicó una tesis doctoral. ¿Era la edad la que estaba mal?
+:::
+
+Sin reglas definidas de antemano, cada analista resolvería el caso distinto, y ni siquiera la misma persona podría repetir su decisión semanas después.
+
+::: {style="border-radius:0.7em;padding:0.8em 1.1em;background-color:#f2f2f2;font-size:0.95em;"}
+Los principios de Fellegi y Holt (1976), que aplican los sistemas de edición de varios institutos de estadística:
+
+1. cambiar el **menor número de datos** necesario para que el registro pase todas las reglas;
+2. mantener, en lo posible, las **distribuciones** de las variables;
+3. que las reglas de imputación se deduzcan de las reglas de edición.
+:::
+:::
+
+## Cuánto editar {.smaller}
+
+::: {style="font-size:0.95em;"}
+Editar cuesta tiempo y dinero, y editar de más puede **introducir** errores. Hoy se recomienda la **edición selectiva**: concentrar el esfuerzo en los errores que afectan las estimaciones.
+
+Frente a una inconsistencia hay tres opciones:
+
+::: {style="font-size:1.0em;"}
+- corregir siempre, para forzar la consistencia;
+- corregir solo cuando el error es claro, y dejar sin cambios los casos dudosos;
+- **marcar** el caso sin corregirlo y documentarlo, para que quien analiza decida.
+:::
+
+En la Casen 2024 se aplicaron reglas de edición solo para errores que quedaban después de recontactar a los hogares: la edad frente a la fecha de nacimiento, las relaciones de parentesco para formar núcleos, el dividendo y la identificación del hogar principal en viviendas con más de un hogar.
+:::
+
+# Codificar
+
+## De texto a categorías {.smaller}
+
+::: {style="font-size:0.85em;"}
+**Codificar** es traducir respuestas de texto a categorías numéricas. En la Casen 2024:
+
+::: {style="font-size:0.85em;"}
+| Pregunta | Se codifica con |
+|:---|:---|
+| Ocupación u oficio, y qué hace en el trabajo | Clasificación Internacional Uniforme de Ocupaciones (CIUO-08), a 1 y 4 dígitos |
+| A qué se dedica la empresa donde trabaja | Clasificador de actividades económicas para encuestas sociodemográficas (CAENES) |
+| Nombre de la carrera | Clasificación Internacional Normalizada de la Educación (CINE-F) |
+| Establecimiento de educación parvularia | Códigos del Mineduc |
+
+: {tbl-colwidths="[42,58]"}
+:::
+
+::: {style="font-size:0.95em;"}
+- Un equipo de codificadores entrenados codificó a mano; el Ministerio revisó ocupación y actividad económica con un modelo de **codificación automática** del INE.
+- Los clasificadores estándar permiten comparar con otras encuestas y con estadísticas de otros países.
+- Para países, comunas y establecimientos educacionales se usaron **listas desplegables** en la tablet: esas preguntas ya no se codifican después.
+- Las respuestas a las 17 preguntas con opción «Otro, especifique» se revisaron caso a caso para recodificar en las categorías existentes cuando correspondía.
+:::
+:::
+
+## Codificar la ocupación {.smaller}
+
+::: {style="font-size:0.85em;"}
+La Casen pregunta por la ocupación con dos preguntas abiertas: «¿Cuál es la ocupación u oficio?» y «¿Qué hace en su trabajo o negocio principal?». Las respuestas, las **glosas**, se depuran (mayúsculas, género, ortografía) y se codifican con la CIUO-08 a 4 dígitos. Aun así, la base muestra el desorden:
+
+::: {.columns}
+::: {.column style="width:50%;font-size:0.85em;"}
+**Una glosa, muchos códigos.** «Maestro(a) de construcción» aparece en 242 casos, codificados con 18 códigos distintos:
+
+| Código | Casos |
+|:---|---:|
+| 7111 Constructores de casas | 80 |
+| 7115 Carpinteros de obra | 59 |
+| 7112 Albañiles | 27 |
+| 9313 Obreros de la construcción de edificios | 15 |
+| 7131 Pintores y empapeladores de paredes | 13 |
+| Otros 13 códigos | 48 |
+
+: {tbl-colwidths="[78,22]"}
+:::
+::: {.column style="width:48%;font-size:0.85em;"}
+**Muchas glosas, un código.** El código 9111, «Trabajadores de casa particular y asistentes domésticos», reúne 2.516 casos con 444 glosas distintas:
+
+- Asesor(a) del hogar
+- Asesor(a) de hogar puertas afuera
+- Trabajador(a) de casa particular
+- Empleado(a) doméstico(a)
+- Servicio doméstico
+- Aseo en casa particular
+:::
+:::
+
+::: {style="font-size:0.8em;color:#5A6472;"}
+Fuente: elaboración propia con la base Casen 2024 (variables o9a, o9b y oficio4_08), casos sin ponderar.
+:::
+:::
+
+## Glosas parecidas, códigos distintos {.smaller}
+
+::: {style="font-size:0.85em;"}
+Lo que decide el código es qué hace la persona. Algunas glosas reales de la Casen 2024:
+
+::: {style="font-size:0.85em;"}
+| Ocupación u oficio | Qué hace | Código asignado |
+|:---|:---|:---|
+| Maestro(a) de construcción | Construye viviendas y arreglos de casas particulares | 7111 Constructores de casas |
+| Maestro(a) constructor(a) | Construcción y reparación de casas particulares | 9313 Obreros de la construcción de edificios |
+| Sociólogo(a) | Análisis estadísticas | 2632 Sociólogos, antropólogos, geógrafos y arqueólogos |
+| Sociólogo(a) | Evaluación de proyectos | 2634 Psicólogos |
+| Conductor(a) | Transporte de pasajeros | 8322 Conductores de automóviles, taxis y camionetas |
+| Conductor(a) | Transportar pasajeros(as) | 8331 Conductores de buses y trolebuses |
+| Vendedor(a) | Atención de público. | 4221 Empleados de agencias de viajes |
+
+: {tbl-colwidths="[24,38,38]"}
+:::
+
+::: {style="font-size:0.95em;"}
+- Muchas respuestas dicen poco, y casos casi iguales terminan con códigos distintos según quién los codificó.
+- Registrar las tareas con detalle en terreno reduce el problema.
+:::
+:::
+
+## Errores de codificación {.smaller}
+
+::: {style="font-size:0.85em;"}
+::: {style="font-size:1.0em;"}
+**Error en la estructura de códigos.** Si una categoría junta respuestas que el análisis necesita separar, el error es sistemático. Por ejemplo, una categoría que reúna a quienes terminaron la enseñanza media y a quienes la validaron por exámenes libres, en un estudio sobre retornos de la educación.
+:::
+
+::: {style="font-size:1.0em;"}
+**Variabilidad entre codificadores.** Como ocurre con las encuestadoras (clase 9), cada codificador usa los códigos a su manera: unos recurren más a la categoría «otro», otros interpretan distinto ciertas palabras.
+
+- En un estudio británico sobre codificación de ocupaciones, la correlación intraclase entre codificadores fue cercana a **0,001**, mucho menor que la de los entrevistadores.
+- Pero cada codificador había codificado en promedio **322 casos**. Con esa carga, la varianza de una proporción aumenta en torno a **3%**.
+:::
+
+Para reducirlo se capacita con un manual de códigos claro y se mide la **confiabilidad entre codificadores**: dos personas codifican por separado las mismas respuestas y se compara su concordancia.
+:::
+
+# La no respuesta al ítem
+
+## No respuesta al ítem {.smaller}
+
+::: {style="font-size:0.85em;"}
+La **no respuesta al ítem** ocurre cuando alguien participa en la encuesta pero deja sin respuesta una pregunta. Sus causas difieren de las de la no respuesta de unidad, porque la persona ya conoce la pregunta:
+
+::: {style="font-size:0.95em;"}
+- **no entender** qué se pregunta;
+- **no tener** la información con la precisión pedida: hay evidencia de que personas que no dan un monto exacto de ingreso sí aceptan indicar un tramo;
+- **no querer** revelarla.
+:::
+
+Las tasas más altas suelen estar en las preguntas de **ingresos y patrimonio**.
+
+::: {.columns}
+::: {.column style="width:52%;font-size:0.8em;"}
+| Módulo, Casen | 2022 | 2024 |
+|:---|---:|---:|
+| Ingresos | 1,4 | 3,6 |
+| Orientación sexual e identidad de género | 1,0 | 3,0 |
+| Vivienda | 0,6 | 1,3 |
+| Total | 0,8 | 2,2 |
+:::
+::: {.column style="width:46%;font-size:0.85em;"}
+Tasa promedio de no respuesta al ítem (%), por módulo. 329 preguntas admiten «No sabe» o «No responde». La tasa se monitoreó cada semana durante el terreno, y las preguntas con 10% o más se incluyeron en la recuperación de datos con los hogares.
+
+::: {style="color:#5A6472;"}
+Fuente: Documento metodológico Casen 2024, Tabla 36.
+:::
+:::
+:::
+:::
+
+## Qué hacer con los vacíos {.smaller}
+
+::: {style="font-size:0.95em;"}
+Con una base con vacíos hay dos caminos:
+
+::: {style="font-size:1.0em;"}
+- **Análisis de casos completos:** se descartan los casos con algún dato faltante en las variables del análisis. Equivale a suponer que quienes no respondieron la pregunta son como quienes sí la respondieron. Es una imputación **implícita**, y además descarta todo lo demás que esas personas respondieron.
+- **Imputación explícita:** se completa el dato faltante con un valor estimado a partir de la información disponible. El supuesto queda a la vista y se puede discutir.
+:::
+
+::: {style="border-radius:0.7em;padding:0.9em 1.1em;background-color:#f2f2f2;"}
+A diferencia de la no respuesta de unidad, aquí sí hay información de la misma persona: todo lo que respondió en el resto del cuestionario. Por eso la no respuesta de unidad se trata sobre todo con ponderadores y la no respuesta al ítem, con imputación.
+:::
+:::
+
+## Cómo se imputa {.smaller}
+
+::: {style="font-size:0.85em;"}
+::: {style="font-size:0.85em;"}
+| Método | Cómo funciona | Problema |
+|:---|:---|:---|
+| Media | Se reemplaza el vacío por el promedio de quienes respondieron | Concentra muchos casos en un solo valor y deforma la distribución |
+| Media por grupos | Promedio de personas parecidas (por sexo, educación, ocupación) | Sin un componente aleatorio, el mismo problema dentro de cada grupo |
+| Regresión | Un modelo predice el valor con otras variables de la persona, más un componente aleatorio | Las variables predictoras también deben estar completas |
+| *Hot-deck* | Se toma el valor de un **donante**: otra persona de la encuesta con características parecidas | Depende de las variables con que se define el parecido |
+
+: {tbl-colwidths="[18,44,38]"}
+:::
+
+Dos reglas valen para cualquier método:
+
+::: {style="font-size:0.95em;"}
+- cada variable imputada lleva una **marca** que indica qué valores se imputaron, para que quien analiza decida si los usa;
+- el software trata los valores imputados como observados, y por eso **subestima la varianza**. La imputación múltiple, que genera varias bases imputadas, permite estimarla.
+:::
+:::
+
+## Imputación en la Casen {.smaller}
+
+::: {style="font-size:0.85em;"}
+En la Casen, la imputación de ingresos se llama **corrección por no respuesta** y la hace un organismo externo, la **Cepal**. Se aplica a las preguntas que concentran la mayor parte del ingreso de los hogares:
+
+::: {style="font-size:0.95em;"}
+| Variable | Pregunta |
+|:---|:---|
+| y1 | Sueldo o salario líquido del trabajo principal |
+| y7 | Dinero retirado del negocio o actividad para gastos personales |
+| y29_2b | Monto de la jubilación o pensión de vejez |
+| v19 | Arriendo que se paga en el sector por viviendas similares, con el que se construye el alquiler imputado |
+
+: {tbl-colwidths="[14,86]"}
+:::
+
+::: {style="font-size:0.95em;"}
+- La Cepal también revisa y corrige valores atípicos, y construye los ingresos del hogar. En la base, las variables de ingreso corregidas llevan el sufijo **cor** (por ejemplo, `ytrabajocor`).
+- El método está documentado en una publicación de la Cepal sobre la medición de ingresos y pobreza en la Casen.
+- Desde la metodología 2013, los ingresos de la encuesta ya no se ajustan a los de las Cuentas Nacionales.
+:::
+
+La tasa oficial de pobreza se calcula, entonces, con ingresos declarados y con ingresos imputados.
+:::
+
+# La base final
+
+## Variables construidas {.smaller}
+
+::: {style="font-size:0.95em;"}
+Muchas de las variables que se analizan se **construyen** después del terreno. La condición de pobreza, por ejemplo, compara el ingreso del hogar, declarado e imputado, con las líneas de pobreza, que ya consideran el tamaño del hogar.
+
+La base de la Casen 2024 incluye muchas variables construidas después del terreno:
+
+::: {style="font-size:0.95em;"}
+- **ingresos** corregidos de las personas, de los hogares y per cápita;
+- **pobreza por ingresos**, con sus líneas, y **pobreza multidimensional**, con cada uno de sus indicadores;
+- **deciles y quintiles** de ingreso;
+- indicadores como años de escolaridad, condición de actividad, hacinamiento o tipo de hogar.
+:::
+
+Cada variable construida contiene decisiones de operacionalización como las de la clase 6. Por eso es importante documentar con precisión cómo se construyó.
+:::
+
+## Lo que recibe quien analiza {.smaller}
+
+::: {style="font-size:0.88em;"}
+::: {style="font-size:0.95em;"}
+- **Factores de expansión.** En la Casen, el factor regional (`expr`) es el de uso general; los factores provincial y comunal se calculan con fines de investigación, porque provincias y comunas no son dominios de estimación. El módulo de orientación sexual e identidad de género tiene su propio factor.
+- **Variables de diseño** para estimar la varianza: estratos (`varstrat`) y conglomerados (`varunit`).
+- **Variables imputadas**, marcadas para distinguir lo observado de lo imputado. En la Casen, los ingresos corregidos llevan el sufijo **cor** (`ytrabajocor`) y la base conserva las respuestas originales.
+- **Documentación**: libro de códigos, cuestionario y documento metodológico.
+:::
+
+::: {style="border-radius:0.7em;padding:0.8em 1.1em;background-color:#f2f2f2;font-size:0.95em;"}
+La documentación también tiene estándares. Además de definiciones y procedimientos, una base bien documentada informa indicadores del propio proceso: tasas de no respuesta al ítem, fallas de validación, duración de las entrevistas.
+:::
+
+::: {style="font-size:0.95em;"}
+La Casen produce una **base interna**, para el análisis del Ministerio, y una **base pública**, de la que se eliminan las variables que permiten identificar a las personas.
+:::
+:::
+
+# Síntesis y actividad
+
+## Síntesis {.smaller}
+
+::: {style="font-size:0.95em;"}
+- Entre la última entrevista y la cifra publicada hay meses de **procesamiento**, y en ese trabajo se producen y se corrigen errores.
+- El sesgo de no respuesta depende de **quiénes** faltan y de si eso se relaciona con lo que se mide. Los ajustes corrigen cuando las causas de faltar se observan; no corrigen cuando la variable medida es la causa.
+- **Validar** con reglas explícitas de universo, rango y contenido, durante el terreno, cuando todavía se puede recontactar. **Editar** cambiando lo menos posible: editar de más también produce error.
+- **Codificar** traduce texto a categorías estándar, con error propio: estructuras de códigos inadecuadas y variabilidad entre codificadores.
+- La **no respuesta al ítem** se trata con imputación. No imputar también supone algo; imputar exige marcar los valores y reconocer que la varianza queda subestimada.
+- Muchas variables clave, como la pobreza, se **construyen** después del terreno. La documentación es lo que permite usarlas bien.
+:::
+
+## Actividad en grupos {.smaller}
+
+::: {style="font-size:0.95em;"}
+En grupos, con la documentación metodológica de la encuesta de su proyecto, busquen qué se informa sobre:
+
+::: {style="font-size:1em;"}
+| Etapa | Preguntas |
+|:---|:---|
+| Validación y edición | ¿Describe las reglas de validación? ¿Se recontactó a los hogares? ¿Qué se editó y con qué criterio? |
+| Codificación | ¿Qué preguntas abiertas se codificaron y con qué clasificadores? |
+| No respuesta al ítem | ¿Informa tasas por pregunta o por módulo? ¿Imputa? ¿Qué variables, con qué método y con qué marca? |
+| Base final | ¿Qué variables construidas trae y está documentado cómo se construyeron? ¿Trae factor de expansión y variables de diseño? |
+
+: {tbl-colwidths="[22,78]"}
+:::
+
+Para cada etapa, clasifiquen lo que encuentren: **documentado con detalle**, **mencionado sin detalle** o **no se informa**. Al final, cada grupo comparte el hallazgo más importante. Es un insumo para el informe final del proyecto.
+:::
+
+## Próxima clase {.smaller}
+
+**Taller en R: análisis con diseño complejo.** Estimaremos con la Casen 2024 usando sus factores de expansión y sus variables de diseño, y evaluaremos si cada estimación cumple el estándar de calidad del INE para publicarse.
+
+::: {style="border-radius:0.7em;padding:0.9em 1.1em;background-color:#f2f2f2;"}
+- Traer computador con **R y RStudio** instalados. Las instrucciones estarán en la página de la semana.
+- En el taller se asigna la **Tarea 4**.
+:::

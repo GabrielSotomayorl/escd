@@ -1,0 +1,30 @@
+---
+title: "🗓️ Semana 11: Del terreno a la base de datos: procesamiento, no respuesta e imputación"
+---
+
+Esta semana seguimos a los datos desde que termina el terreno hasta que llegan a la base que descarga quien analiza, con la **Casen 2024** como caso. Vemos qué significa la **no respuesta** que quedó (cuándo produce sesgo y cuándo los ajustes pueden corregirlo), cómo se **validan, editan y codifican** los datos, cómo se trata la **no respuesta al ítem** con **imputación**, y qué trae la **base final**: variables construidas, factores de expansión, variables de diseño y documentación. Al final de la clase hay una actividad en grupos sobre el procesamiento de la encuesta de su proyecto.
+
+## Clase Expositiva
+
+Puedes navegar por las diapositivas directamente en el recuadro de abajo o hacer clic [aquí](slides.qmd) para ver la presentación en pantalla completa. Usa las flechas de tu teclado para avanzar.
+
+<div class="container" style="position: relative;overflow: hidden;width: 100%;min-height:600px;">
+<iframe src="slides.html" style="position: absolute;top: 0;left: 0;bottom: 0;right: 0;width: 100%;min-height:600px;"></iframe>
+</div>
+
+## Lecturas Obligatorias
+
+Para acompañar los contenidos de esta semana, por favor revisa el siguiente material:
+
+- Groves, R. M., Fowler, F. J., Couper, M. P., Lepkowski, J. M., Singer, E., & Tourangeau, R. (2009). *Survey Methodology* (2nd ed.). Wiley. Cap. 6, secciones 6.3, 6.4 y 6.7: sesgo de no respuesta, sus mecanismos y no respuesta al ítem.
+- Groves, R. M., et al. (2009). *Survey Methodology* (2nd ed.). Wiley. Cap. 10, secciones 10.1 a 10.4, 10.6 y 10.8: codificación, edición, imputación y documentación.
+
+## Lecturas Complementarias
+
+- United Nations Statistics Division. (2026). *Handbook of Surveys on Households and Individuals*. Cap. 7: "Data processing".
+- Observatorio Social, Ministerio de Desarrollo Social y Familia (2026). *Documento metodológico del proceso estadístico Casen 2024*. Capítulo 9: procesamiento. (El caso visto en clase.)
+- Observatorio Social, Ministerio de Desarrollo Social y Familia (2026). *Metodología de medición de la pobreza por ingresos en Chile. Actualización 2024*. Capítulo 1: antecedentes, con los ingresos considerados y su imputación.
+
+## Dudas y Comunicación
+
+Recuerda que puedes utilizar los canales de comunicación establecidos o acercarte al profesor y ayudantes si tienes dudas sobre los contenidos de esta semana.
