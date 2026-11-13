@@ -532,7 +532,7 @@ Para cada etapa, clasifiquen lo que encuentren: **documentado con detalle**, **m
 
 ## Próxima clase {.smaller}
 
-**Taller en R: análisis con diseño complejo.** Estimaremos con la Casen 2024 usando sus factores de expansión y sus variables de diseño, y evaluaremos si cada estimación cumple el estándar de calidad del INE para publicarse.
+**Taller en R: análisis con diseño complejo.** Estimaremos con la base pública de la Encuesta Nacional sobre Uso del Tiempo (ENUT 2023) usando sus factores de expansión y sus variables de diseño, y evaluaremos si cada estimación cumple el estándar de calidad del INE para publicarse.
 
 ::: {style="border-radius:0.7em;padding:0.9em 1.1em;background-color:#f2f2f2;"}
 - Traer computador con **R y RStudio** instalados. Las instrucciones estarán en la página de la semana.

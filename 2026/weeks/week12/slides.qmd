@@ -1,0 +1,333 @@
+---
+subtitle: "Encuestas Sociales para Contextos Diversos"
+title: "<font style='font-size:1em;'>🗓️ Semana 12<br/> Análisis de encuestas complejas: estimar con el diseño y evaluar la calidad</font>"
+author: Prof. [Gabriel Sotomayor](https://gabrielsotomayorl.github.io/)
+institute: '[Pontificia Universidad Católica de Chile](https://sociologia.uc.cl/)'
+date: "2026-11-13"
+date-meta: "2026"
+date-format: "dddd DD [de] MMMM [de] YYYY"
+toc: true
+toc-depth: 1
+toc-title: "Contenidos de hoy:"
+center-title-slide: false
+from: markdown+emoji
+format:
+  revealjs:
+    fig-responsive: true
+    theme: [simple, ../../../css/slides.scss]
+    slide-number: true
+    mouse-wheel: false
+    preview-links: auto
+    logo: /figures/icons/course_favicon.png
+    footer: 'Encuestas Sociales para Contextos Diversos'
+---
+
+# Una cifra oficial y su base
+
+## Una cifra que se puede reproducir {.smaller}
+
+::: {style="font-size:0.9em;"}
+El 17 de enero de 2025 el INE publicó los resultados de la **II Encuesta Nacional sobre Uso del Tiempo (ENUT 2023)**. En un día tipo, las mujeres destinan **4:57 horas** al trabajo no remunerado y los hombres **2:52**, en promedio entre quienes lo realizan.
+
+La base de datos es pública. Si se calcula el promedio con `mean()`, como en cualquier base:
+
+| | Mujeres | Hombres |
+|:---|:---:|:---:|
+| Cifra oficial del INE | 4:57 | 2:52 |
+| `mean()` sobre la base | 4:52 | 2:41 |
+| Error estándar con `mean()` | 0,030 horas | 0,024 horas |
+| Error estándar con el diseño | 0,051 horas | 0,039 horas |
+
+: {tbl-colwidths="[46,27,27]"}
+
+El promedio simple no reproduce la cifra oficial, y su error estándar es cerca de **40% menor** que el que corresponde al diseño. La diferencia en la estimación puntual es de minutos; en la incertidumbre es mucho mayor.
+
+::: {style="font-size:0.75em;"}
+Fuente: INE (2025), comunicado de prensa del 17 de enero; elaboración propia con la base pública de la II ENUT.
+:::
+:::
+
+## El plan de hoy {.smaller}
+
+**¿Qué hay que saber de una base de encuesta para reproducir sus cifras y decidir cuáles se pueden publicar?**
+
+1. Repaso: qué hace complejo a un diseño y por qué importa al analizar.
+2. La base de la ENUT: unidades de análisis y factores de expansión.
+3. Estimar con los paquetes `survey` y `srvyr`.
+4. Subpoblaciones: en qué momento se filtra.
+5. Evaluar la calidad de una estimación con el estándar del INE.
+6. Un modelo de regresión que considera el diseño.
+
+En el segundo bloque, el taller en R hace todo esto con la base de la ENUT.
+
+# Repaso: el diseño complejo
+
+## Estratos, conglomerados y factores de expansión {.smaller}
+
+Las encuestas de hogares no seleccionan a las personas por muestreo aleatorio simple. Combinan tres elementos, que vimos en las clases 4 y 5:
+
+- **Estratos.** La población se divide antes de seleccionar y en cada estrato se selecciona por separado. Asegura que todos los estratos estén en la muestra y suele reducir la varianza. En la ENUT, cada comuna es un estrato.
+- **Conglomerados o UPM.** Primero se seleccionan unidades primarias de muestreo (grupos de manzanas o viviendas cercanas) y después viviendas dentro de ellas. Abarata el terreno, pero quienes viven en la misma UPM se parecen entre sí: cada caso aporta menos información que uno seleccionado de forma independiente.
+- **Factor de expansión.** Indica a cuántas unidades de la población representa cada caso. Parte del inverso de la probabilidad de selección y se ajusta por no respuesta y calibración.
+
+## Por qué importa al analizar {.smaller}
+
+- Las **probabilidades de selección son desiguales**. Sin factores de expansión, el promedio describe a la muestra y no a la población: los grupos sobremuestreados pesan de más.
+- Los **conglomerados aumentan la varianza** respecto de un muestreo aleatorio simple del mismo tamaño (el efecto de diseño). Las fórmulas habituales, que suponen casos independientes, subestiman el error.
+
+Por eso la estimación necesita dos correcciones: **los pesos para la estimación puntual y el diseño para la varianza**. Las bases de microdatos traen tres columnas para hacerlo: estrato, conglomerado y factor de expansión.
+
+# La base de la II ENUT
+
+## La II ENUT 2023 {.smaller}
+
+- Encuesta del INE, en terreno entre septiembre y diciembre de 2023, a personas de 12 años o más de 112 comunas urbanas.
+- Estratificada por comuna y bietápica: UPM y luego viviendas.
+- Dos cuestionarios: el **Cuestionario del Hogar** (CH), que un informante responde por todo el hogar, y el **Cuestionario de Uso del Tiempo** (CUT), que responde cada integrante de 12 años o más.
+- Variables de diseño: `varstrat` (la comuna), `varunit` (la UPM) y dos factores de expansión, `fe_ch` y `fe_cut`.
+- Dominios con precisión garantizada: nacional y regional, por sexo.
+
+::: {style="font-size:0.75em;"}
+Fuente: INE (2025), *Documento metodológico II ENUT* y *Manual de uso de la base de datos II ENUT*.
+:::
+
+## Distintas unidades de análisis {.smaller}
+
+Cada fila de la base es una persona, pero con ella se estima sobre tres poblaciones distintas:
+
+::: {style="font-size:0.85em;"}
+| Para estimar sobre | Filas que se usan | Factor | Suma del factor | Ejemplo |
+|:---|:---|:---|:---|:---|
+| Hogares | Una por hogar, la de la persona proveedora principal (`pco == 1`): 16.335 | `fe_ch` | 5.985.331 hogares | 8,9% de los hogares recibe habitualmente servicios pagados domésticos o de cuidado |
+| Personas | Todas: 48.020 | `fe_ch` | 17.749.136 personas | 3,6% de las personas está en situación de dependencia funcional |
+| Personas de 12 años o más | Quienes respondieron el CUT (`tiempo == 1`): 28.477 | `fe_cut` | 15.126.310 personas | 4:57 y 2:52 horas diarias de trabajo no remunerado |
+
+: {tbl-colwidths="[17,26,10,17,30]"}
+:::
+
+## Dos factores y las variables de hogar {.smaller}
+
+::: {style="font-size:0.92em;"}
+**Dos factores.** No todas las personas de 12 años o más respondieron el CUT, así que el INE calibró `fe_cut` solo para quienes lo hicieron. Variables del CH con `fe_ch`, variables del CUT con `fe_cut`.
+
+**Variables de hogar.** Las variables de hogar (tamaño del hogar, servicios pagados, ingresos del hogar) están solo en la fila de la persona proveedora principal. En las filas del resto de los integrantes quedan vacías.
+
+::: {style="border-radius:0.7em;padding:0.8em 1em;background-color:#f2f2f2;"}
+Un modelo del tiempo de trabajo no remunerado que incluye el tamaño del hogar sin copiarlo antes a todos los integrantes corre sin ningún aviso, pero con **13.334 casos en vez de 26.534**: solo proveedores principales. El efecto de la edad **cambia de signo**.
+:::
+
+Antes de estimar hay que saber en qué filas está cada variable y qué factor le corresponde. Eso está en el manual de la base, no en los datos.
+:::
+
+# Estimar con survey y srvyr
+
+## Por qué hace falta software especializado {.smaller}
+
+Las funciones habituales de R (`mean()`, `sd()`, `table()`, `t.test()`, `lm()`) tratan la muestra como si fuera un **muestreo aleatorio simple**: casos independientes y con la misma probabilidad de selección.
+
+Algunas aceptan ponderadores, como `weighted.mean()` o el argumento `weights` de `lm()`. Con eso se corrige la estimación puntual, pero no el error estándar: esas funciones no conocen los estratos ni los conglomerados, y `lm()` interpreta los pesos como pesos de precisión, no como factores de expansión.
+
+::: {style="font-size:1.6em;"}
+```r
+lm(t_tnr_dt ~ sexo, data = cut, weights = fe_cut)
+```
+:::
+
+En la ENUT, este modelo da el mismo coeficiente para las mujeres que el modelo con el diseño (2,09 horas más), pero con un error estándar de 0,041 en vez de 0,058.
+
+El análisis correcto requiere software que incorpore el diseño completo. En R, ese es principalmente el paquete **`survey`**; `srvyr` es una capa sobre él. En Stata cumplen esa función los comandos `svy`.
+
+## El paquete survey {.smaller}
+
+El paquete `survey`, de Thomas Lumley, primero **declara el diseño** y después estima siempre sobre ese objeto:
+
+::: {style="font-size:1.4em;"}
+```r
+library(survey)
+
+cut <- subset(enut, tiempo == 1)      # quienes respondieron el CUT
+
+diseno <- svydesign(ids = ~varunit, strata = ~varstrat,
+                    weights = ~fe_cut, data = cut)
+
+svymean(~t_tnr_dt, diseno, na.rm = TRUE)
+svyby(~t_tnr_dt, ~sexo, diseno, svymean, na.rm = TRUE, deff = TRUE)
+```
+:::
+
+- La tilde (`~`) indica que se trata de una columna de los datos.
+- Cada función `svy*` devuelve la estimación y su error estándar.
+- Con `deff = TRUE` entrega el efecto de diseño: **2,4** para el promedio de los hombres y **2,8** para el de las mujeres.
+
+## srvyr: la misma lógica con dplyr {.smaller}
+
+El paquete `srvyr` usa `survey` por dentro, con la sintaxis de `dplyr`. Los números son los mismos.
+
+::: {style="font-size:1.25em;"}
+```r
+library(srvyr)
+
+diseno <- cut |>
+  as_survey_design(ids = varunit, strata = varstrat, weights = fe_cut)
+
+diseno |>
+  group_by(sexo) |>
+  summarise(tnr = survey_mean(t_tnr_dt, na.rm = TRUE, vartype = c("se", "cv")))
+```
+:::
+
+::: {style="font-size:0.8em;"}
+| Paquete survey | Paquete srvyr |
+|:---|:---|
+| `svydesign()` | `as_survey_design()` |
+| `svymean()`, `svytotal()` | `survey_mean()`, `survey_total()` dentro de `summarise()` |
+| `svyby()` | `group_by()` + `summarise()` |
+| `subset()` | `filter()` |
+
+: {tbl-colwidths="[40,60]"}
+:::
+
+# Subpoblaciones
+
+## Filtrar después de declarar el diseño {.smaller}
+
+El orden recomendado: (1) declarar el diseño con la base completa, (2) filtrar la subpoblación, (3) agrupar, (4) estimar.
+
+La varianza se calcula con las diferencias entre UPM dentro de cada estrato. Si se filtra la base **antes** de declarar el diseño, desaparecen las UPM sin casos de la subpoblación y algunos estratos quedan con una sola UPM: el software ya no ve el diseño completo.
+
+::: {style="font-size:1.45em;"}
+```r
+# Incorrecto: filtrar la base y declarar el diseño con lo que queda
+cut |> filter(sexo == "Hombre", !is.na(t_tcnr_psdf_dt)) |>
+  as_survey_design(ids = varunit, strata = varstrat, weights = fe_cut)
+
+# Correcto: declarar con toda la base y filtrar el diseño
+diseno |> filter(sexo == "Hombre", !is.na(t_tcnr_psdf_dt)) |>
+  summarise(m = survey_mean(t_tcnr_psdf_dt, vartype = "se"))
+```
+:::
+
+## Qué pasa en la ENUT {.smaller}
+
+El ejemplo: tiempo diario que dedican los **hombres que cuidan a personas en situación de dependencia funcional** (398 casos).
+
+- Filtrando el diseño: 1,44 horas, error estándar **0,151**.
+- Filtrando la base: 30 estratos quedan con una sola UPM. Con la opción por defecto, R se detiene con un error (*Stratum has only one PSU*). Si se le da una regla para seguir, entrega un error estándar de **0,140**, 7% menor.
+
+En subpoblaciones grandes la diferencia suele ser pequeña; el problema crece cuanto más chica es la subpoblación, que es justamente donde la precisión ya es escasa.
+
+::: {style="border-radius:0.7em;padding:0.8em 1em;background-color:#f2f2f2;font-size:0.9em;"}
+Una excepción razonable: el manual del INE declara el diseño del CUT sobre las filas con `tiempo == 1`, porque quienes no respondieron no tienen `fe_cut`. Esas filas no forman parte de la muestra de ese factor, y en la ENUT ninguna UPM queda fuera.
+:::
+
+# ¿Se puede publicar esta cifra?
+
+## La calidad estadística de una estimación {.smaller}
+
+::: {style="font-size:0.92em;"}
+Una estimación de encuesta no se publica sola: la acompañan medidas de su precisión.
+
+- **Error estándar:** cuánto variaría la estimación de una muestra a otra. Con él se construye el intervalo de confianza.
+- **Coeficiente de variación:** el error estándar dividido por la estimación. Mide la precisión relativa y no tiene unidades, así que permite comparar horas, pesos y porcentajes.
+- **Tamaño muestral:** cuántos casos hay detrás de la estimación.
+- **Grados de libertad:** como la varianza se calcula con las diferencias entre las UPM de cada estrato, se cuentan como UPM menos estratos, no por personas. En la ENUT completa son 2.162 − 112 = 2.050; en una celda de región por sexo pueden ser una decena.
+
+Las oficinas estadísticas fijan **umbrales** sobre estas métricas antes de publicar. Las estimaciones que no los cumplen se publican con una advertencia o se suprimen, y el criterio se documenta.
+:::
+
+## Un ejemplo: el estándar del INE {.smaller}
+
+::: {style="font-size:0.95em;"}
+El INE (2020) clasifica cada estimación de sus encuestas de hogares con criterios que se aplican en orden:
+
+1. **Tamaño muestral:** con menos de 60 casos, la estimación es **no fiable**.
+2. **Grados de libertad:** con menos de 9, **no fiable**.
+3. **Proporciones:** el error estándar no debe superar un máximo que depende de $p$: $p^{2/3}/9$ si $p<0{,}5$, y $(1-p)^{2/3}/9$ si $p \geq 0{,}5$. Si lo supera, **poco fiable**. Para $p = 0{,}5$, el máximo es de 7 puntos porcentuales; para $p = 0{,}1$, de 2,4.
+4. **Medias, totales y otros:** coeficiente de variación de hasta 15%, **fiable**; entre 15% y 30%, **poco fiable**; sobre 30%, **no fiable**.
+
+En las proporciones, el tamaño muestral y los grados de libertad se cuentan sobre el **denominador**.
+
+Un **tabulado** se publica si más de la mitad de sus celdas son fiables. Las poco fiables llevan una nota de precaución.
+:::
+
+## Un tabulado que no pasa {.smaller}
+
+Tiempo diario de cuidado a personas en situación de dependencia funcional, **entre quienes cuidan**:
+
+- **Nacional por sexo:** fiable. Hombres, 398 casos y coeficiente de variación de 10,5%; mujeres, 974 casos y 5,4%.
+- **Por región y sexo:** de 32 celdas, 5 son fiables, 2 poco fiables y 25 no fiables. El tabulado **no se publica**.
+
+La **proporción de personas que cuida** a alguien en esa situación, por región y sexo, pasa en las 32 celdas: el denominador son todas las personas de 12 años o más, y no solo quienes cuidan.
+
+::: {style="border-radius:0.7em;padding:0.8em 1em;background-color:#f2f2f2;font-size:0.9em;"}
+El mismo tema da un tabulado publicable o no según el estimador y su denominador. Por eso la evaluación se hace tabulado por tabulado, y no una vez para toda la encuesta.
+:::
+
+# Más allá de lo descriptivo: regresión
+
+## Regresión lineal con el diseño {.smaller}
+
+`svyglm()` ajusta el modelo con los pesos y calcula los errores estándar con estratos y conglomerados. Funciona igual sobre un diseño de `srvyr`:
+
+::: {style="font-size:1.35em;"}
+```r
+modelo <- svyglm(t_tnr_dt ~ sexo + edad + ocupada + ninos_0_4 + educ,
+                 design = diseno |> filter(edad >= 15))
+```
+:::
+
+::: {style="font-size:0.85em;"}
+| Variable | Con el diseño: coeficiente (ee) | Sin el diseño, con lm: coeficiente (ee) |
+|:---|:---:|:---:|
+| Mujer | 2,03 (0,057) | 2,13 (0,041) |
+| Edad (años) | 0,026 (0,002) | 0,022 (0,001) |
+| Ocupada | −0,18 (0,065) | −0,21 (0,043) |
+| Niño o niña de 0 a 4 años en el hogar | 2,31 (0,116) | 2,02 (0,060) |
+| Universitaria completa (vs. sin primaria completa) | 1,44 (0,148) | 1,47 (0,098) |
+
+: {tbl-colwidths="[48,26,26]"}
+
+Horas diarias de trabajo no remunerado (día tipo) entre quienes lo realizan; personas de 15 años o más (26.534 casos). El modelo incluye los demás niveles educativos.
+:::
+
+## Los modelos también se estiman con el diseño {.smaller}
+
+::: {style="font-size:0.92em;"}
+El coeficiente de una regresión es un **parámetro de la población**, igual que una media: el que se obtendría si se ajustara el mismo modelo a toda la población. Para estimarlo se usan los pesos, y su error estándar se calcula con estratos y conglomerados.
+
+En la ENUT, sin el diseño:
+
+- los errores estándar resultan entre 1,3 y 1,9 veces más chicos;
+- el coeficiente de tener un niño o niña de 0 a 4 años en el hogar baja de 2,31 a 2,02 horas.
+
+Con errores estándar subestimados, el modelo declara significativos efectos que pueden no serlo en la población.
+
+::: {style="font-size:0.85em;"}
+Existe una discusión sobre omitir los pesos en modelos bien especificados cuando la selección no depende de la variable que se modela (UNSD, 2026, sección 9.6.1). Quien lo haga debe justificarlo, y aun así los errores estándar deben considerar el diseño.
+:::
+:::
+
+# Síntesis y taller
+
+## Síntesis {.smaller}
+
+::: {style="font-size:0.9em;"}
+1. **Antes de estimar hay que leer la documentación**: unidades de análisis, factores de expansión, variables de diseño y dominios con precisión garantizada. En la ENUT, la misma base estima sobre hogares, personas y respondientes del CUT, con dos factores distintos.
+2. **Los pesos corrigen la estimación puntual y el diseño corrige la incertidumbre.** Sin el diseño, el error estándar del tiempo de trabajo no remunerado en la ENUT sale cerca de 40% más chico.
+3. `survey` y `srvyr` hacen lo mismo con dos sintaxis: **se declara el diseño una vez** y todo se estima sobre él.
+4. **Las subpoblaciones se filtran sobre el diseño**, no sobre la base.
+5. **Una cifra calculada no es una cifra publicable.** Las oficinas estadísticas fijan umbrales de casos, grados de libertad y precisión; el estándar del INE los aplica celda por celda y tabulado por tabulado.
+6. Los **coeficientes de un modelo** son parámetros de la población: se estiman con los pesos y sus errores estándar con el diseño.
+:::
+
+## Taller y próximas semanas {.smaller}
+
+**Taller en R (segundo bloque):** con la base pública de la ENUT 2023, reproduciremos las cifras oficiales, estimaremos sobre hogares y personas, evaluaremos la calidad con el estándar del INE y ajustaremos un modelo de regresión.
+
+::: {style="border-radius:0.7em;padding:0.9em 1.1em;background-color:#f2f2f2;"}
+- **Tarea 4** (en parejas): se asigna hoy y vence el **miércoles 18 de noviembre**.
+- **Control de lectura 2** (unidades 4 y 5): **viernes 20 de noviembre**.
+- **Presentaciones del proyecto grupal:** **viernes 27 de noviembre**.
+:::
+
+📖 **Lecturas de esta semana:** Zimmer, Powell y Velásquez (2024), caps. 4 y 5; UNSD (2026), *Handbook*, cap. 9 (secciones 9.3 y 9.6.1).

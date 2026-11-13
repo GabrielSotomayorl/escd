@@ -1,0 +1,34 @@
+---
+title: "🗓️ Semana 12: Análisis de encuestas complejas y calidad de las estimaciones · Taller en R"
+---
+
+Esta semana pasamos de la base de datos a las cifras, con la **II Encuesta Nacional sobre Uso del Tiempo (ENUT 2023)** del INE como caso. En el primer bloque vemos qué hay que saber de una base antes de estimar (unidades de análisis, factores de expansión y variables de diseño), cómo se estima con los paquetes **`survey`** y **`srvyr`**, cómo se trabaja con **subpoblaciones**, cómo se evalúa si una estimación se puede publicar según el **estándar de calidad del INE** y cómo se ajusta un **modelo de regresión** que considera el diseño. En el segundo bloque, el **taller en R** hace todo esto con la base pública de la ENUT. Del taller sale la **Tarea 4**, cuya pauta está disponible en Canvas.
+
+**Material del taller:** [🧪 Guía del taller](taller.qmd)
+
+**Para el taller:** traer computador con **R y RStudio instalados**, los paquetes `haven`, `dplyr`, `survey`, `srvyr` y `texreg`, y la base de la ENUT en formato R descargada desde la [página de uso del tiempo del INE](https://www.ine.gob.cl/estadisticas-por-tema/mercado-laboral/uso-del-tiempo-trabajo-no-remunerado) (instrucciones al inicio de la guía).
+
+## Clase Expositiva
+
+Puedes navegar por las diapositivas directamente en el recuadro de abajo o hacer clic [aquí](slides.qmd) para ver la presentación en pantalla completa. Usa las flechas de tu teclado para avanzar.
+
+<div class="container" style="position: relative;overflow: hidden;width: 100%;min-height:600px;">
+<iframe src="slides.html" style="position: absolute;top: 0;left: 0;bottom: 0;right: 0;width: 100%;min-height:600px;"></iframe>
+</div>
+
+## Lecturas Obligatorias
+
+Para acompañar los contenidos de esta semana, por favor revisa el siguiente material:
+
+- Zimmer, S. A., Powell, R. J., & Velásquez, I. C. (2024). *Exploring Complex Survey Data Analysis Using R: A Tidy Introduction with {srvyr} and {survey}*. CRC Press. Cap. 4, secciones 4.3 y 4.4, y cap. 5, secciones 5.1, 5.4 y 5.9.2. [Versión en línea gratuita](https://tidy-survey-r.github.io/tidy-survey-book/).
+- United Nations Statistics Division. (2026). *Handbook of Surveys on Households and Individuals*. Cap. 9, secciones 9.3 ("Accounting for the sampling design") y 9.6.1 ("To weight or not to weight?").
+
+## Lecturas Complementarias
+
+- Instituto Nacional de Estadísticas (2020). *Estándar para la evaluación de la calidad de las estimaciones en encuestas de hogares*. (El estándar visto en clase.)
+- Instituto Nacional de Estadísticas (2025). *Manual de uso de la base de datos II ENUT*. Cap. 2 (unidades de análisis y diseño muestral) y cap. 5 (estimaciones, evaluación de calidad y pruebas de hipótesis en R).
+- Zimmer, Powell y Velásquez (2024), cap. 7, sección 7.3: regresión lineal con datos de encuesta.
+
+## Dudas y Comunicación
+
+Recuerda que puedes utilizar los canales de comunicación establecidos o acercarte al profesor y ayudantes si tienes dudas sobre los contenidos de esta semana.

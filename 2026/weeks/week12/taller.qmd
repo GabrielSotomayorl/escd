@@ -1,0 +1,370 @@
+---
+title: "🧪 Taller semana 12: análisis de la ENUT 2023 con diseño complejo en R"
+df-print: kable
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+
+## La encuesta y la base
+
+La **II Encuesta Nacional sobre Uso del Tiempo (ENUT 2023)** es del INE. Se levantó entre septiembre y diciembre de 2023 en 112 comunas urbanas de todas las regiones, con una tasa de respuesta de 66,0%. Su muestra es estratificada (el estrato es la comuna) y bietápica: dentro de cada comuna se seleccionan UPM con probabilidad proporcional a su número de viviendas, y luego viviendas con igual probabilidad dentro de cada UPM. Tiene dos cuestionarios: el **Cuestionario del Hogar** (CH), que responde un informante de 18 años o más por todo el hogar, y el **Cuestionario de Uso del Tiempo** (CUT), que responde cada integrante de 12 años o más.
+
+Hay dos factores de expansión. `fe_ch` sirve para hogares y para todas las personas. `fe_cut` sirve para las variables del CUT y solo existe para quienes lo respondieron: el INE lo calibró a totales de población por región, sexo, tramo de edad y par de días asignado. Para la varianza se usan `varstrat` (estrato) y `varunit` (UPM). El documento metodológico explica que el cálculo usa la aproximación del conglomerado último, que trata a las UPM como si se hubieran seleccionado con reemplazo dentro de cada estrato y puede sobreestimar levemente la varianza.
+
+**La base completa se descarga desde la [página de uso del tiempo del INE](https://www.ine.gob.cl/estadisticas-por-tema/mercado-laboral/uso-del-tiempo-trabajo-no-remunerado)**, en la sección de bases de datos. Descarguen la versión en **formato R** (el archivo `250403-ii-enut-bdd-r-v2.zip`, que contiene la base `250403-ii-enut-bdd-r-v2.RDS`). En la misma página están el cuestionario, el diccionario de variables y el *Manual de uso de la base de datos*, que conviene tener a mano.
+
+La base tiene 48.020 filas, una por persona, y 1.089 columnas. En el taller usaremos estas:
+
+| Variable | Descripción |
+|:---|:---|
+| `id_hog` | Identificador del hogar |
+| `pco` | Parentesco con la persona proveedora principal del hogar (1 = proveedora principal) |
+| `region_ord` | Región, de norte a sur |
+| `varstrat`, `varunit` | Estrato y conglomerado de varianza |
+| `fe_ch`, `fe_cut` | Factores de expansión del Cuestionario del Hogar y del CUT |
+| `tiempo` | 1 si la persona respondió el CUT |
+| `NSE` | Nivel socioeconómico de la UPM |
+| `hhsize`, `a1` | Tamaño del hogar y si el hogar recibe habitualmente servicios pagados domésticos o de cuidado. **Solo en la fila de la persona proveedora principal** |
+| `edad`, `sexo`, `nivel_educ`, `cae`, `psdf` | Edad, sexo, nivel educativo, condición de actividad y situación de dependencia funcional |
+| `p_*_dt`, `t_*_dt` | Participación (1 = sí) y tiempo en horas en un día tipo: trabajo no remunerado (`tnr`), doméstico (`tdnr`), de cuidados (`tcnr`), de cuidado a personas en situación de dependencia funcional (`tcnr_psdf`), en la ocupación (`to`) y carga global de trabajo (`cgt`) |
+
+: {tbl-colwidths="[30,70]"}
+
+Las variables tienen **etiquetas**, que `as_factor()` muestra en vez de los números. Las variables de tiempo solo tienen valor para quienes realizaron la actividad, así que sus promedios son **entre quienes participan**, como los publica el INE. El valor **96** indica dato perdido.
+
+## Paso 0. Antes del taller
+
+1. Tener instalados **R** y **RStudio** (como en el taller de la semana 10).
+2. Instalar los paquetes en la consola de R:
+
+```{.r}
+install.packages(c("haven", "dplyr", "survey", "srvyr", "texreg"))
+```
+
+3. Crear un **proyecto de RStudio** (*File > New Project > New Directory > New Project*), descomprimir la base en la carpeta del proyecto y abrir un script nuevo para ir copiando el código de esta guía.
+
+## Paso 1. Cargar y mirar la base
+
+```{r}
+#| eval: false
+library(haven)
+library(dplyr)
+library(survey)
+library(srvyr)
+library(texreg)
+
+enut <- readRDS("250403-ii-enut-bdd-r-v2.RDS")
+```
+
+```{r}
+#| include: false
+library(haven)
+library(dplyr)
+library(survey)
+library(srvyr)
+library(texreg)
+# Para renderizar esta página se usa un extracto con las columnas de la guía
+enut <- readRDS("data/enut2023_extracto.rds")
+```
+
+La base tiene 48.020 filas y 1.089 columnas. Las de diseño y algunas sociodemográficas:
+
+```{r}
+enut |>
+  select(id_hog, pco, varstrat, varunit, fe_ch, fe_cut, tiempo, edad, sexo) |>
+  head()
+```
+
+La base tiene una fila por persona. ¿Cuántos hogares y cuántas personas que respondieron el CUT hay?
+
+```{r}
+enut |>
+  summarise(
+    personas = n(),
+    hogares = n_distinct(id_hog),
+    proveedores = sum(pco == 1),
+    respondieron_cut = sum(tiempo == 1)
+  )
+```
+
+Las variables de hogar solo están en la fila de la persona proveedora principal:
+
+```{r}
+enut |>
+  group_by(proveedora = pco == 1) |>
+  summarise(casos = n(), hhsize_vacio = sum(is.na(hhsize)))
+```
+
+## Paso 2. Preparar las variables
+
+Antes de filtrar, se construye una variable de hogar que usaremos en el modelo del paso 9: si en el hogar vive al menos un niño o niña de 0 a 4 años. Tiene que construirse con **la base completa**, porque los niños no responden el CUT y desaparecen al filtrar. Primero se marca a cada persona de 0 a 4 años; después se toma el máximo dentro de cada hogar, y la variable auxiliar se elimina:
+
+```{r}
+enut <- enut |>
+  mutate(nino = as.numeric(edad <= 4)) |>   # 1 si la persona tiene entre 0 y 4 años
+  group_by(id_hog) |>
+  mutate(ninos_0_4 = max(nino)) |>          # 1 si en el hogar hay al menos uno
+  ungroup() |>
+  select(-nino)
+```
+
+Ahora la base de quienes respondieron el CUT. En las variables de tiempo y participación, el valor 96 es dato perdido y hay que convertirlo en `NA`. También se crean versiones con etiquetas de sexo, región y nivel educativo, y una variable de ocupación (`cae == 2` es persona ocupada):
+
+```{r}
+cut <- enut |>
+  filter(tiempo == 1) |>
+  mutate(
+    p_tnr_dt       = if_else(p_tnr_dt == 96, NA, p_tnr_dt),
+    t_tnr_dt       = if_else(t_tnr_dt == 96, NA, t_tnr_dt),
+    t_tdnr_dt      = if_else(t_tdnr_dt == 96, NA, t_tdnr_dt),
+    p_tcnr_dt      = if_else(p_tcnr_dt == 96, NA, p_tcnr_dt),
+    t_tcnr_dt      = if_else(t_tcnr_dt == 96, NA, t_tcnr_dt),
+    p_tcnr_psdf_dt = if_else(p_tcnr_psdf_dt == 96, NA, p_tcnr_psdf_dt),
+    t_tcnr_psdf_dt = if_else(t_tcnr_psdf_dt == 96, NA, t_tcnr_psdf_dt),
+    t_to_dt        = if_else(t_to_dt == 96, NA, t_to_dt),
+    t_cgt_dt       = if_else(t_cgt_dt == 96, NA, t_cgt_dt),
+    sexo    = as_factor(sexo),
+    region  = as_factor(region_ord),
+    educ    = as_factor(nivel_educ),
+    ocupada = as.numeric(cae == 2)
+  )
+```
+
+## Paso 3. El cálculo ingenuo
+
+El promedio de horas de trabajo no remunerado (`t_tnr_dt`) por sexo, como en cualquier base, con el error estándar de la fórmula del muestreo aleatorio simple:
+
+```{r}
+cut |>
+  filter(!is.na(t_tnr_dt)) |>
+  group_by(sexo) |>
+  summarise(n = n(), media = mean(t_tnr_dt), ee_mas = sd(t_tnr_dt) / sqrt(n()))
+```
+
+El INE publicó **4:57 horas** para las mujeres y **2:52** para los hombres. Para comparar, una función que pasa horas decimales a horas y minutos:
+
+```{r}
+hm <- function(h) sprintf("%d:%02d", floor(h), round((h - floor(h)) * 60))
+hm(4.865)
+```
+
+## Paso 4. Declarar el diseño con survey
+
+`svydesign()` crea un objeto que guarda los datos junto con la información del diseño. Cada argumento corresponde a una columna de la base, que se nombra con una tilde (`~`):
+
+- `ids = ~varunit`: los conglomerados, es decir, las UPM.
+- `strata = ~varstrat`: los estratos, que en la ENUT son las comunas.
+- `weights = ~fe_cut`: el factor de expansión. Se usa `fe_cut` porque el tiempo de trabajo no remunerado viene del CUT.
+- `data = cut`: la base de quienes respondieron el CUT, que son quienes tienen `fe_cut`.
+
+```{r}
+diseno_s <- svydesign(
+  ids = ~varunit,
+  strata = ~varstrat,
+  weights = ~fe_cut,
+  data = cut
+)
+```
+
+Con el diseño declarado, `svymean()` estima una media y `svyby()` la repite por grupos. En `svyby()` se indican la variable (`~t_tnr_dt`), los grupos (`~sexo`), el diseño, la función que se aplica a cada grupo (`svymean`) y sus opciones: `na.rm = TRUE` excluye los valores perdidos y `deff = TRUE` pide el efecto de diseño.
+
+```{r}
+svymean(~t_tnr_dt, diseno_s, na.rm = TRUE)
+
+svyby(~t_tnr_dt, ~sexo, diseno_s, svymean, na.rm = TRUE, deff = TRUE)
+```
+
+¿Reproducen ahora la cifra oficial? Comparen el error estándar con el `ee_mas` del paso anterior. ¿Qué indica el `DEff`?
+
+## Paso 5. Lo mismo con srvyr
+
+`as_survey_design()` recibe los mismos argumentos, sin tilde. Después se trabaja como en `dplyr`: `group_by()` define los grupos y dentro de `summarise()` van las funciones `survey_*()`. El argumento `vartype` indica qué medidas de precisión entregar: error estándar (`"se"`), intervalo de confianza (`"ci"`) y coeficiente de variación (`"cv"`).
+
+```{r}
+diseno <- cut |>
+  as_survey_design(ids = varunit, strata = varstrat, weights = fe_cut)
+
+diseno |>
+  group_by(sexo) |>
+  summarise(
+    tnr = survey_mean(t_tnr_dt, na.rm = TRUE, vartype = c("se", "ci", "cv")),
+    participa = survey_mean(p_tnr_dt, na.rm = TRUE)
+  ) |>
+  mutate(tnr_hm = hm(tnr))
+```
+
+`survey_mean()` sobre una variable 0/1 entrega una proporción. El INE publicó una participación en el trabajo no remunerado de 98,4% para las mujeres y 95,8% para los hombres.
+
+::: {style="border-radius:0.6em;padding:0.8em 1.1em;background-color:#f2f2f2;margin-bottom:1em;"}
+**Actividad 1.** Repitan la estimación por sexo para el **trabajo doméstico** (tiempo: `t_tdnr_dt`) y el **trabajo de cuidados** (participación: `p_tcnr_dt`; tiempo: `t_tcnr_dt`). El INE publicó una participación en el trabajo de cuidados de 42,6% para las mujeres y 32,4% para los hombres. ¿Reproducen esas cifras?
+:::
+
+## Paso 6. Hogares y personas
+
+Las estimaciones sobre hogares y sobre todas las personas usan `fe_ch` y **la base completa** (`enut`, no `cut`). El diseño se declara con todas las filas y después se filtra:
+
+- para **hogares**, la fila de la persona proveedora principal (`pco == 1`), donde están las variables de hogar;
+- para **personas**, todas las filas.
+
+```{r}
+diseno_ch <- enut |>
+  as_survey_design(ids = varunit, strata = varstrat, weights = fe_ch)
+
+# Hogares: total, servicios pagados (a1 == 1) y tamaño promedio (hhsize)
+diseno_ch |>
+  filter(pco == 1) |>
+  summarise(
+    hogares = survey_total(),
+    servicio_pagado = survey_mean(a1 == 1, vartype = c("se", "ci")),
+    tamano = survey_mean(hhsize)
+  )
+
+# Personas: total y proporción en situación de dependencia funcional
+diseno_ch |>
+  summarise(
+    personas = survey_total(),
+    dependencia = survey_mean(psdf == 1, vartype = c("se", "ci"))
+  )
+```
+
+El INE publicó 5.985.331 hogares y 17.749.136 personas.
+
+::: {style="border-radius:0.6em;padding:0.8em 1.1em;background-color:#f2f2f2;margin-bottom:1em;"}
+**Actividad 2.** Estimen la proporción de hogares que recibe servicios pagados domésticos o de cuidado (`a1 == 1`) según el nivel socioeconómico de la UPM (`NSE`). Usen `diseno_ch`, filtren las filas de hogar (`pco == 1`) y agrupen con `group_by(nse = as_factor(NSE))` para ver las etiquetas (bajo, medio y alto). ¿Cómo cambia la proporción entre niveles?
+:::
+
+## Paso 7. Subpoblaciones
+
+La **carga global de trabajo** (`t_cgt_dt`) suma el trabajo en la ocupación y el no remunerado. El INE la publica para las personas ocupadas de 15 años o más: 10:58 horas para las mujeres y 9:49 para los hombres. La subpoblación se filtra **sobre el diseño**:
+
+```{r}
+diseno |>
+  filter(edad >= 15, ocupada == 1, !is.na(t_to_dt), !is.na(t_tnr_dt)) |>
+  group_by(sexo) |>
+  summarise(cgt = survey_mean(t_cgt_dt, na.rm = TRUE)) |>
+  mutate(cgt_hm = hm(cgt))
+```
+
+Ahora la versión incorrecta, en una subpoblación chica: el tiempo que dedican los hombres que cuidan a personas en situación de dependencia funcional (`t_tcnr_psdf_dt`). Primero se filtra la base y después se declara el diseño:
+
+```{r}
+#| error: true
+cut |>
+  filter(sexo == "Hombre", !is.na(t_tcnr_psdf_dt)) |>
+  as_survey_design(ids = varunit, strata = varstrat, weights = fe_cut) |>
+  summarise(m = survey_mean(t_tcnr_psdf_dt, vartype = "se"))
+```
+
+Y la correcta. `unweighted(n())` cuenta los casos de la muestra:
+
+```{r}
+diseno |>
+  filter(sexo == "Hombre", !is.na(t_tcnr_psdf_dt)) |>
+  summarise(m = survey_mean(t_tcnr_psdf_dt, vartype = c("se", "cv")), n = unweighted(n()))
+```
+
+::: {style="border-radius:0.6em;padding:0.8em 1.1em;background-color:#f2f2f2;margin-bottom:1em;"}
+**Actividad 3.** El mensaje de error dice que un estrato quedó con una sola UPM. ¿Por qué pasa al filtrar la base y no al filtrar el diseño? Estimen con el diseño el tiempo de cuidado a personas en situación de dependencia funcional (`t_tcnr_psdf_dt`) de las **mujeres** que cuidan, y comparen su coeficiente de variación con el de los hombres.
+:::
+
+## Paso 8. ¿Se puede publicar?
+
+El estándar del INE evalúa, en orden: al menos 60 casos, al menos 9 grados de libertad y, según el tipo de estimador, el error estándar (proporciones) o el coeficiente de variación (el resto: fiable hasta 15%, poco fiable hasta 30%, no fiable sobre 30%). Los grados de libertad se cuentan como UPM menos estratos con casos en la celda.
+
+Con `srvyr` se obtienen las tres métricas de cada celda del tabulado de tiempo de cuidado por región y sexo. `unweighted()` calcula sobre los casos de la muestra, sin ponderar, y `case_when()` aplica los criterios en orden:
+
+```{r}
+celdas <- diseno |>
+  filter(!is.na(t_tcnr_psdf_dt)) |>
+  group_by(region, sexo) |>
+  summarise(
+    horas = survey_mean(t_tcnr_psdf_dt, vartype = "cv"),
+    n = unweighted(n()),
+    gl = unweighted(n_distinct(varunit) - n_distinct(varstrat))
+  ) |>
+  ungroup() |>
+  mutate(calidad = case_when(
+    n < 60 | gl < 9   ~ "No fiable",
+    horas_cv <= 0.15  ~ "Fiable",
+    horas_cv <= 0.30  ~ "Poco fiable",
+    TRUE              ~ "No fiable"
+  ))
+
+celdas |> head(8)
+
+celdas |> count(calidad)
+```
+
+Un tabulado se publica si más de la mitad de sus celdas son fiables.
+
+Para una **proporción**, el criterio es un error estándar máximo que depende de $p$: $p^{2/3}/9$ si $p < 0{,}5$ y $(1-p)^{2/3}/9$ si no. El tamaño muestral y los grados de libertad se cuentan sobre el denominador, en este caso todas las personas que respondieron. El mismo tabulado, para la proporción de personas que cuida (`p_tcnr_psdf_dt`):
+
+```{r}
+diseno |>
+  filter(!is.na(p_tcnr_psdf_dt)) |>
+  group_by(region, sexo) |>
+  summarise(
+    p = survey_mean(p_tcnr_psdf_dt, vartype = "se"),
+    n = unweighted(n()),
+    gl = unweighted(n_distinct(varunit) - n_distinct(varstrat))
+  ) |>
+  ungroup() |>
+  mutate(
+    ee_max = if_else(p < 0.5, p^(2/3) / 9, (1 - p)^(2/3) / 9),
+    calidad = case_when(
+      n < 60 | gl < 9 ~ "No fiable",
+      p_se <= ee_max  ~ "Fiable",
+      TRUE            ~ "Poco fiable"
+    )
+  ) |>
+  count(calidad)
+```
+
+::: {style="border-radius:0.6em;padding:0.8em 1.1em;background-color:#f2f2f2;margin-bottom:1em;"}
+**Actividad 4.** ¿Se publica el tabulado del tiempo de cuidado por región y sexo? ¿Qué criterio deja fuera a más celdas? ¿Por qué la proporción de personas que cuida pasa y el tiempo que dedican quienes cuidan no? Evalúen el tiempo de cuidado (`t_tcnr_psdf_dt`) **solo por sexo**, sin región, con el mismo código.
+:::
+
+## Paso 9. Un modelo de regresión
+
+Un modelo lineal de las horas de trabajo no remunerado (`t_tnr_dt`) según sexo, edad, ocupación (`ocupada`), presencia de niños de 0 a 4 años en el hogar (`ninos_0_4`) y nivel educativo (`educ`), para las personas de 15 años o más. `svyglm()` lo ajusta con el diseño; `lm()`, sin él:
+
+```{r}
+modelo_svy <- svyglm(t_tnr_dt ~ sexo + edad + ocupada + ninos_0_4 + educ,
+                     design = diseno |> filter(edad >= 15))
+
+modelo_lm <- lm(t_tnr_dt ~ sexo + edad + ocupada + ninos_0_4 + educ,
+                data = cut |> filter(edad >= 15))
+```
+
+`screenreg()`, del paquete `texreg`, muestra los dos modelos lado a lado en la consola, con los errores estándar entre paréntesis:
+
+```{r}
+#| eval: false
+screenreg(list(modelo_svy, modelo_lm),
+          custom.model.names = c("Con diseño", "Sin diseño (lm)"),
+          digits = 3)
+```
+
+```{r}
+#| echo: false
+#| results: asis
+htmlreg(list(modelo_svy, modelo_lm),
+        custom.model.names = c("Con diseño", "Sin diseño (lm)"),
+        digits = 3, doctype = FALSE, html.tag = FALSE, head.tag = FALSE,
+        body.tag = FALSE, star.symbol = "&#42;", caption = "")
+```
+
+::: {style="border-radius:0.6em;padding:0.8em 1.1em;background-color:#f2f2f2;margin-bottom:1em;"}
+**Actividad 5.** ¿Cuánto más grandes son los errores estándar con el diseño? ¿Qué coeficientes cambian más y cómo cambia su interpretación? ¿Alguna conclusión sobre significancia estadística cambiaría si se usara `lm()`? Para terminar, agreguen la interacción `sexo * ninos_0_4` en el modelo con diseño. ¿El efecto de tener un niño pequeño en el hogar es el mismo para mujeres y hombres?
+:::
+
+## Fuentes
+
+- Instituto Nacional de Estadísticas. (2020). *Estándar para la evaluación de la calidad de las estimaciones en encuestas de hogares*. INE.
+- Instituto Nacional de Estadísticas. (2025). *Documento metodológico II Encuesta Nacional sobre Uso del Tiempo*. INE.
+- Instituto Nacional de Estadísticas. (2025). *Manual de uso de la base de datos II Encuesta Nacional sobre Uso del Tiempo*. INE.
+- Instituto Nacional de Estadísticas. (2025). *Síntesis de resultados II ENUT 2023*. INE.
+- United Nations Statistics Division. (2026). *Handbook of Surveys on Households and Individuals*. Cap. 9.
+- Zimmer, S. A., Powell, R. J., & Velásquez, I. C. (2024). *Exploring complex survey data analysis using R: A tidy introduction with {srvyr} and {survey}*. CRC Press.
